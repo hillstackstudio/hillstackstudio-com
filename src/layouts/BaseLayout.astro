@@ -1,0 +1,29 @@
+---
+import schemaData from '../../public/schema.json';
+import '../styles/global.css';
+
+export interface Props {
+  title?: string;
+  description?: string;
+}
+
+const {
+  title = "Hill Stack Studio | Locally Rooted. AI Optimized.",
+  description = "Hill Stack Studio ensures every local business has the visibility, technology, and personal support needed to thrive in the age of AI search across Seattle, Puyallup, Tacoma, Pierce County, and the Pacific Northwest."
+} = Astro.props;
+---
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>{title}</title>
+  <meta name="description" content={description} />
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+  <link rel="apple-touch-icon" href="/favicon.svg" />
+  <script type="application/ld+json" is:inline set:html={JSON.stringify(schemaData)} />
+</head>
+<body class="bg-[#F8FAFC] text-[#1E293B] antialiased min-h-screen min-h-[100dvh] flex flex-col selection:bg-blue-100 selection:text-blue-900">
+  <slot />
+</body>
+</html>

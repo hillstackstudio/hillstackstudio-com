@@ -1,0 +1,47 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Header from '../components/Header.astro';
+import Hero from '../components/Hero.tsx';
+import Services from '../components/Services.tsx';
+import RecentWork from '../components/RecentWork.tsx';
+import Advantage from '../components/Advantage.astro';
+import Contact from '../components/Contact.tsx';
+import ServiceAreas from '../components/ServiceAreas.astro';
+import Footer from '../components/Footer.astro';
+import StickyMobileBar from '../components/StickyMobileBar.astro';
+import siteContext from '../data/siteContext.json';
+---
+
+<BaseLayout title="Hill Stack Studio | Performance Web Design, SEO & GEO">
+  <Header 
+    companyName={siteContext.companyName}
+    email={siteContext.contact.email}
+  />
+  <main class="flex-grow flex flex-col">
+    <Hero 
+      client:load
+      companyName={siteContext.companyName}
+      tagline={siteContext.tagline}
+      aboutText={siteContext.aboutText}
+      primaryCallToAction={siteContext.primaryCallToAction}
+      regionalKeywords={siteContext.regionalKeywords}
+    />
+    <Services client:visible services={siteContext.services} />
+    <RecentWork client:visible />
+    <Advantage />
+    <Contact 
+      client:visible
+      email={siteContext.contact.email}
+      regionalKeywords={siteContext.regionalKeywords}
+    />
+    <ServiceAreas regionalKeywords={siteContext.regionalKeywords} />
+  </main>
+  <Footer 
+    companyName={siteContext.companyName}
+    email={siteContext.contact.email}
+  />
+  <StickyMobileBar />
+  <div class="sr-only" aria-hidden="true">
+    <span>Seattle Puyallup Tacoma Pierce County Pacific Northwest Hill Stack Studio Generative Engine Optimization Local AI Search Audits</span>
+  </div>
+</BaseLayout>

@@ -1,0 +1,40 @@
+# ====================================================================
+# robots.txt for Hill Stack Studio | Locally rooted. AI Optimized.
+# Generated for GEO & Machine Data Access
+# ====================================================================
+
+# 1. Global Rule for Traditional Search
+User-agent: *
+Allow: /
+
+# 2. Explicitly Allow AI & LLM Crawlers for GEO
+User-agent: GPTBot
+Allow: /
+
+User-agent: ChatGPT-User
+Allow: /
+
+User-agent: OAI-SearchBot
+Allow: /
+
+User-agent: ClaudeBot
+Allow: /
+
+User-agent: Claude-Web
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: Bytespider
+Allow: /
+
+User-agent: CCBot
+Allow: /
+
+User-agent: Google-Extended
+Allow: /
+
+# 3. Discovery Handshakes
+Sitemap: https://hillstackstudio.com/sitemap.xml
+Link: https://hillstackstudio.com/llms.txt

@@ -1,0 +1,45 @@
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "LocalBusiness",
+      "@id": "https://hillstackstudio.com/#identity",
+      "name": "Hill Stack Studio",
+      "slogan": "Locally rooted. AI Optimized.",
+      "description": "To ensure every local business has the visibility, technology, and personal support they need to thrive in the age of AI search.",
+      "url": "https://hillstackstudio.com",
+      "email": "team@hillstackstudio.com",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "[INSERT HILL STACK STUDIO STREET ADDRESS]",
+        "addressLocality": "Puyallup",
+        "addressRegion": "WA",
+        "addressCountry": "US"
+      },
+      "areaServed": [
+        "Seattle",
+        "Bellevue",
+        "Tacoma",
+        "King County",
+        "Pierce County",
+        "Pacific Northwest"
+      ],
+      "knowsAbout": [
+        "Astro Architecture",
+        "Web Design",
+        "Web Development",
+        "Generative Engine Optimization",
+        "Search Engine Optimization",
+        "SEO",
+        "GEO",
+        "AEO",
+        "AI Search Optimization",
+        "Accesiblity"
+
+      ],
+      "sameAs": [
+        "[INSERT HILL STACK STUDIO SOCIAL/MAPS URL]"
+      ]
+    }
+  ]
+}

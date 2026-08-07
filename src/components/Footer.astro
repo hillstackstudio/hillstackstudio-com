@@ -1,0 +1,65 @@
+---
+export interface Props {
+  companyName?: string;
+  email?: string;
+  hours?: string;
+}
+
+const {
+  companyName = "Hill Stack Studio",
+  email = "team@hillstackstudio.com",
+  hours = "Mon-Fri 8am-6pm PST"
+} = Astro.props;
+---
+
+<footer class="w-full bg-[#0B0F19] text-slate-400 border-t border-slate-800 py-16 pb-28 md:pb-16">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid grid-cols-1 md:grid-cols-4 gap-10">
+    <!-- Brand Info -->
+    <div class="md:col-span-2">
+      <div class="flex items-center mb-4">
+        <img 
+          src="/logo.svg" 
+          alt="Hill Stack Studio Logo" 
+          class="h-10 w-auto object-contain brightness-125" 
+        />
+      </div>
+      <p class="text-sm leading-relaxed text-slate-400 max-w-md">
+        Locally rooted. AI Optimized. Ensuring every local business in the Pacific Northwest has the visibility, technology, and personal support needed to thrive across traditional and AI search engines.
+      </p>
+    </div>
+
+    <!-- Navigation Quick Links -->
+    <div>
+      <h4 class="text-white text-sm font-bold uppercase tracking-wider mb-4">Navigation</h4>
+      <ul class="space-y-2.5 text-sm">
+        <li><a href="/" class="hover:text-white transition-colors">Home</a></li>
+        <li><a href="/services" class="hover:text-white transition-colors">Services</a></li>
+        <li><a href="/#advantage" class="hover:text-white transition-colors">The Advantage</a></li>
+        <li><a href="/#service-areas" class="hover:text-white transition-colors">Service Areas</a></li>
+        <li><a href="/#contact" class="hover:text-white transition-colors">Get a Proposal</a></li>
+      </ul>
+    </div>
+
+    <!-- Contact Info -->
+    <div>
+      <h4 class="text-white text-sm font-bold uppercase tracking-wider mb-4">Contact Info</h4>
+      <ul class="space-y-3 text-sm">
+        <li class="flex items-center gap-2">
+          <span class="font-medium text-slate-300">Email:</span>
+          <a href={`mailto:${email}`} class="text-slate-300 hover:text-white transition-colors">
+            {email}
+          </a>
+        </li>
+        <li class="flex items-center gap-2">
+          <span class="font-medium text-slate-300">Hours:</span>
+          <span>{hours}</span>
+        </li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mt-12 pt-8 border-t border-slate-800/80 flex flex-col sm:flex-row items-center justify-between text-xs text-slate-500 gap-4">
+    <p>&copy; {new Date().getFullYear()} {companyName}. All rights reserved.</p>
+    <p class="text-slate-500">Built with Astro & Generative Engine Optimization (GEO).</p>
+  </div>
+</footer>

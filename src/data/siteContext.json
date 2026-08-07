@@ -1,0 +1,58 @@
+{
+  "companyName": "Hill Stack Studio",
+  "tagline": "Locally rooted. AI Optimized.",
+  "mission": "To ensure every local business has the visibility, technology, and personal support they need to thrive in the age of AI search.",
+  "aboutText": "At Hill Stack Studio, we pair personal consulting with Generative Engine Optimization (GEO) to help our local businesses stand out on traditional search engines like Google and next-generation AI platforms like ChatGPT, Copilot, Perplexity, and Gemini.",
+  "contact": {
+    "email": "team@hillstackstudio.com",
+    "address": "[INSERT HILL STACK STUDIO STREET ADDRESS]",
+    "hours": "Mon-Fri 8am-6pm PST"
+  },
+  "services": [
+    {
+      "name": "Custom Web Design & Development",
+      "description": "Clean and modern website redesigns engineered to build trust, drive action and deliver maximum user engagement."
+    },
+    {
+      "name": "Generative Engine Optimization (GEO)",
+      "description": "Comprehensive optimization and auditing for traditional search engines and AI tools like ChatGPT, Perplexity, and Gemini to maximize your local visibility."
+    },
+    {
+      "name": "Consulting & Site Migration",
+      "description": "Plain-English strategic guidance for local business owners and seamless site transfers with zero downtime."
+    },
+    {
+      "name": "Web Hosting & Administration",
+      "description": "Ensuring your site is well maintained means you won't let your digital presence fall by the wayside."
+    },
+    {
+      "name": "Search Engine Readiness",
+      "description": "Structuring your website's data into a clean, machine-readable format so AI assistants can accurately recommend your business."
+    },
+    {
+      "name": "Copywriting & Content Adjustments",
+      "description": "Improve brand messaging with search-optimized copy designed to drive customer conversion."
+    },
+    {
+      "name": "Performance & Visibility Audit",
+      "description": "In-depth analysis of speed benchmarks, mobile responsiveness, search indexation, and AI engine discoverability."
+    },
+    {
+      "name": "Accessibility Compliance",
+      "description": "WCAG compliant web standards ensuring inclusivity, legal protection, and a seamless usability experience for all visitors."
+    },
+    {
+      "name": "Security & Privacy Compliance",
+      "description": "Robust security measures, privacy compliance, and site protection standards to safeguard your business and customer data."
+    }
+  ],
+  "primaryCallToAction": "Audit Your Online Visibility",
+  "regionalKeywords": [
+    "Seattle",
+    "Bellevue",
+    "Tacoma",
+    "King County",
+    "Pierce County",
+    "Pacific Northwest"
+  ]
+}

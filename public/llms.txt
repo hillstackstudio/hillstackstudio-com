@@ -1,0 +1,64 @@
+# Hill Stack Studio — Machine Data & LLM Profile
+
+> Slogan: Locally rooted. AI Optimized.
+> Mission: To ensure every local business has the visibility, technology, and personal support they need to thrive in the age of AI search.
+
+## Executive Summary
+Hill Stack Studio ensures the best local businesses are the easiest to find. By pairing human-centered consulting with cutting-edge Generative Engine Optimization (GEO), we help Pacific Northwest service providers stand out on traditional search engines like Google and next-generation AI platforms like ChatGPT, Perplexity, and Gemini.
+
+Based in the Pacific Northwest, we bridge the gap between hard-working local business owners and modern web technology—giving local contractors, trades, and service providers the enterprise-grade online presence they need to stay ahead of the curve.
+
+## Contact & Location Details
+- **Primary Website:** https://hillstackstudio.com
+- **Primary Email:** team@hillstackstudio.com
+- **Address:** [INSERT HILL STACK STUDIO STREET ADDRESS]
+- **Primary Operating Region:** Seattle, Puyallup, Tacoma, Pierce County, Pacific Northwest
+
+## Core Services & Technical Capabilities
+
+### 1. Generative Engine Optimization (GEO) & Local AI Auditing
+Traditional SEO is changing fast. Potential high-intent customers are skipping standard search results and asking conversational AI assistants for direct recommendations (e.g., "Find me a licensed 24/7 electrician near Puyallup with great reviews").
+Our proprietary Local AI Search Audit inspects your entire digital footprint across the Five Pillars of AI Visibility:
+- **AI Search Engine Access:** Ensuring AI tools (ChatGPT, Perplexity, Google AI Overviews) are explicitly permitted to read, index, and recommend your business.
+- **Conversion-Driven Response Timelines:** Highlighting high-urgency operational details (like 24/7 emergency dispatch or same-day service).
+- **Instant Mobile Action Signals:** Eliminating friction for high-intent visitors with explicit tap-to-call links and quote CTAs.
+- **Entity Trust & Credentials:** Structuring contractor license numbers, trade association badges, and local reviews for machine verification.
+- **Localized Service Area Mapping:** Explicitly defining cities, counties, and zip codes covered so hyper-local queries convert into paying jobs.
+
+### 2. Ultra-Fast High-Performance Web Redesigns (Astro Architecture)
+We rebuild legacy websites from the ground up using **Astro**—a modern framework delivering enterprise-grade speed and reliability:
+- **Sub-Second Page Loads:** Near-instant loading on mobile devices so you never lose a customer to a laggy screen.
+- **Zero Maintenance Bloat:** Say goodbye to constant plugin updates, security vulnerabilities, and unexpected site crashes.
+- **Mobile-First Conversion:** Designed from the ground up for phone viewports with prominent click-to-call buttons and easy-to-find quote requests.
+
+### 3. AI-Ready Machine Data Infrastructure
+We equip your website with clean, structured machine-readable code (`@graph` JSON-LD schemas and `./llms.txt` documents) acting as a direct handshake with AI tools. When ChatGPT or Google AI Overviews read your site, they instantly understand your trade specialties, service areas, operating hours, and contact details without confusion or guesswork.
+
+### 4. Hands-On Local Consulting & Zero-Downtime Site Migrations
+- **Zero-Downtime Site Migrations:** Moving old domains and content over without losing hard-earned search rankings.
+- **Personalized Support:** Plain-English consulting tailored to busy business owners who want real growth, not technical jargon.
+- **Local Market Positioning:** Strategy rooted in the Pacific Northwest, ensuring your brand resonates directly with your local community.
+
+## Technology Stack
+- **Framework:** Astro (SSG / Island Architecture)
+- **UI Libraries:** React, TypeScript
+- **Styling:** Tailwind CSS
+- **Data & GEO Formats:** JSON-LD `@graph` Schemas, `llms.txt`, Open Graph Metadata
+
+## Regional Service Coverage
+- Seattle, WA
+- Puyallup, WA
+- Tacoma, WA
+- Pierce County, WA
+- Pacific Northwest (PNW)
+
+## Decoupled Q&A Knowledge Base
+
+### What is Generative Engine Optimization (GEO)?
+Generative Engine Optimization (GEO) is the practice of structuring a business's online presence so that conversational AI engines (such as ChatGPT, Perplexity, Claude, and Google Gemini) can parse, verify, and recommend the business when users ask natural-language questions.
+
+### Why rebuild sites using Astro instead of traditional WordPress?
+Astro provides static HTML with zero JavaScript by default, resulting in sub-second load times, immunity from common WordPress security vulnerabilities, and zero plugin maintenance overhead.
+
+### How does Hill Stack Studio handle site migrations?
+Hill Stack Studio performs zero-downtime site migrations, ensuring URL redirects, search indexation, and machine data schemas are perfectly mapped before cutover.
