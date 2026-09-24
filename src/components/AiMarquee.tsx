@@ -38,6 +38,11 @@ export const AiMarquee: React.FC = () => {
 
   return (
     <div className="w-full my-6 sm:my-8 md:my-10">
+      {/* Title above marquee matching site design system */}
+      <span className="text-[#17A398] text-sm font-bold uppercase tracking-wider mb-4 sm:mb-5 block text-center">
+        Engineered for Modern Search
+      </span>
+
       {/* Marquee Outer Container with horizontal fade mask */}
       <div className="relative w-full overflow-hidden py-2 sm:py-3 [mask-image:linear-gradient(to_right,transparent,black_10%,black_90%,transparent)]">
         {/* Infinite Moving Row */}

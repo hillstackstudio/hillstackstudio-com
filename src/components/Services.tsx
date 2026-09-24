@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import { servicesData } from '../data/servicesData';
 
 export interface ServiceItem {
@@ -64,6 +64,41 @@ const Services: React.FC<ServicesProps> = ({ services }) => {
     };
   });
 
+  const [visibleIndices, setVisibleIndices] = useState<Set<number>>(new Set());
+  const cardRefs = useRef<(HTMLAnchorElement | null)[]>([]);
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            const idxAttr = entry.target.getAttribute('data-index');
+            if (idxAttr !== null) {
+              const idx = parseInt(idxAttr, 10);
+              setVisibleIndices((prev) => {
+                if (prev.has(idx)) return prev;
+                const next = new Set(prev);
+                next.add(idx);
+                return next;
+              });
+              observer.unobserve(entry.target);
+            }
+          }
+        });
+      },
+      {
+        threshold: 0.12,
+        rootMargin: '0px 0px -40px 0px'
+      }
+    );
+
+    cardRefs.current.forEach((el) => {
+      if (el) observer.observe(el);
+    });
+
+    return () => observer.disconnect();
+  }, [displayServices.length]);
+
   return (
     <section id="services" className="py-20 md:py-28 bg-[#F8FAFC] border-b border-slate-200/80 relative">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -82,31 +117,40 @@ const Services: React.FC<ServicesProps> = ({ services }) => {
 
         {/* 3-Column Agency Service Cards Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {displayServices.map((service, index) => (
-            <a
-              key={index}
-              href={`/services/${service.slug}`}
-              className="group bg-white rounded-2xl p-8 border border-slate-200/80 shadow-xs hover:shadow-xl hover:-translate-y-1.5 transition-all duration-300 flex flex-col justify-between"
-            >
-              <div>
-                <div className="w-12 h-12 rounded-xl bg-teal-50 text-[#17A398] flex items-center justify-center mb-6 group-hover:bg-[#17A398] group-hover:text-white transition-colors duration-300">
-                  {getServiceIcon(index)}
+          {displayServices.map((service, index) => {
+            const isVisible = visibleIndices.has(index);
+            return (
+              <a
+                key={index}
+                data-index={index}
+                ref={(el) => (cardRefs.current[index] = el)}
+                href={`/services/${service.slug}`}
+                style={{
+                  transitionDelay: `${(index % 3) * 120}ms`
+                }}
+                className={`group bg-white rounded-2xl p-8 border border-slate-200/80 shadow-xs hover:shadow-xl hover:-translate-y-1.5 flex flex-col justify-between transition-all duration-700 ease-out motion-reduce:transition-none motion-reduce:transform-none motion-reduce:opacity-100 ${
+                  isVisible
+                    ? 'opacity-100 translate-y-0'
+                    : 'opacity-0 translate-y-10'
+                }`}
+              >
+                <div className="flex flex-col items-center text-center">
+                  <div className="w-12 h-12 rounded-xl bg-teal-50 text-[#17A398] flex items-center justify-center mb-6 mx-auto group-hover:bg-[#17A398] group-hover:text-white transition-colors duration-300">
+                    {getServiceIcon(index)}
+                  </div>
+                  <h3 className="text-xl font-bold text-[#0B0F19] mb-3 group-hover:text-[#17A398] transition-colors">
+                    {service.name}
+                  </h3>
+                  <p className="text-slate-600 leading-relaxed text-base md:text-lg">
+                    {service.description}
+                  </p>
                 </div>
-                <h3 className="text-xl font-bold text-[#0B0F19] mb-3 group-hover:text-[#17A398] transition-colors">
-                  {service.name}
-                </h3>
-                <p className="text-slate-600 leading-relaxed text-sm md:text-base">
-                  {service.description}
-                </p>
-              </div>
-              <div className="mt-6 pt-4 border-t border-slate-100 flex items-center justify-end gap-1.5 text-[#17A398] text-sm font-bold">
-                <span>Learn more</span>
-                <svg className="w-4 h-4 group-hover:translate-x-1 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="2.5">
-                  <path strokeLinecap="round" strokeLinejoin="round" d="M14 5l7 7m0 0l-7 7m7-7H3"/>
-                </svg>
-              </div>
-            </a>
-          ))}
+                <div className="mt-6 pt-4 border-t border-slate-100 flex items-center justify-center text-[#17A398] text-sm font-bold">
+                  <span>Learn more</span>
+                </div>
+              </a>
+            );
+          })}
         </div>
 
         {/* Section Bottom Action */}

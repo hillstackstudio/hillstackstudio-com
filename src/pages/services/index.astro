@@ -2,7 +2,6 @@
 import BaseLayout from '../../layouts/BaseLayout.astro';
 import Header from '../../components/Header.astro';
 import Footer from '../../components/Footer.astro';
-import StickyMobileBar from '../../components/StickyMobileBar.astro';
 import siteContext from '../../data/siteContext.json';
 import { servicesData } from '../../data/servicesData';
 
@@ -89,7 +88,7 @@ const getServiceSvgPath = (index: number) => {
                 <h2 class="text-xl font-bold text-[#0B0F19] mb-3 group-hover:text-[#17A398] transition-colors leading-snug">
                   {service.name}
                 </h2>
-                <p class="text-slate-600 leading-relaxed text-sm md:text-base">
+                <p class="text-slate-600 leading-relaxed text-base md:text-lg">
                   {service.shortDescription}
                 </p>
               </div>
@@ -131,5 +130,4 @@ const getServiceSvgPath = (index: number) => {
     companyName={siteContext.companyName}
     email={siteContext.contact.email}
   />
-  <StickyMobileBar />
 </BaseLayout>

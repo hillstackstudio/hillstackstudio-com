@@ -2,7 +2,6 @@
 import BaseLayout from '../../layouts/BaseLayout.astro';
 import Header from '../../components/Header.astro';
 import Footer from '../../components/Footer.astro';
-import StickyMobileBar from '../../components/StickyMobileBar.astro';
 import siteContext from '../../data/siteContext.json';
 import { servicesData, getServiceBySlug, ServiceDetail } from '../../data/servicesData';
 
@@ -395,5 +394,4 @@ const siblingServices = servicesData
     companyName={siteContext.companyName}
     email={siteContext.contact.email}
   />
-  <StickyMobileBar />
 </BaseLayout>

@@ -8,7 +8,6 @@ import Advantage from '../components/Advantage.astro';
 import Contact from '../components/Contact.tsx';
 import ServiceAreas from '../components/ServiceAreas.astro';
 import Footer from '../components/Footer.astro';
-import StickyMobileBar from '../components/StickyMobileBar.astro';
 import siteContext from '../data/siteContext.json';
 ---
 
@@ -26,7 +25,7 @@ import siteContext from '../data/siteContext.json';
       primaryCallToAction={siteContext.primaryCallToAction}
       regionalKeywords={siteContext.regionalKeywords}
     />
-    <Services client:visible services={siteContext.services} />
+    <Services client:load services={siteContext.services} />
     <RecentWork client:visible />
     <Advantage />
     <Contact 
@@ -40,7 +39,6 @@ import siteContext from '../data/siteContext.json';
     companyName={siteContext.companyName}
     email={siteContext.contact.email}
   />
-  <StickyMobileBar />
   <div class="sr-only" aria-hidden="true">
     <span>Seattle Puyallup Tacoma Pierce County Pacific Northwest Hill Stack Studio Generative Engine Optimization Local AI Search Audits</span>
   </div>

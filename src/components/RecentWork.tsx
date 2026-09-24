@@ -93,7 +93,7 @@ const RecentWork: React.FC<RecentWorkProps> = ({ works = defaultWorks }) => {
             Our Work
           </span>
           <h2 className="text-3xl sm:text-4xl md:text-5xl font-extrabold text-[#0B0F19] tracking-tight leading-[1.15]">
-            Proven Optimized Results <br className="hidden sm:inline" />
+            Discoverable Websites & Optimized Results
           </h2>
         </div>
 

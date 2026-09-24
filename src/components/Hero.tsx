@@ -39,7 +39,7 @@ const Hero: React.FC<HeroProps> = ({
         </p>
 
         {/* Action Buttons (Swapped Positions) */}
-        <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-8 sm:mb-12">
+        <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-14 sm:mb-20 md:mb-24">
           <a
             href="#services"
             className="w-full sm:w-auto inline-flex items-center justify-center bg-white hover:bg-slate-50 text-[#0B0F19] border border-slate-300 hover:border-slate-400 px-8 py-3.5 rounded-full font-bold text-base transition-all duration-200 shadow-sm"
