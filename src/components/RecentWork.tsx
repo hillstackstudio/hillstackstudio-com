@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 
 export interface WorkItem {
   id: string;
@@ -29,60 +29,19 @@ const defaultWorks: WorkItem[] = [
     category: 'Chiropractic & Wellness',
     image: '/images/recent-work/live-right-chiro.png',
     testimonial:
-      '"We\'ve seen an increase in website traffic, and we\'ve received lots of positive feedback from the community. Hill Stack Studio listened, knew the business, and provided a great product on time."',
+      '"It was a pleasure working with Hill Stack Studio, our traffic has increased significantly with higher rankings on Google and ChatGPT. We’re also converting a larger percentage of website traffic with better user engagement and more patient inquiries."',
     author: {
       name: 'Calvin Smolich',
-      title: 'Owner & Doctor of Chriopractic',
+      title: 'Owner & Doctor of Chiropractic',
       initials: 'CS',
     },
     metrics: ['+140% Web Traffic', '97/100 Performance', '100/100 SEO Score'],
     color: '#17A398',
   },
-  {
-    id: 'soundview',
-    company: 'Soundview Plumbing & HVAC',
-    domain: 'soundviewplumbing.com',
-    category: 'Local Trade Services',
-    image: '/images/recent-work/soundview.jpg',
-    testimonial:
-      '"After launching our new Astro site with Hill Stack Studio, our emergency service calls tripled. When local homeowners ask ChatGPT or Siri for a 24/7 plumber in Puyallup, we show up first!"',
-    author: {
-      name: 'Marcus Vance',
-      title: 'Owner & Master Plumber',
-      initials: 'MV',
-    },
-    metrics: ['3x Emergency Calls', '0.3s Load Speed', 'ChatGPT Ready'],
-    color: '#17A398',
-  },
-  {
-    id: 'cascade',
-    company: 'Cascade Custom Builders',
-    domain: 'cascadebuilderspnw.com',
-    category: 'Architecture & Contracting',
-    image: '/images/recent-work/cascade.jpg',
-    testimonial:
-      '"Hill Stack Studio turned our outdated site into a high-converting digital storefront. Their local AI search audit gave us a massive competitive edge across Tacoma and Seattle."',
-    author: {
-      name: 'Elena Rostova',
-      title: 'Operations Manager',
-      initials: 'ER',
-    },
-    metrics: ['+180% Organic Leads', '100% Machine Schema', 'Zero Downtime'],
-    color: '#17A398',
-  },
 ];
 
 const RecentWork: React.FC<RecentWorkProps> = ({ works = defaultWorks }) => {
-  const [activeIndex, setActiveIndex] = useState(0);
-  const currentWork = works[activeIndex] || works[0];
-
-  const handlePrev = () => {
-    setActiveIndex((prev) => (prev === 0 ? works.length - 1 : prev - 1));
-  };
-
-  const handleNext = () => {
-    setActiveIndex((prev) => (prev === works.length - 1 ? 0 : prev + 1));
-  };
+  const currentWork = works[0] || defaultWorks[0];
 
   return (
     <section id="recent-work" className="py-20 md:py-28 bg-[#F8FAFC] border-b border-slate-200/80 relative overflow-hidden">
@@ -97,125 +56,22 @@ const RecentWork: React.FC<RecentWorkProps> = ({ works = defaultWorks }) => {
           </h2>
         </div>
 
-        {/* Project Selector Tabs & Navigation */}
-        {works.length > 1 && (
-          <div className="flex flex-wrap items-center justify-between gap-4 mb-10 pb-4 border-b border-slate-200/80 max-w-6xl mx-auto">
-            {/* Tab Buttons */}
-            <div className="flex items-center gap-2 overflow-x-auto pb-2 sm:pb-0 scrollbar-none">
-              {works.map((item, idx) => {
-                const isActive = idx === activeIndex;
-                return (
-                  <button
-                    key={item.id}
-                    onClick={() => setActiveIndex(idx)}
-                    className={`px-4 py-2 rounded-full text-xs sm:text-sm font-bold transition-all duration-200 whitespace-nowrap ${
-                      isActive
-                        ? 'bg-[#17A398] text-white shadow-md shadow-teal-500/20'
-                        : 'bg-white text-slate-600 hover:bg-slate-50 border border-slate-200/80 hover:text-[#0B0F19]'
-                    }`}
-                  >
-                    {item.company}
-                  </button>
-                );
-              })}
-            </div>
-
-            {/* Prev / Next Controls */}
-            <div className="flex items-center gap-2">
-              <span className="text-xs font-bold text-slate-400 mr-2">
-                {activeIndex + 1} / {works.length}
-              </span>
-              <button
-                onClick={handlePrev}
-                aria-label="Previous project"
-                className="w-9 h-9 rounded-full bg-white border border-slate-200/80 flex items-center justify-center text-slate-700 hover:bg-teal-50 hover:text-[#17A398] hover:border-teal-200 transition-colors font-bold text-base"
-              >
-                ‹
-              </button>
-              <button
-                onClick={handleNext}
-                aria-label="Next project"
-                className="w-9 h-9 rounded-full bg-white border border-slate-200/80 flex items-center justify-center text-slate-700 hover:bg-teal-50 hover:text-[#17A398] hover:border-teal-200 transition-colors font-bold text-base"
-              >
-                ›
-              </button>
-            </div>
-          </div>
-        )}
-
-        {/* Showcase Grid Layout */}
-        <div className="max-w-6xl mx-auto grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-12 items-center">
-          {/* Left Column: Testimonial & Client Metadata */}
-          <div className="lg:col-span-5 flex flex-col justify-between h-full py-2">
-            <div>
-              {/* Domain link with brand accent color */}
-              <a
-                href={`https://${currentWork.domain}`}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-flex items-center gap-1.5 text-[#17A398] hover:text-[#128279] font-bold text-lg sm:text-xl transition-colors group mb-6"
-              >
-                <span>{currentWork.domain}</span>
-                <svg
-                  className="w-5 h-5 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform"
-                  fill="none"
-                  viewBox="0 0 24 24"
-                  stroke="currentColor"
-                  strokeWidth="2.5"
-                >
-                  <path strokeLinecap="round" strokeLinejoin="round" d="M7 17L17 7M17 7H7M17 7V17" />
-                </svg>
-              </a>
-
-              {/* Main Testimonial Quote */}
-              <blockquote className="text-xl sm:text-2xl font-bold text-[#0B0F19] leading-snug sm:leading-normal tracking-tight mb-8">
-                {currentWork.testimonial}
-              </blockquote>
-
-              {/* Impact Metrics Badges matching brand primary tint */}
-              {currentWork.metrics && currentWork.metrics.length > 0 && (
-                <div className="flex flex-wrap gap-2 mb-8">
-                  {currentWork.metrics.map((metric, i) => (
-                    <span
-                      key={i}
-                      className="inline-flex items-center px-3 py-1 rounded-full text-xs font-bold bg-teal-50 text-[#17A398] border border-teal-200/80"
-                    >
-                      {metric}
-                    </span>
-                  ))}
-                </div>
-              )}
-            </div>
-
-            {/* Author Profile Footer */}
-            <div className="flex items-center gap-4 pt-4 border-t border-slate-200/80">
-              {currentWork.author.avatar ? (
-                <img
-                  src={currentWork.author.avatar}
-                  alt={currentWork.author.name}
-                  className="w-12 h-12 rounded-full object-cover border-2 border-white shadow-sm"
-                />
-              ) : (
-                <div className="w-12 h-12 rounded-full bg-[#17A398] text-white font-bold flex items-center justify-center text-sm shadow-md">
-                  {currentWork.author.initials}
-                </div>
-              )}
-              <div>
-                <h4 className="text-base font-bold text-[#0B0F19]">{currentWork.author.name}</h4>
-                <p className="text-sm text-slate-500 font-normal">{currentWork.author.title}</p>
-              </div>
-            </div>
-          </div>
-
-          {/* Right Column: Clean Image Display without browser frame */}
-          <div className="lg:col-span-7">
-            <div className="bg-white rounded-3xl p-3 sm:p-4 border border-slate-200/80 shadow-xl overflow-hidden">
-              <div className="relative rounded-2xl overflow-hidden bg-slate-100 border border-slate-200/70 min-h-[320px] sm:min-h-[400px] flex items-center justify-center">
+        {/* Showcase Layout: Image above link and description */}
+        <div className="max-w-4xl mx-auto flex flex-col items-center">
+          {/* Site Image Display */}
+          <div className="w-full mb-8 sm:mb-10">
+            <a
+              href={`https://${currentWork.domain}`}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="block group bg-white rounded-3xl p-3 sm:p-4 border border-slate-200/80 shadow-xl hover:shadow-2xl transition-all duration-300 overflow-hidden"
+            >
+              <div className="relative rounded-2xl overflow-hidden bg-slate-100 border border-slate-200/70 flex items-center justify-center">
                 {currentWork.image ? (
                   <img
                     src={currentWork.image}
                     alt={`${currentWork.company} Website`}
-                    className="w-full h-full object-cover object-top rounded-2xl"
+                    className="w-full h-auto block object-contain rounded-2xl group-hover:scale-[1.01] transition-transform duration-500"
                     onError={(e) => {
                       // Fallback if local image doesn't exist yet
                       const target = e.currentTarget;
@@ -246,6 +102,66 @@ const RecentWork: React.FC<RecentWorkProps> = ({ works = defaultWorks }) => {
                     <span className="text-xs text-slate-500 max-w-xs">{currentWork.domain}</span>
                   </div>
                 )}
+              </div>
+            </a>
+          </div>
+
+          {/* Details below: Link to site, Description/Testimonial, Metrics, Author */}
+          <div className="w-full max-w-3xl flex flex-col items-center text-center">
+            {/* Domain link with brand accent color */}
+            <a
+              href={`https://${currentWork.domain}`}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-1.5 text-[#17A398] hover:text-[#128279] font-bold text-lg sm:text-xl transition-colors group mb-6"
+            >
+              <span>{currentWork.domain}</span>
+              <svg
+                className="w-5 h-5 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+                strokeWidth="2.5"
+              >
+                <path strokeLinecap="round" strokeLinejoin="round" d="M7 17L17 7M17 7H7M17 7V17" />
+              </svg>
+            </a>
+
+            {/* Main Testimonial Quote / Description */}
+            <blockquote className="text-xl sm:text-2xl font-bold text-[#0B0F19] leading-snug sm:leading-normal tracking-tight mb-8">
+              {currentWork.testimonial}
+            </blockquote>
+
+            {/* Impact Metrics Badges matching brand primary tint */}
+            {currentWork.metrics && currentWork.metrics.length > 0 && (
+              <div className="flex flex-wrap justify-center gap-2 mb-8">
+                {currentWork.metrics.map((metric, i) => (
+                  <span
+                    key={i}
+                    className="inline-flex items-center px-3.5 py-1.5 rounded-full text-xs sm:text-sm font-bold bg-teal-50 text-[#17A398] border border-teal-200/80"
+                  >
+                    {metric}
+                  </span>
+                ))}
+              </div>
+            )}
+
+            {/* Author Profile Footer */}
+            <div className="flex flex-col items-center text-center pt-6 border-t border-slate-200/80 w-full max-w-md mx-auto">
+              {currentWork.author.avatar ? (
+                <img
+                  src={currentWork.author.avatar}
+                  alt={currentWork.author.name}
+                  className="w-14 h-14 rounded-full object-cover border-2 border-white shadow-sm mb-3"
+                />
+              ) : (
+                <div className="w-14 h-14 rounded-full bg-[#17A398] text-white font-bold flex items-center justify-center text-base shadow-md mb-3">
+                  {currentWork.author.initials}
+                </div>
+              )}
+              <div>
+                <h4 className="text-lg font-bold text-[#0B0F19] mb-1">{currentWork.author.name}</h4>
+                <p className="text-sm sm:text-base text-slate-500 font-normal">{currentWork.author.title}</p>
               </div>
             </div>
           </div>
