@@ -32,7 +32,13 @@ const aiBrands: AiBrand[] = [
   },
 ];
 
-export const AiMarquee: React.FC = () => {
+export interface AiMarqueeProps {
+  title?: string;
+}
+
+export const AiMarquee: React.FC<AiMarqueeProps> = ({
+  title = "Engineered for Modern Search",
+}) => {
   // Duplicate array 4x to guarantee a seamless continuous translateX(-50%) loop on all screen sizes
   const marqueeItems = [...aiBrands, ...aiBrands, ...aiBrands, ...aiBrands];
 
@@ -40,7 +46,7 @@ export const AiMarquee: React.FC = () => {
     <div className="w-full my-6 sm:my-8 md:my-10">
       {/* Title above marquee matching site design system */}
       <span className="text-[#17A398] text-sm font-bold uppercase tracking-wider mb-4 sm:mb-5 block text-center">
-        Engineered for Modern Search
+        {title}
       </span>
 
       {/* Marquee Outer Container with horizontal fade mask */}

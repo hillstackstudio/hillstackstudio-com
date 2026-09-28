@@ -1,0 +1,219 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+import AiMarquee from '../components/AiMarquee';
+import siteContext from '../data/siteContext.json';
+const teamMembers = [
+  {
+    name: "Benjamin Hill",
+    role: "Co-Founder & Principal Engineer",
+    image: "/images/team/placeholder-avatar.svg",
+  },
+  {
+    name: "Erin Kea Openiano",
+    role: "Co-Founder & Client Relations",
+    image: "/images/team/placeholder-avatar.svg",
+  },
+];
+---
+
+<BaseLayout
+  title={`About Us | ${siteContext.companyName}`}
+  description="Learn about Hill Stack Studio: Locally rooted web engineering studio in the Pacific Northwest combining sub-second Astro websites with Generative Engine Optimization (GEO)."
+>
+  <Header
+    companyName={siteContext.companyName}
+    email={siteContext.contact.email}
+  />
+
+  <main class="bg-[#F8FAFC] flex-grow flex flex-col">
+    {/* Page Header Hero */}
+    <section class="bg-gradient-to-b from-[#E6F6F5] via-[#F0F9F8] to-[#F8FAFC] pt-14 pb-16 md:pt-20 md:pb-24 border-b border-slate-200/60 relative">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+        {/* Breadcrumbs */}
+        <nav class="flex items-center justify-center gap-2 text-xs md:text-sm text-slate-500 mb-6 font-medium">
+          <a href="/" class="hover:text-[#17A398] transition-colors flex items-center gap-1">
+            <svg class="w-3.5 h-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6" />
+            </svg>
+            <span>Home</span>
+          </a>
+          <span>/</span>
+          <span class="text-slate-800 font-bold">About Us</span>
+        </nav>
+
+        <span class="text-[#17A398] text-sm font-bold uppercase tracking-wider mb-3 block">
+          Our Mission
+        </span>
+        <h1 class="text-4xl md:text-5xl font-extrabold text-[#0B0F19] tracking-tight mb-6 max-w-4xl mx-auto leading-[1.15]">
+          Locally Rooted.<br />
+          AI Optimized.
+        </h1>
+        <p class="text-lg sm:text-xl text-slate-600 max-w-3xl mx-auto leading-relaxed">
+          We take pride in helping Pacific Northwest businesses stand out on Google, convert visitors into customers, and remain discoverable in the rapidly evolving world of AI search.
+        </p>
+
+        <AiMarquee
+          client:load
+          title="Modernize Your Business with Discoverability in AI Search"
+        />
+      </div>
+    </section>
+
+    {/* The Hill Stack Story Section */}
+    <section class="py-16 md:py-24">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-center">
+          <div class="lg:col-span-7">
+            <span class="text-[#17A398] text-sm font-bold uppercase tracking-wider mb-3 block">
+              Our Story
+            </span>
+            <h2 class="text-3xl sm:text-4xl font-extrabold text-[#0B0F19] tracking-tight mb-6 leading-snug">
+              The internet and search have moved forward. Most small business websites haven't.
+            </h2>
+            <div class="space-y-4 text-slate-600 text-base sm:text-lg leading-relaxed">
+              <p>
+                How people discover local businesses has fundamentally transformed. Customers aren't just typing keywords into Google anymore. They're asking AI assistants like <strong>ChatGPT, Gemini and Claude</strong> for trusted recommendations. Companies with teams of software developers are currently making this transition, but most small business websites are outdated and completely invisible to these modern AI search engines.
+              </p>
+              <p>
+                <strong>Hill Stack Studio</strong> was founded to solve this problem. We provide modern engineering, Generative Engine Optimization (GEO) and full website redesign combined with the strategic consulting our local businesses deserve.
+              </p>
+            </div>
+            
+            <div class="mt-8 flex flex-wrap items-center gap-4">
+              <a
+                href="/#contact"
+                class="inline-flex items-center gap-2 bg-[#17A398] hover:bg-[#128279] text-white font-bold py-3.5 px-8 rounded-full shadow-lg shadow-teal-500/25 hover:shadow-teal-500/35 transition-all duration-200 active:scale-95 text-base"
+              >
+                <span>Request a Consultation</span>
+                <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M14 5l7 7m0 0l-7 7m7-7H3" />
+                </svg>
+              </a>
+              <a
+                href="/services"
+                class="inline-flex items-center gap-2 bg-white hover:bg-slate-50 text-slate-700 font-bold py-3.5 px-7 rounded-full border border-slate-200/90 shadow-xs hover:shadow-md transition-all duration-200 text-base"
+              >
+                <span>View Our Services</span>
+              </a>
+            </div>
+          </div>
+
+          <div class="lg:col-span-5">
+            <div class="bg-white rounded-3xl p-8 sm:p-10 border border-slate-200/80 shadow-xl relative overflow-hidden">
+              <div class="flex items-center gap-4 mb-6">
+                <div class="w-12 h-12 rounded-2xl bg-teal-50 text-[#17A398] flex items-center justify-center font-bold text-xl shadow-xs shrink-0">
+                  ✦
+                </div>
+                <h3 class="text-2xl font-extrabold text-[#0B0F19]">Our Commitment</h3>
+              </div>
+              <ul class="space-y-4 text-slate-600 text-base">
+                <li class="flex items-start gap-3">
+                  <span class="text-[#17A398] font-bold mt-0.5 shrink-0">✓</span>
+                  <span><strong>100% Custom Engineering:</strong> Fast, clean code built to run smoothly and reliably.</span>
+                </li>
+                <li class="flex items-start gap-3">
+                  <span class="text-[#17A398] font-bold mt-0.5 shrink-0">✓</span>
+                  <span><strong>GEO & AI Search Ready:</strong> Structured data that positions your business as the trusted choice in your area.</span>
+                </li>
+                <li class="flex items-start gap-3">
+                  <span class="text-[#17A398] font-bold mt-0.5 shrink-0">✓</span>
+                  <span><strong>Locally Focused:</strong> Proudly partnering with businesses across Seattle, Bellevue, Tacoma and the PNW.</span>
+                </li>
+                <li class="flex items-start gap-3">
+                  <span class="text-[#17A398] font-bold mt-0.5 shrink-0">✓</span>
+                  <span><strong>Complete Website Support:</strong> We manage your hosting, security and updates so you can focus on running your business.</span>
+                </li>
+              </ul>
+
+              <div class="mt-8 pt-6 border-t border-slate-100 flex items-center justify-between">
+                <div>
+                  <div class="text-xs uppercase tracking-wider font-bold text-slate-400">Response Time</div>
+                  <div class="text-sm font-bold text-[#17A398]">Within 24 Hours</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    {/* Our Team Section */}
+    <section class="py-16 md:py-24 bg-[#F8FAFC] border-t border-slate-200/80">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center max-w-3xl mx-auto mb-14 sm:mb-16">
+          <span class="text-[#17A398] text-sm font-bold uppercase tracking-wider mb-2 block">
+            Our Team
+          </span>
+          <h2 class="text-3xl sm:text-4xl md:text-5xl font-extrabold text-[#0B0F19] tracking-tight">
+            Modern Engineering, Dedicated Partnership
+          </h2>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-3xl mx-auto">
+          {teamMembers.map((member) => (
+            <div class="bg-white rounded-3xl p-8 sm:p-10 border border-slate-200/80 shadow-xs hover:shadow-xl transition-all duration-300 flex flex-col items-center text-center group">
+              <div class="w-28 h-28 sm:w-32 sm:h-32 rounded-full overflow-hidden mb-6 border-4 border-slate-50 shadow-md ring-1 ring-slate-200/80 group-hover:scale-105 transition-transform duration-300 bg-slate-100">
+                <img
+                  src={member.image}
+                  alt={member.name}
+                  class="w-full h-full object-cover"
+                  loading="lazy"
+                />
+              </div>
+              <h3 class="text-2xl font-extrabold text-[#0B0F19] mb-1.5 tracking-tight group-hover:text-[#17A398] transition-colors">
+                {member.name}
+              </h3>
+              <p class="text-slate-500 font-medium text-base sm:text-lg">
+                {member.role}
+              </p>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+
+    {/* Regional Service Focus Banner */}
+    <section class="py-12 bg-white border-t border-slate-200/80">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+        <span class="text-slate-500 text-xs sm:text-sm font-semibold uppercase tracking-wider block mb-4">
+          Proudly Serving Communities Across the Pacific Northwest
+        </span>
+        <div class="flex flex-wrap items-center justify-center gap-2 sm:gap-3">
+          {siteContext.regionalKeywords.map((city) => (
+            <span class="inline-flex items-center px-4 py-2 rounded-full text-xs sm:text-sm font-bold bg-teal-50 text-[#17A398] border border-teal-200/60">
+              {city}
+            </span>
+          ))}
+        </div>
+      </div>
+    </section>
+
+    {/* Bottom Call to Action Banner */}
+    <section class="py-16 md:py-20 bg-[#E6F6F5]/60 border-t border-slate-200/80">
+      <div class="max-w-4xl mx-auto px-4 text-center">
+        <h2 class="text-3xl sm:text-4xl font-extrabold text-[#0B0F19] mb-4">
+          Ready to Elevate Your Online Visibility?
+        </h2>
+        <p class="text-slate-600 text-lg mb-8 max-w-xl mx-auto leading-relaxed">
+          Contact Hill Stack Studio today for a plain-English consultation and a custom audit of your website's performance and AI discoverability.
+        </p>
+        <a
+          href="/#contact"
+          class="inline-flex items-center gap-2 bg-[#17A398] hover:bg-[#128279] text-white font-bold py-3.5 px-8 rounded-full shadow-lg shadow-teal-500/25 hover:shadow-teal-500/35 transition-all duration-200 active:scale-95 text-base"
+        >
+          <span>Schedule Your Consultation</span>
+          <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M14 5l7 7m0 0l-7 7m7-7H3" />
+          </svg>
+        </a>
+      </div>
+    </section>
+  </main>
+
+  <Footer
+    companyName={siteContext.companyName}
+    email={siteContext.contact.email}
+  />
+</BaseLayout>
