@@ -36,7 +36,7 @@ const defaultWorks: WorkItem[] = [
       initials: 'CS',
     },
     metrics: ['+140% Web Traffic', '97/100 Performance', '100/100 SEO Score'],
-    color: '#17A398',
+    color: '#2563EB',
   },
 ];
 
@@ -48,7 +48,7 @@ const RecentWork: React.FC<RecentWorkProps> = ({ works = defaultWorks }) => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Header matching site design system */}
         <div className="text-center mb-12 sm:mb-16 max-w-3xl mx-auto">
-          <span className="text-[#17A398] text-sm font-bold uppercase tracking-wider mb-2 block">
+          <span className="text-[#2563EB] text-sm font-bold uppercase tracking-wider mb-2 block">
             Our Work
           </span>
           <h2 className="text-3xl sm:text-4xl md:text-5xl font-extrabold text-[#0B0F19] tracking-tight leading-[1.15]">
@@ -78,8 +78,8 @@ const RecentWork: React.FC<RecentWorkProps> = ({ works = defaultWorks }) => {
                       target.style.display = 'none';
                       if (target.parentElement) {
                         target.parentElement.innerHTML = `
-                          <div class="flex flex-col items-center justify-center p-8 text-center bg-gradient-to-br from-slate-50 to-teal-50/40 w-full min-h-[360px]">
-                            <div class="w-16 h-16 rounded-2xl bg-teal-50 text-[#17A398] flex items-center justify-center mb-4 border border-teal-100 shadow-sm">
+                          <div class="flex flex-col items-center justify-center p-8 text-center bg-gradient-to-br from-slate-50 to-blue-50/40 w-full min-h-[360px]">
+                            <div class="w-16 h-16 rounded-2xl bg-blue-50 text-[#2563EB] flex items-center justify-center mb-4 border border-blue-100 shadow-sm">
                               <svg class="w-8 h-8" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5">
                                 <path stroke-linecap="round" stroke-linejoin="round" d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z" />
                               </svg>
@@ -92,8 +92,8 @@ const RecentWork: React.FC<RecentWorkProps> = ({ works = defaultWorks }) => {
                     }}
                   />
                 ) : (
-                  <div className="flex flex-col items-center justify-center p-8 text-center bg-gradient-to-br from-slate-50 to-teal-50/40 w-full min-h-[360px]">
-                    <div className="w-16 h-16 rounded-2xl bg-teal-50 text-[#17A398] flex items-center justify-center mb-4 border border-teal-100 shadow-sm">
+                  <div className="flex flex-col items-center justify-center p-8 text-center bg-gradient-to-br from-slate-50 to-blue-50/40 w-full min-h-[360px]">
+                    <div className="w-16 h-16 rounded-2xl bg-blue-50 text-[#2563EB] flex items-center justify-center mb-4 border border-blue-100 shadow-sm">
                       <svg className="w-8 h-8" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="1.5">
                         <path strokeLinecap="round" strokeLinejoin="round" d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z" />
                       </svg>
@@ -113,7 +113,7 @@ const RecentWork: React.FC<RecentWorkProps> = ({ works = defaultWorks }) => {
               href={`https://${currentWork.domain}`}
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center gap-1.5 text-[#17A398] hover:text-[#128279] font-bold text-lg sm:text-xl transition-colors group mb-6"
+              className="inline-flex items-center gap-1.5 text-[#2563EB] hover:text-[#1D4ED8] font-bold text-lg sm:text-xl transition-colors group mb-6"
             >
               <span>{currentWork.domain}</span>
               <svg
@@ -138,7 +138,7 @@ const RecentWork: React.FC<RecentWorkProps> = ({ works = defaultWorks }) => {
                 {currentWork.metrics.map((metric, i) => (
                   <span
                     key={i}
-                    className="inline-flex items-center px-3.5 py-1.5 rounded-full text-xs sm:text-sm font-bold bg-teal-50 text-[#17A398] border border-teal-200/80"
+                    className="inline-flex items-center px-3.5 py-1.5 rounded-full text-xs sm:text-sm font-bold bg-blue-50 text-[#2563EB] border border-blue-200/80"
                   >
                     {metric}
                   </span>
@@ -155,7 +155,7 @@ const RecentWork: React.FC<RecentWorkProps> = ({ works = defaultWorks }) => {
                   className="w-14 h-14 rounded-full object-cover border-2 border-white shadow-sm mb-3"
                 />
               ) : (
-                <div className="w-14 h-14 rounded-full bg-[#17A398] text-white font-bold flex items-center justify-center text-base shadow-md mb-3">
+                <div className="w-14 h-14 rounded-full bg-[#2563EB] text-white font-bold flex items-center justify-center text-base shadow-md mb-3">
                   {currentWork.author.initials}
                 </div>
               )}

@@ -104,7 +104,7 @@ const Services: React.FC<ServicesProps> = ({ services }) => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Header */}
         <div className="text-center mb-16 max-w-3xl mx-auto">
-          <span className="text-[#17A398] text-sm font-bold uppercase tracking-wider mb-2 block">
+          <span className="text-[#2563EB] text-sm font-bold uppercase tracking-wider mb-2 block">
             What We Do
           </span>
           <h2 className="text-3xl sm:text-4xl md:text-5xl font-extrabold text-[#0B0F19] tracking-tight mb-6">
@@ -135,17 +135,17 @@ const Services: React.FC<ServicesProps> = ({ services }) => {
                 }`}
               >
                 <div className="flex flex-col items-center text-center">
-                  <div className="w-12 h-12 rounded-xl bg-teal-50 text-[#17A398] flex items-center justify-center mb-6 mx-auto group-hover:bg-[#17A398] group-hover:text-white transition-colors duration-300">
+                  <div className="w-12 h-12 rounded-xl bg-blue-50 text-[#2563EB] flex items-center justify-center mb-6 mx-auto group-hover:bg-[#2563EB] group-hover:text-white transition-colors duration-300">
                     {getServiceIcon(index)}
                   </div>
-                  <h3 className="text-xl font-bold text-[#0B0F19] mb-3 group-hover:text-[#17A398] transition-colors">
+                  <h3 className="text-xl font-bold text-[#0B0F19] mb-3 group-hover:text-[#2563EB] transition-colors">
                     {service.name}
                   </h3>
                   <p className="text-slate-600 leading-relaxed text-base md:text-lg">
                     {service.description}
                   </p>
                 </div>
-                <div className="mt-6 pt-4 border-t border-slate-100 flex items-center justify-center text-[#17A398] text-sm font-bold">
+                <div className="mt-6 pt-4 border-t border-slate-100 flex items-center justify-center text-[#2563EB] text-sm font-bold">
                   <span>Learn more</span>
                 </div>
               </a>
@@ -163,7 +163,7 @@ const Services: React.FC<ServicesProps> = ({ services }) => {
           </a>
           <a
             href="#contact"
-            className="inline-flex items-center gap-2 bg-[#17A398] hover:bg-[#128279] text-white font-bold py-3.5 px-8 rounded-full shadow-lg shadow-teal-500/25 hover:shadow-teal-500/35 transition-all duration-200 active:scale-95 text-base"
+            className="inline-flex items-center gap-2 bg-[#2563EB] hover:bg-[#1D4ED8] text-white font-bold py-3.5 px-8 rounded-full shadow-sm hover:shadow-md transition-all duration-200 active:scale-95 text-base"
           >
             <span>Request a Consultation</span>
           </a>

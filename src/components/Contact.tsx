@@ -10,14 +10,14 @@ const Contact: React.FC<ContactProps> = () => {
     <section id="contact" className="py-20 md:py-28 bg-[#F8FAFC] border-b border-slate-200/80">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-12 max-w-3xl mx-auto">
-          <span className="text-[#17A398] text-sm font-bold uppercase tracking-wider mb-2 block">
+          <span className="text-[#2563EB] text-sm font-bold uppercase tracking-wider mb-2 block">
             Contact Our Team
           </span>
           <h2 className="text-3xl sm:text-4xl md:text-5xl font-extrabold text-[#0B0F19] tracking-tight mb-6">
             Improve Your Digital Presence
           </h2>
           <p className="text-lg text-slate-600 leading-relaxed">
-            To get in touch, you may submit the form below or send an email to: <a href="mailto:team@hillstackstudio.com" className="text-[#17A398] font-bold hover:text-[#128279] transition-colors">team@hillstackstudio.com</a>
+            To get in touch, you may submit the form below or send an email to: <a href="mailto:team@hillstackstudio.com" className="text-[#2563EB] font-bold hover:text-[#1D4ED8] transition-colors">team@hillstackstudio.com</a>
           </p>
         </div>
         
@@ -30,7 +30,7 @@ const Contact: React.FC<ContactProps> = () => {
                 <input 
                   type="text" 
                   id="name" 
-                  className="w-full px-4 py-3.5 bg-slate-50 border border-slate-200 rounded-xl focus:bg-white focus:ring-2 focus:ring-[#17A398] focus:border-transparent transition-all text-slate-900 placeholder:text-slate-400 text-sm"
+                  className="w-full px-4 py-3.5 bg-slate-50 border border-slate-200 rounded-xl focus:bg-white focus:ring-2 focus:ring-[#2563EB] focus:border-transparent transition-all text-slate-900 placeholder:text-slate-400 text-sm"
                   placeholder="e.g. John Doe"
                 />
               </div>
@@ -40,7 +40,7 @@ const Contact: React.FC<ContactProps> = () => {
                 <input 
                   type="text" 
                   id="company" 
-                  className="w-full px-4 py-3.5 bg-slate-50 border border-slate-200 rounded-xl focus:bg-white focus:ring-2 focus:ring-[#17A398] focus:border-transparent transition-all text-slate-900 placeholder:text-slate-400 text-sm"
+                  className="w-full px-4 py-3.5 bg-slate-50 border border-slate-200 rounded-xl focus:bg-white focus:ring-2 focus:ring-[#2563EB] focus:border-transparent transition-all text-slate-900 placeholder:text-slate-400 text-sm"
                   placeholder="e.g. Acme Services"
                 />
               </div>
@@ -50,7 +50,7 @@ const Contact: React.FC<ContactProps> = () => {
                 <input 
                   type="email" 
                   id="email" 
-                  className="w-full px-4 py-3.5 bg-slate-50 border border-slate-200 rounded-xl focus:bg-white focus:ring-2 focus:ring-[#17A398] focus:border-transparent transition-all text-slate-900 placeholder:text-slate-400 text-sm"
+                  className="w-full px-4 py-3.5 bg-slate-50 border border-slate-200 rounded-xl focus:bg-white focus:ring-2 focus:ring-[#2563EB] focus:border-transparent transition-all text-slate-900 placeholder:text-slate-400 text-sm"
                   placeholder="john@yourbusiness.com"
                 />
               </div>
@@ -60,7 +60,7 @@ const Contact: React.FC<ContactProps> = () => {
                 <input 
                   type="url" 
                   id="website" 
-                  className="w-full px-4 py-3.5 bg-slate-50 border border-slate-200 rounded-xl focus:bg-white focus:ring-2 focus:ring-[#17A398] focus:border-transparent transition-all text-slate-900 placeholder:text-slate-400 text-sm"
+                  className="w-full px-4 py-3.5 bg-slate-50 border border-slate-200 rounded-xl focus:bg-white focus:ring-2 focus:ring-[#2563EB] focus:border-transparent transition-all text-slate-900 placeholder:text-slate-400 text-sm"
                   placeholder="https://yourbusiness.com"
                 />
               </div>
@@ -70,7 +70,7 @@ const Contact: React.FC<ContactProps> = () => {
                 <input 
                   type="tel" 
                   id="phone" 
-                  className="w-full px-4 py-3.5 bg-slate-50 border border-slate-200 rounded-xl focus:bg-white focus:ring-2 focus:ring-[#17A398] focus:border-transparent transition-all text-slate-900 placeholder:text-slate-400 text-sm"
+                  className="w-full px-4 py-3.5 bg-slate-50 border border-slate-200 rounded-xl focus:bg-white focus:ring-2 focus:ring-[#2563EB] focus:border-transparent transition-all text-slate-900 placeholder:text-slate-400 text-sm"
                   placeholder="(253) 555-0199"
                 />
               </div>
@@ -80,7 +80,7 @@ const Contact: React.FC<ContactProps> = () => {
                 <textarea 
                   id="message" 
                   rows={4}
-                  className="w-full px-4 py-3.5 bg-slate-50 border border-slate-200 rounded-xl focus:bg-white focus:ring-2 focus:ring-[#17A398] focus:border-transparent transition-all text-slate-900 placeholder:text-slate-400 text-sm resize-none"
+                  className="w-full px-4 py-3.5 bg-slate-50 border border-slate-200 rounded-xl focus:bg-white focus:ring-2 focus:ring-[#2563EB] focus:border-transparent transition-all text-slate-900 placeholder:text-slate-400 text-sm resize-none"
                   placeholder="Tell us about your business, current website, or service area..."
                 ></textarea>
               </div>
@@ -88,7 +88,7 @@ const Contact: React.FC<ContactProps> = () => {
             
             <button 
               type="submit" 
-              className="w-full bg-[#17A398] hover:bg-[#128279] text-white font-bold py-4 px-8 rounded-full shadow-lg shadow-teal-500/25 active:scale-95 transition-all duration-200 text-base mt-2 flex items-center justify-center gap-2"
+              className="w-full bg-[#2563EB] hover:bg-[#1D4ED8] text-white font-bold py-4 px-8 rounded-full shadow-sm hover:shadow-md active:scale-95 transition-all duration-200 text-base mt-2 flex items-center justify-center gap-2"
             >
               <span>Submit Request</span>
             </button>

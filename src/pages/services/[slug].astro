@@ -66,19 +66,16 @@ const siblingServices = servicesData
 
   <main class="bg-[#F8FAFC] flex-grow flex flex-col">
     {/* Hero Section */}
-    <section class="bg-gradient-to-b from-[#E6F6F5] via-[#F0F9F8] to-[#F8FAFC] pt-12 pb-16 md:pt-16 md:pb-24 border-b border-slate-200/60 relative overflow-hidden">
+    <section class="bg-gradient-to-b from-[#EFF6FF] via-[#F5F9FF] to-[#F8FAFC] pt-12 pb-16 md:pt-16 md:pb-24 border-b border-slate-200/60 relative overflow-hidden">
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         
         {/* Breadcrumbs */}
         <nav class="flex items-center gap-2 text-xs md:text-sm text-slate-500 mb-8 font-medium">
-          <a href="/" class="hover:text-[#17A398] transition-colors flex items-center gap-1">
-            <svg class="w-3.5 h-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
-              <path stroke-linecap="round" stroke-linejoin="round" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6" />
-            </svg>
-            <span>Home</span>
+          <a href="/" class="hover:text-[#2563EB] transition-colors">
+            Home
           </a>
           <span>/</span>
-          <a href="/services" class="hover:text-[#17A398] transition-colors">Services</a>
+          <a href="/services" class="hover:text-[#2563EB] transition-colors">Services</a>
           <span>/</span>
           <span class="text-slate-800 font-bold truncate max-w-[200px] sm:max-w-none">{currentService.name}</span>
         </nav>
@@ -86,7 +83,7 @@ const siblingServices = servicesData
         <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-12 items-center">
           <div class="lg:col-span-7">
             {currentService.badge && (
-              <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-teal-100/80 text-[#17A398] text-xs sm:text-sm font-bold mb-6 border border-teal-200/60">
+              <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-blue-100/80 text-[#2563EB] text-xs sm:text-sm font-bold mb-6 border border-blue-200/60">
                 <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
                   <path stroke-linecap="round" stroke-linejoin="round" d={getServiceSvgPath(currentService.iconIndex)} />
                 </svg>
@@ -98,7 +95,7 @@ const siblingServices = servicesData
               {currentService.name}
             </h1>
 
-            <p class="text-lg sm:text-xl text-[#17A398] font-semibold mb-6">
+            <p class="text-lg sm:text-xl text-[#2563EB] font-semibold mb-6">
               {currentService.tagline}
             </p>
 
@@ -115,7 +112,7 @@ const siblingServices = servicesData
               </a>
               <a
                 href="/#contact"
-                class="inline-flex items-center justify-center gap-2 bg-[#17A398] hover:bg-[#128279] text-white font-bold py-3.5 px-8 rounded-full shadow-lg shadow-teal-500/25 hover:shadow-teal-500/35 transition-all duration-200 active:scale-95 text-base"
+                class="inline-flex items-center justify-center gap-2 bg-[#2563EB] hover:bg-[#1D4ED8] text-white font-bold py-3.5 px-8 rounded-full shadow-sm hover:shadow-md transition-all duration-200 active:scale-95 text-base"
               >
                 <span>Request a Consultation</span>
                 <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5">
@@ -137,7 +134,7 @@ const siblingServices = servicesData
               </div>
             ) : (
               <div class="relative w-full max-w-sm bg-white rounded-3xl p-8 sm:p-10 border border-slate-200/80 shadow-xl text-center group">
-                <div class="w-24 h-24 mx-auto rounded-3xl bg-teal-50 text-[#17A398] flex items-center justify-center mb-6 shadow-inner group-hover:scale-105 group-hover:bg-[#17A398] group-hover:text-white transition-all duration-300">
+                <div class="w-24 h-24 mx-auto rounded-3xl bg-blue-50 text-[#2563EB] flex items-center justify-center mb-6 shadow-inner group-hover:scale-105 group-hover:bg-[#2563EB] group-hover:text-white transition-all duration-300">
                   <svg class="w-12 h-12" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.8">
                     <path stroke-linecap="round" stroke-linejoin="round" d={getServiceSvgPath(currentService.iconIndex)} />
                   </svg>
@@ -157,7 +154,7 @@ const siblingServices = servicesData
     <section class="py-16 md:py-24 bg-white border-b border-slate-200/80">
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div class="text-center max-w-3xl mx-auto mb-16">
-          <span class="text-[#17A398] text-sm font-bold uppercase tracking-wider block mb-2">
+          <span class="text-[#2563EB] text-sm font-bold uppercase tracking-wider block mb-2">
             Service Capabilities
           </span>
           <h2 class="text-3xl sm:text-4xl font-extrabold text-[#0B0F19] tracking-tight">
@@ -167,12 +164,12 @@ const siblingServices = servicesData
 
         <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
           {currentService.features.map((feature, idx) => (
-            <div class="bg-[#F8FAFC] rounded-2xl p-8 border border-slate-200/80 hover:border-teal-500/40 hover:shadow-lg transition-all duration-300 flex items-start gap-5 group">
-              <div class="w-10 h-10 rounded-xl bg-teal-50 text-[#17A398] group-hover:bg-[#17A398] group-hover:text-white flex items-center justify-center shrink-0 font-bold transition-colors">
+            <div class="bg-[#F8FAFC] rounded-2xl p-8 border border-slate-200/80 hover:border-blue-500/40 hover:shadow-lg transition-all duration-300 flex items-start gap-5 group">
+              <div class="w-10 h-10 rounded-xl bg-blue-50 text-[#2563EB] group-hover:bg-[#2563EB] group-hover:text-white flex items-center justify-center shrink-0 font-bold transition-colors">
                 {idx + 1}
               </div>
               <div>
-                <h3 class="text-xl font-bold text-[#0B0F19] mb-2 group-hover:text-[#17A398] transition-colors">
+                <h3 class="text-xl font-bold text-[#0B0F19] mb-2 group-hover:text-[#2563EB] transition-colors">
                   {feature.title}
                 </h3>
                 <p class="text-slate-600 leading-relaxed text-sm md:text-base">
@@ -187,10 +184,10 @@ const siblingServices = servicesData
 
     {/* AI Search & Local Impact Banner */}
     <section class="py-16 md:py-24 bg-[#0B0F19] text-white relative overflow-hidden">
-      <div class="absolute inset-0 opacity-10 bg-[radial-gradient(#17A398_1px,transparent_1px)] [background-size:16px_16px]"></div>
+      <div class="absolute inset-0 opacity-10 bg-[radial-gradient(#2563EB_1px,transparent_1px)] [background-size:16px_16px]"></div>
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <div class="max-w-4xl mx-auto bg-slate-900/90 rounded-3xl p-8 sm:p-12 border border-slate-800 shadow-2xl backdrop-blur-sm">
-          <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-teal-500/20 text-[#17A398] text-xs font-bold mb-4 uppercase tracking-wider border border-teal-500/30">
+          <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-blue-500/20 text-[#2563EB] text-xs font-bold mb-4 uppercase tracking-wider border border-blue-500/30">
             AI Visibility & Local Advantage
           </div>
           <h2 class="text-2xl sm:text-3xl md:text-4xl font-extrabold text-white mb-6 leading-tight">
@@ -202,7 +199,7 @@ const siblingServices = servicesData
 
           <div class="pt-6 border-t border-slate-800 flex items-center justify-end text-xs text-slate-400">
             <span class="flex items-center gap-2">
-              <svg class="w-4 h-4 text-teal-400" fill="currentColor" viewBox="0 0 20 20">
+              <svg class="w-4 h-4 text-blue-400" fill="currentColor" viewBox="0 0 20 20">
                 <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
               </svg>
               Optimized for ChatGPT, Copilot, Perplexity, & Gemini
@@ -216,7 +213,7 @@ const siblingServices = servicesData
     <section class="py-16 md:py-24 bg-[#F8FAFC] border-b border-slate-200/80">
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div class="text-center max-w-3xl mx-auto mb-16">
-          <span class="text-[#17A398] text-sm font-bold uppercase tracking-wider block mb-2">
+          <span class="text-[#2563EB] text-sm font-bold uppercase tracking-wider block mb-2">
             Execution Workflow
           </span>
           <h2 class="text-3xl sm:text-4xl font-extrabold text-[#0B0F19] tracking-tight">
@@ -228,7 +225,7 @@ const siblingServices = servicesData
           {currentService.processSteps.map((step) => (
             <div class="bg-white rounded-2xl p-7 border border-slate-200/80 shadow-xs flex flex-col justify-between hover:shadow-md transition-shadow">
               <div>
-                <span class="text-3xl font-black text-[#17A398]/30 block mb-3 font-mono">
+                <span class="text-3xl font-black text-[#2563EB]/30 block mb-3 font-mono">
                   {step.stepNumber}
                 </span>
                 <h3 class="text-lg font-bold text-[#0B0F19] mb-2">
@@ -249,7 +246,7 @@ const siblingServices = servicesData
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
           <div class="lg:col-span-5">
-            <span class="text-[#17A398] text-sm font-bold uppercase tracking-wider block mb-2">
+            <span class="text-[#2563EB] text-sm font-bold uppercase tracking-wider block mb-2">
               Tangible Results
             </span>
             <h2 class="text-3xl sm:text-4xl font-extrabold text-[#0B0F19] tracking-tight mb-6">
@@ -260,7 +257,7 @@ const siblingServices = servicesData
             </p>
             <a
               href="/#contact"
-              class="inline-flex items-center gap-2 text-[#17A398] font-bold text-sm hover:underline"
+              class="inline-flex items-center gap-2 text-[#2563EB] font-bold text-sm hover:underline"
             >
               <span>Have questions about deliverables? Talk to our team</span>
               <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5">
@@ -273,7 +270,7 @@ const siblingServices = servicesData
             <ul class="space-y-4">
               {currentService.deliverables.map((item) => (
                 <li class="flex items-start gap-3.5 text-slate-700 font-medium text-base">
-                  <div class="w-6 h-6 rounded-full bg-teal-100 text-[#17A398] flex items-center justify-center shrink-0 mt-0.5">
+                  <div class="w-6 h-6 rounded-full bg-blue-100 text-[#2563EB] flex items-center justify-center shrink-0 mt-0.5">
                     <svg class="w-3.5 h-3.5" fill="currentColor" viewBox="0 0 20 20">
                       <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd" />
                     </svg>
@@ -292,7 +289,7 @@ const siblingServices = servicesData
       <section class="py-16 md:py-24 bg-[#F8FAFC] border-b border-slate-200/80">
         <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <div class="text-center mb-12">
-            <span class="text-[#17A398] text-sm font-bold uppercase tracking-wider block mb-2">
+            <span class="text-[#2563EB] text-sm font-bold uppercase tracking-wider block mb-2">
               Got Questions?
             </span>
             <h2 class="text-3xl font-extrabold text-[#0B0F19]">
@@ -321,7 +318,7 @@ const siblingServices = servicesData
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div class="flex flex-col sm:flex-row items-start sm:items-end justify-between mb-12 gap-4">
           <div>
-            <span class="text-[#17A398] text-sm font-bold uppercase tracking-wider block mb-2">
+            <span class="text-[#2563EB] text-sm font-bold uppercase tracking-wider block mb-2">
               Explore More Solutions
             </span>
             <h2 class="text-2xl sm:text-3xl font-extrabold text-[#0B0F19]">
@@ -330,7 +327,7 @@ const siblingServices = servicesData
           </div>
           <a
             href="/services"
-            class="text-[#17A398] font-bold text-sm hover:underline flex items-center gap-1 shrink-0"
+            class="text-[#2563EB] font-bold text-sm hover:underline flex items-center gap-1 shrink-0"
           >
             <span>View All 9 Services</span>
             <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
@@ -343,15 +340,15 @@ const siblingServices = servicesData
           {siblingServices.map((sibling) => (
             <a
               href={`/services/${sibling.slug}`}
-              class="group bg-[#F8FAFC] rounded-2xl p-7 border border-slate-200/80 hover:border-teal-500/40 hover:bg-white hover:shadow-xl transition-all duration-300 flex flex-col justify-between"
+              class="group bg-[#F8FAFC] rounded-2xl p-7 border border-slate-200/80 hover:border-blue-500/40 hover:bg-white hover:shadow-xl transition-all duration-300 flex flex-col justify-between"
             >
               <div>
-                <div class="w-10 h-10 rounded-xl bg-teal-50 text-[#17A398] flex items-center justify-center mb-5 group-hover:bg-[#17A398] group-hover:text-white transition-colors">
+                <div class="w-10 h-10 rounded-xl bg-blue-50 text-[#2563EB] flex items-center justify-center mb-5 group-hover:bg-[#2563EB] group-hover:text-white transition-colors">
                   <svg class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
                     <path stroke-linecap="round" stroke-linejoin="round" d={getServiceSvgPath(sibling.iconIndex)} />
                   </svg>
                 </div>
-                <h3 class="text-lg font-bold text-[#0B0F19] mb-2 group-hover:text-[#17A398] transition-colors">
+                <h3 class="text-lg font-bold text-[#0B0F19] mb-2 group-hover:text-[#2563EB] transition-colors">
                   {sibling.name}
                 </h3>
                 <p class="text-slate-600 text-xs sm:text-sm line-clamp-3 leading-relaxed">
@@ -359,7 +356,7 @@ const siblingServices = servicesData
                 </p>
               </div>
 
-              <div class="mt-6 pt-4 border-t border-slate-200/60 flex items-center justify-end gap-1 text-[#17A398] text-xs font-bold">
+              <div class="mt-6 pt-4 border-t border-slate-200/60 flex items-center justify-end gap-1 text-[#2563EB] text-xs font-bold">
                 <span>Learn details</span>
                 <svg class="w-3.5 h-3.5 group-hover:translate-x-1 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5">
                   <path stroke-linecap="round" stroke-linejoin="round" d="M14 5l7 7m0 0l-7 7m7-7H3"/>
@@ -372,7 +369,7 @@ const siblingServices = servicesData
     </section>
 
     {/* Section Bottom Action */}
-    <section class="py-16 bg-[#F0F9F8]">
+    <section class="py-16 bg-[#EFF6FF]/60">
       <div class="max-w-4xl mx-auto px-4 text-center">
         <h2 class="text-2xl sm:text-3xl font-extrabold text-[#0B0F19] mb-4">
           Ready to Elevate Your Service Visibility in AI Search?
@@ -382,7 +379,7 @@ const siblingServices = servicesData
         </p>
         <a
           href="/#contact"
-          class="inline-flex items-center gap-2 bg-[#17A398] hover:bg-[#128279] text-white font-bold py-3.5 px-8 rounded-full shadow-lg shadow-teal-500/25 hover:shadow-teal-500/35 transition-all duration-200 active:scale-95 text-base"
+          class="inline-flex items-center gap-2 bg-[#2563EB] hover:bg-[#1D4ED8] text-white font-bold py-3.5 px-8 rounded-full shadow-sm hover:shadow-md transition-all duration-200 active:scale-95 text-base"
         >
           <span>Get Your Free Audit & Consultation</span>
         </a>

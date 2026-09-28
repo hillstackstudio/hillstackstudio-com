@@ -42,22 +42,19 @@ const getServiceSvgPath = (index: number) => {
 
   <main class="bg-[#F8FAFC] flex-grow flex flex-col">
     {/* Page Header Hero */}
-    <section class="bg-gradient-to-b from-[#E6F6F5] via-[#F0F9F8] to-[#F8FAFC] pt-14 pb-16 md:pt-20 md:pb-24 border-b border-slate-200/60 relative">
+    <section class="bg-gradient-to-b from-[#EFF6FF] via-[#F5F9FF] to-[#F8FAFC] pt-14 pb-16 md:pt-20 md:pb-24 border-b border-slate-200/60 relative">
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
         
         {/* Breadcrumbs */}
         <nav class="flex items-center justify-center gap-2 text-xs md:text-sm text-slate-500 mb-6 font-medium">
-          <a href="/" class="hover:text-[#17A398] transition-colors flex items-center gap-1">
-            <svg class="w-3.5 h-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
-              <path stroke-linecap="round" stroke-linejoin="round" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6" />
-            </svg>
-            <span>Home</span>
+          <a href="/" class="hover:text-[#2563EB] transition-colors">
+            Home
           </a>
           <span>/</span>
           <span class="text-slate-800 font-bold">Services</span>
         </nav>
 
-        <span class="text-[#17A398] text-sm font-bold uppercase tracking-wider mb-3 block">
+        <span class="text-[#2563EB] text-sm font-bold uppercase tracking-wider mb-3 block">
           Comprehensive Web & AI Visibility Solutions
         </span>
         <h1 class="text-4xl sm:text-5xl md:text-6xl font-extrabold text-[#0B0F19] tracking-tight mb-6 max-w-4xl mx-auto leading-[1.15]">
@@ -79,13 +76,13 @@ const getServiceSvgPath = (index: number) => {
               class="group bg-white rounded-2xl p-8 border border-slate-200/80 shadow-xs hover:shadow-2xl hover:-translate-y-1.5 transition-all duration-300 flex flex-col justify-between"
             >
               <div>
-                <div class="w-12 h-12 rounded-2xl bg-teal-50 text-[#17A398] flex items-center justify-center mb-6 group-hover:bg-[#17A398] group-hover:text-white transition-colors duration-300 shadow-xs">
+                <div class="w-12 h-12 rounded-2xl bg-blue-50 text-[#2563EB] flex items-center justify-center mb-6 group-hover:bg-[#2563EB] group-hover:text-white transition-colors duration-300 shadow-xs">
                   <svg class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
                     <path stroke-linecap="round" stroke-linejoin="round" d={getServiceSvgPath(service.iconIndex)} />
                   </svg>
                 </div>
 
-                <h2 class="text-xl font-bold text-[#0B0F19] mb-3 group-hover:text-[#17A398] transition-colors leading-snug">
+                <h2 class="text-xl font-bold text-[#0B0F19] mb-3 group-hover:text-[#2563EB] transition-colors leading-snug">
                   {service.name}
                 </h2>
                 <p class="text-slate-600 leading-relaxed text-base md:text-lg">
@@ -93,9 +90,9 @@ const getServiceSvgPath = (index: number) => {
                 </p>
               </div>
 
-              <div class="mt-8 pt-4 border-t border-slate-100 flex items-center justify-between text-[#17A398] text-sm font-bold">
+              <div class="mt-8 pt-4 border-t border-slate-100 flex items-center justify-between text-[#2563EB] text-sm font-bold">
                 <span>Explore Service Details</span>
-                <div class="w-8 h-8 rounded-full bg-teal-50 group-hover:bg-[#17A398] group-hover:text-white flex items-center justify-center transition-colors">
+                <div class="w-8 h-8 rounded-full bg-blue-50 group-hover:bg-[#2563EB] group-hover:text-white flex items-center justify-center transition-colors">
                   <svg class="w-4 h-4 group-hover:translate-x-0.5 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5">
                     <path stroke-linecap="round" stroke-linejoin="round" d="M14 5l7 7m0 0l-7 7m7-7H3"/>
                   </svg>
@@ -108,7 +105,7 @@ const getServiceSvgPath = (index: number) => {
     </section>
 
     {/* Bottom Call to Action */}
-    <section class="py-16 bg-[#E6F6F5]/60 border-t border-slate-200/80">
+    <section class="py-16 bg-[#EFF6FF]/60 border-t border-slate-200/80">
       <div class="max-w-4xl mx-auto px-4 text-center">
         <h2 class="text-3xl font-extrabold text-[#0B0F19] mb-4">
           Need Guidance Choosing the Right Strategy?
@@ -118,7 +115,7 @@ const getServiceSvgPath = (index: number) => {
         </p>
         <a
           href="/#contact"
-          class="inline-flex items-center gap-2 bg-[#17A398] hover:bg-[#128279] text-white font-bold py-3.5 px-8 rounded-full shadow-lg shadow-teal-500/25 hover:shadow-teal-500/35 transition-all duration-200 active:scale-95 text-base"
+          class="inline-flex items-center gap-2 bg-[#2563EB] hover:bg-[#1D4ED8] text-white font-bold py-3.5 px-8 rounded-full shadow-sm hover:shadow-md transition-all duration-200 active:scale-95 text-base"
         >
           <span>Schedule Your Consultation</span>
         </a>

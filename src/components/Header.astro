@@ -45,16 +45,30 @@ const serviceSvgPaths = [
 
 <header 
   id="main-header"
-  class="w-full bg-[#E6F6F5] border-b border-transparent sticky top-0 z-50 transition-all duration-300"
+  class="w-full bg-[#EFF6FF] border-b border-transparent sticky top-0 z-50 transition-all duration-300"
 >
   <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between relative">
-    <!-- Brand Logo Icon -->
-    <a href="/" class="flex items-center group py-2 z-10" aria-label="Hill Stack Studio Home">
+    <!-- Brand Logo & Wordmark -->
+    <a 
+      id="brand-logo-link"
+      href="/" 
+      class="flex items-center gap-3 group py-2 z-10 select-none transition-all duration-300 ease-in-out" 
+      aria-label="Hill Stack Studio Home"
+    >
       <img 
-        src="/logo.svg" 
-        alt="Hill Stack Studio Logo" 
-        class="h-10 w-auto object-contain group-hover:scale-105 transition-transform" 
+        src="/logo-icon.svg" 
+        alt="Hill Stack Studio Icon" 
+        class="h-8 sm:h-9 w-auto object-contain group-hover:scale-105 transition-transform shrink-0" 
       />
+      <div 
+        id="header-wordmark"
+        class="flex items-center overflow-hidden transition-all duration-300 ease-in-out max-w-[240px] opacity-100 translate-x-0"
+      >
+        <span class="text-lg sm:text-xl font-display tracking-tight whitespace-nowrap leading-none pl-0.5">
+          <span class="font-extrabold text-[#0f172a]">Hill Stack</span>
+          <span class="font-normal text-slate-500"> Studio</span>
+        </span>
+      </div>
     </a>
 
     <!-- Desktop Navigation -->
@@ -68,11 +82,11 @@ const serviceSvgPaths = [
             <div class="relative group/dropdown py-6">
               <a 
                 href={item.href} 
-                class="flex items-center gap-1.5 text-base lg:text-lg font-medium text-slate-700 group-hover/dropdown:text-[#17A398] transition-colors py-1"
+                class="flex items-center gap-1.5 text-base lg:text-lg font-medium text-slate-700 group-hover/dropdown:text-[#2563EB] transition-colors py-1"
               >
                 <span>{item.label}</span>
                 <svg 
-                  class="w-4 h-4 opacity-60 text-slate-500 group-hover/dropdown:text-[#17A398] group-hover/dropdown:rotate-180 transition-all duration-200" 
+                  class="w-4 h-4 opacity-60 text-slate-500 group-hover/dropdown:text-[#2563EB] group-hover/dropdown:rotate-180 transition-all duration-200" 
                   fill="none" 
                   viewBox="0 0 24 24" 
                   stroke="currentColor" 
@@ -86,15 +100,15 @@ const serviceSvgPaths = [
               <div class="absolute top-full left-0 w-64 bg-white rounded-2xl border border-slate-200/80 shadow-2xl p-3.5 opacity-0 invisible group-hover/dropdown:opacity-100 group-hover/dropdown:visible transition-all duration-200 transform translate-y-2 group-hover/dropdown:translate-y-0 pointer-events-none group-hover/dropdown:pointer-events-auto z-50">
                 <a 
                   href="/about" 
-                  class="flex items-center gap-3.5 p-2.5 rounded-xl hover:bg-teal-50/60 transition-colors group/item"
+                  class="flex items-center gap-3.5 p-2.5 rounded-xl hover:bg-blue-50/60 transition-colors group/item"
                 >
-                  <div class="w-11 h-11 rounded-full bg-teal-50 text-[#17A398] group-hover/item:bg-[#17A398] group-hover/item:text-white flex items-center justify-center shrink-0 transition-colors shadow-xs">
+                  <div class="w-11 h-11 rounded-full bg-blue-50 text-[#2563EB] group-hover/item:bg-[#2563EB] group-hover/item:text-white flex items-center justify-center shrink-0 transition-colors shadow-xs">
                     <svg class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
                       <path stroke-linecap="round" stroke-linejoin="round" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4" />
                     </svg>
                   </div>
                   <div>
-                    <span class="text-base font-medium text-slate-800 group-hover/item:text-[#17A398] transition-colors block">
+                    <span class="text-base font-medium text-slate-800 group-hover/item:text-[#2563EB] transition-colors block">
                       About Us
                     </span>
                   </div>
@@ -109,11 +123,11 @@ const serviceSvgPaths = [
             <div class="relative group/dropdown py-6">
               <a 
                 href={item.href} 
-                class="flex items-center gap-1.5 text-base lg:text-lg font-medium text-slate-700 group-hover/dropdown:text-[#17A398] transition-colors py-1"
+                class="flex items-center gap-1.5 text-base lg:text-lg font-medium text-slate-700 group-hover/dropdown:text-[#2563EB] transition-colors py-1"
               >
                 <span>{item.label}</span>
                 <svg 
-                  class="w-4 h-4 opacity-60 text-slate-500 group-hover/dropdown:text-[#17A398] group-hover/dropdown:rotate-180 transition-all duration-200" 
+                  class="w-4 h-4 opacity-60 text-slate-500 group-hover/dropdown:text-[#2563EB] group-hover/dropdown:rotate-180 transition-all duration-200" 
                   fill="none" 
                   viewBox="0 0 24 24" 
                   stroke="currentColor" 
@@ -129,14 +143,14 @@ const serviceSvgPaths = [
                   {servicesList.map((service, index) => (
                     <a 
                       href={`/services/${service.slug}`} 
-                      class="flex items-center gap-3.5 p-2.5 rounded-2xl hover:bg-teal-50/60 transition-colors group/item"
+                      class="flex items-center gap-3.5 p-2.5 rounded-2xl hover:bg-blue-50/60 transition-colors group/item"
                     >
-                      <div class="w-11 h-11 rounded-full bg-teal-50 text-[#17A398] group-hover/item:bg-[#17A398] group-hover/item:text-white flex items-center justify-center shrink-0 transition-colors shadow-xs">
+                      <div class="w-11 h-11 rounded-full bg-blue-50 text-[#2563EB] group-hover/item:bg-[#2563EB] group-hover/item:text-white flex items-center justify-center shrink-0 transition-colors shadow-xs">
                         <svg class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
                           <path stroke-linecap="round" stroke-linejoin="round" d={serviceSvgPaths[index % serviceSvgPaths.length]} />
                         </svg>
                       </div>
-                      <span class="text-base font-medium text-slate-800 group-hover/item:text-[#17A398] transition-colors leading-snug">
+                      <span class="text-base font-medium text-slate-800 group-hover/item:text-[#2563EB] transition-colors leading-snug">
                         {service.name}
                       </span>
                     </a>
@@ -162,7 +176,7 @@ const serviceSvgPaths = [
     <button
       id="mobile-menu-button"
       type="button"
-      class="flex md:hidden items-center justify-center p-2.5 rounded-xl bg-[#17A398] hover:bg-[#128279] text-white shadow-md shadow-teal-500/20 transition-all outline-none focus:outline-none focus:ring-0 focus-visible:outline-none active:outline-none ring-0 focus-visible:ring-0 [-webkit-tap-highlight-color:transparent] select-none z-20"
+      class="flex md:hidden items-center justify-center p-2.5 rounded-xl bg-[#2563EB] hover:bg-[#1D4ED8] text-white shadow-sm transition-all outline-none focus:outline-none focus:ring-0 focus-visible:outline-none active:outline-none ring-0 focus-visible:ring-0 [-webkit-tap-highlight-color:transparent] select-none z-20"
       aria-label="Toggle navigation menu"
       aria-expanded="false"
       aria-controls="mobile-menu"
@@ -189,13 +203,13 @@ const serviceSvgPaths = [
         <div class="flex items-center justify-start">
           <a
             href="/#advantage"
-            class="mobile-nav-link py-3 pl-3 pr-1.5 text-xl sm:text-2xl font-medium text-slate-800 hover:text-[#17A398] rounded-l-xl hover:bg-teal-50/60 transition-colors"
+            class="mobile-nav-link py-3 pl-3 pr-1.5 text-xl sm:text-2xl font-medium text-slate-800 hover:text-[#2563EB] rounded-l-xl hover:bg-blue-50/60 transition-colors"
           >
             Company
           </a>
           <button
             type="button"
-            class="mobile-accordion-button py-3 px-2 text-slate-500 hover:text-[#17A398] rounded-r-xl hover:bg-teal-50/60 transition-colors flex items-center justify-center"
+            class="mobile-accordion-button py-3 px-2 text-slate-500 hover:text-[#2563EB] rounded-r-xl hover:bg-blue-50/60 transition-colors flex items-center justify-center"
             aria-label="Toggle Company Menu"
           >
             <svg class="w-5 h-5 transition-transform duration-200" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5">
@@ -206,9 +220,9 @@ const serviceSvgPaths = [
         <div class="mobile-accordion-content hidden border-t border-b border-slate-300 my-2 py-2 pl-3">
           <a
             href="/about"
-            class="mobile-nav-link flex items-center gap-3 py-2.5 px-3 text-lg font-medium text-slate-700 hover:text-[#17A398] rounded-lg hover:bg-teal-50/40 transition-colors"
+            class="mobile-nav-link flex items-center gap-3 py-2.5 px-3 text-lg font-medium text-slate-700 hover:text-[#2563EB] rounded-lg hover:bg-blue-50/40 transition-colors"
           >
-            <div class="w-9 h-9 rounded-full bg-teal-50 text-[#17A398] flex items-center justify-center shrink-0">
+            <div class="w-9 h-9 rounded-full bg-blue-50 text-[#2563EB] flex items-center justify-center shrink-0">
               <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
                 <path stroke-linecap="round" stroke-linejoin="round" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4" />
               </svg>
@@ -223,13 +237,13 @@ const serviceSvgPaths = [
         <div class="flex items-center justify-start">
           <a
             href="/services"
-            class="mobile-nav-link py-3 pl-3 pr-1.5 text-xl sm:text-2xl font-medium text-slate-800 hover:text-[#17A398] rounded-l-xl hover:bg-teal-50/60 transition-colors"
+            class="mobile-nav-link py-3 pl-3 pr-1.5 text-xl sm:text-2xl font-medium text-slate-800 hover:text-[#2563EB] rounded-l-xl hover:bg-blue-50/60 transition-colors"
           >
             Services
           </a>
           <button
             type="button"
-            class="mobile-accordion-button py-3 px-2 text-slate-500 hover:text-[#17A398] rounded-r-xl hover:bg-teal-50/60 transition-colors flex items-center justify-center"
+            class="mobile-accordion-button py-3 px-2 text-slate-500 hover:text-[#2563EB] rounded-r-xl hover:bg-blue-50/60 transition-colors flex items-center justify-center"
             aria-label="Toggle Services List"
           >
             <svg class="w-5 h-5 transition-transform duration-200" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5">
@@ -241,9 +255,9 @@ const serviceSvgPaths = [
           {servicesList.map((service, index) => (
             <a
               href={`/services/${service.slug}`}
-              class="mobile-nav-link flex items-center gap-3.5 p-2.5 rounded-xl hover:bg-teal-50/60 transition-colors"
+              class="mobile-nav-link flex items-center gap-3.5 p-2.5 rounded-xl hover:bg-blue-50/60 transition-colors"
             >
-              <div class="w-10 h-10 rounded-full bg-teal-50 text-[#17A398] flex items-center justify-center shrink-0">
+              <div class="w-10 h-10 rounded-full bg-blue-50 text-[#2563EB] flex items-center justify-center shrink-0">
                 <svg class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
                   <path stroke-linecap="round" stroke-linejoin="round" d={serviceSvgPaths[index % serviceSvgPaths.length]} />
                 </svg>
@@ -259,7 +273,7 @@ const serviceSvgPaths = [
       {/* Work Link */}
       <a
         href="/#recent-work"
-        class="mobile-nav-link py-3 px-3 text-xl sm:text-2xl font-medium text-slate-800 hover:text-[#17A398] rounded-xl hover:bg-teal-50/60 transition-colors"
+        class="mobile-nav-link py-3 px-3 text-xl sm:text-2xl font-medium text-slate-800 hover:text-[#2563EB] rounded-xl hover:bg-blue-50/60 transition-colors"
       >
         Work
       </a>
@@ -267,7 +281,7 @@ const serviceSvgPaths = [
       {/* Contact Link */}
       <a
         href="/#contact"
-        class="mobile-nav-link py-3 px-3 text-xl sm:text-2xl font-medium text-slate-800 hover:text-[#17A398] rounded-xl hover:bg-teal-50/60 transition-colors"
+        class="mobile-nav-link py-3 px-3 text-xl sm:text-2xl font-medium text-slate-800 hover:text-[#2563EB] rounded-xl hover:bg-blue-50/60 transition-colors"
       >
         Contact
       </a>
@@ -276,7 +290,7 @@ const serviceSvgPaths = [
     {/* Request a Consultation Link */}
     <a
       href="/#contact"
-      class="mobile-nav-link group flex items-center justify-start gap-2.5 w-full py-3.5 px-7 text-xl sm:text-2xl font-medium text-white bg-[#17A398] hover:bg-[#128279] active:bg-[#0f6f67] transition-colors"
+      class="mobile-nav-link group flex items-center justify-start gap-2.5 w-full py-3.5 px-7 text-xl sm:text-2xl font-medium text-white bg-[#2563EB] hover:bg-[#1D4ED8] active:bg-[#1E40AF] transition-colors"
     >
       <span>Request a Consultation</span>
       <svg
@@ -293,19 +307,38 @@ const serviceSvgPaths = [
 </header>
 
 <script>
-  // Dynamic header background scroll effect:
-  // Starts out matching the top hero background color (#E6F6F5),
-  // then smoothly transitions to the main page background color (#F8FAFC) when scrolling down.
+  // Dynamic header background and logo text scroll effect:
+  // Starts out matching the top hero background color (#EFF6FF) with the full wordmark visible,
+  // then smoothly transitions to the main page background color (#F8FAFC) and collapses
+  // the text "Hill Stack Studio" when scrolling down, leaving only the mark.
   const header = document.getElementById('main-header');
+  const wordmark = document.getElementById('header-wordmark');
+  const brandLogoLink = document.getElementById('brand-logo-link');
   
   if (header) {
     const handleScroll = () => {
       if (window.scrollY > 20) {
         header.classList.add('bg-[#F8FAFC]/90', 'backdrop-blur-md', 'border-slate-200/80', 'shadow-xs');
-        header.classList.remove('bg-[#E6F6F5]', 'border-transparent');
+        header.classList.remove('bg-[#EFF6FF]', 'border-transparent');
+        if (brandLogoLink) {
+          brandLogoLink.classList.remove('gap-3');
+          brandLogoLink.classList.add('gap-0');
+        }
+        if (wordmark) {
+          wordmark.classList.add('max-w-0', 'opacity-0', '-translate-x-2');
+          wordmark.classList.remove('max-w-[240px]', 'opacity-100', 'translate-x-0');
+        }
       } else {
-        header.classList.add('bg-[#E6F6F5]', 'border-transparent');
+        header.classList.add('bg-[#EFF6FF]', 'border-transparent');
         header.classList.remove('bg-[#F8FAFC]/90', 'backdrop-blur-md', 'border-slate-200/80', 'shadow-xs');
+        if (brandLogoLink) {
+          brandLogoLink.classList.add('gap-3');
+          brandLogoLink.classList.remove('gap-0');
+        }
+        if (wordmark) {
+          wordmark.classList.add('max-w-[240px]', 'opacity-100', 'translate-x-0');
+          wordmark.classList.remove('max-w-0', 'opacity-0', '-translate-x-2');
+        }
       }
     };
 

@@ -45,7 +45,7 @@ export const AiMarquee: React.FC<AiMarqueeProps> = ({
   return (
     <div className="w-full my-6 sm:my-8 md:my-10">
       {/* Title above marquee matching site design system */}
-      <span className="text-[#17A398] text-sm font-bold uppercase tracking-wider mb-4 sm:mb-5 block text-center">
+      <span className="text-[#2563EB] text-sm font-bold uppercase tracking-wider mb-4 sm:mb-5 block text-center">
         {title}
       </span>
 

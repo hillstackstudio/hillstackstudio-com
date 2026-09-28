@@ -9,7 +9,7 @@
     <rect x="110" y="79" width="40" height="16" rx="8" fill="#2563EB" fill-opacity="0.2"/>
   </g>
 
-  <!-- High-Contrast Wordmark -->
+  <!-- High-Contrast Wordmark for Dark Background -->
   <g id="wordmark">
     <text 
       x="250" 
@@ -18,8 +18,8 @@
       font-size="44" 
       letter-spacing="-0.03em"
     >
-      <tspan font-weight="800" fill="#0f172a">Hill Stack</tspan>
-      <tspan font-weight="400" fill="#64748B"> Studio</tspan>
+      <tspan font-weight="800" fill="#FFFFFF">Hill Stack</tspan>
+      <tspan font-weight="400" fill="#94A3B8"> Studio</tspan>
     </text>
   </g>
 </svg>

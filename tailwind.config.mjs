@@ -6,8 +6,8 @@ export default {
       colors: {
         brand: {
           dark: '#0B0F19',
-          primary: '#17A398',
-          'primary-hover': '#128279',
+          primary: '#2563EB',
+          'primary-hover': '#1D4ED8',
           cardText: '#1E293B',
           bg: '#F8FAFC',
           surface: '#FFFFFF',
