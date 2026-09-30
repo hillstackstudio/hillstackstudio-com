@@ -5,6 +5,7 @@ import Hero from '../components/Hero.tsx';
 import Services from '../components/Services.tsx';
 import RecentWork from '../components/RecentWork.tsx';
 import Advantage from '../components/Advantage.astro';
+import Faq from '../components/Faq.tsx';
 import Contact from '../components/Contact.tsx';
 import ServiceAreas from '../components/ServiceAreas.astro';
 import Footer from '../components/Footer.astro';
@@ -15,6 +16,7 @@ import siteContext from '../data/siteContext.json';
   <Header 
     companyName={siteContext.companyName}
     email={siteContext.contact.email}
+    transparentAtTop={true}
   />
   <main class="flex-grow flex flex-col">
     <Hero 
@@ -28,6 +30,7 @@ import siteContext from '../data/siteContext.json';
     <Services client:load services={siteContext.services} />
     <RecentWork client:visible />
     <Advantage />
+    <Faq client:visible />
     <Contact 
       client:visible
       email={siteContext.contact.email}

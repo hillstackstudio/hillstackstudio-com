@@ -6,6 +6,7 @@ export interface Props {
   companyName?: string;
   email?: string;
   navItems?: Array<{ label: string; href: string }>;
+  transparentAtTop?: boolean;
 }
 
 const {
@@ -15,7 +16,8 @@ const {
     { label: "Services", href: "/services" },
     { label: "Work", href: "/#recent-work" },
     { label: "Contact", href: "/#contact" }
-  ]
+  ],
+  transparentAtTop = false
 } = Astro.props;
 
 const servicesList = servicesData;
@@ -45,7 +47,11 @@ const serviceSvgPaths = [
 
 <header 
   id="main-header"
-  class="w-full bg-[#EFF6FF] border-b border-transparent sticky top-0 z-50 transition-all duration-300"
+  data-transparent-at-top={transparentAtTop ? 'true' : 'false'}
+  class:list={[
+    "w-full border-b sticky top-0 z-50 transition-all duration-300",
+    transparentAtTop ? "bg-transparent border-transparent" : "bg-[#EFF6FF] border-transparent"
+  ]}
 >
   <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between relative">
     <!-- Brand Logo & Wordmark -->
@@ -316,10 +322,13 @@ const serviceSvgPaths = [
   const brandLogoLink = document.getElementById('brand-logo-link');
   
   if (header) {
+    const isTransparentAtTop = header.dataset.transparentAtTop === 'true';
+    const topBgClass = isTransparentAtTop ? 'bg-transparent' : 'bg-[#EFF6FF]';
+
     const handleScroll = () => {
       if (window.scrollY > 20) {
         header.classList.add('bg-[#F8FAFC]/90', 'backdrop-blur-md', 'border-slate-200/80', 'shadow-xs');
-        header.classList.remove('bg-[#EFF6FF]', 'border-transparent');
+        header.classList.remove(topBgClass, 'border-transparent');
         if (brandLogoLink) {
           brandLogoLink.classList.remove('gap-3');
           brandLogoLink.classList.add('gap-0');
@@ -329,7 +338,7 @@ const serviceSvgPaths = [
           wordmark.classList.remove('max-w-[240px]', 'opacity-100', 'translate-x-0');
         }
       } else {
-        header.classList.add('bg-[#EFF6FF]', 'border-transparent');
+        header.classList.add(topBgClass, 'border-transparent');
         header.classList.remove('bg-[#F8FAFC]/90', 'backdrop-blur-md', 'border-slate-200/80', 'shadow-xs');
         if (brandLogoLink) {
           brandLogoLink.classList.add('gap-3');
@@ -361,11 +370,19 @@ const serviceSvgPaths = [
         menuButton.setAttribute('aria-expanded', 'false');
         hamburgerIcon?.classList.remove('hidden');
         closeIcon?.classList.add('hidden');
+        if (window.scrollY <= 20 && header?.dataset.transparentAtTop === 'true') {
+          header.classList.add('bg-transparent');
+          header.classList.remove('bg-[#F8FAFC]/95');
+        }
       } else {
         mobileMenu.classList.remove('hidden');
         menuButton.setAttribute('aria-expanded', 'true');
         hamburgerIcon?.classList.add('hidden');
         closeIcon?.classList.remove('hidden');
+        if (window.scrollY <= 20 && header?.dataset.transparentAtTop === 'true') {
+          header.classList.remove('bg-transparent');
+          header.classList.add('bg-[#F8FAFC]/95');
+        }
       }
     };
 
