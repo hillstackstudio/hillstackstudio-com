@@ -31,12 +31,12 @@ export const servicesData: ServiceDetail[] = [
     slug: "custom-web-design-development",
     name: "Custom Web Design & Development",
     tagline: "Ultra-fast, high-converting websites engineered on Astro.",
-    shortDescription: "Clean and modern website redesigns engineered to build trust, drive action and deliver maximum user engagement.",
+    shortDescription: "Clean custom code and modern website redesigns engineered for fast page loads, AI search recommendations and customer conversion.",
     heroDescription: "We build modern, high-performance websites built from the ground up on Astro architecture. Engineered specifically for local service providers, our sites load in sub-seconds and convert phone calls effortlessly.",
     iconIndex: 0,
     heroImage: "/images/services/web-development.svg",
     aiImpactTitle: "Why Web Speed & Architecture Matter for AI Search",
-    aiImpactDescription: "Modern AI search engines like ChatGPT, Gemini, and Google AI Overviews prioritize websites with clean HTML markup and sub-second response times. Slow, bloated legacy CMS sites get deprioritized by web crawlers. Our Astro builds ensure AI agents consume and index your business data instantly without rendering lag.",
+    aiImpactDescription: "Modern AI search engines like ChatGPT, Gemini and Google AI Overviews prioritize websites with clean HTML markup and sub-second response times. Slow, bloated legacy CMS sites get deprioritized by web crawlers. Our Astro builds ensure AI agents consume and index your business data instantly without rendering lag.",
     features: [
       {
         title: "Sub-Second Page Loads",
@@ -48,7 +48,7 @@ export const servicesData: ServiceDetail[] = [
       },
       {
         title: "Tailored Brand Aesthetics",
-        description: "Custom typography, rich color palettes, and modern micro-animations that reflect your local business reputation."
+        description: "Custom typography, rich color palettes and modern micro-animations that reflect your local business reputation."
       },
       {
         title: "Structured Semantic HTML",
@@ -71,7 +71,7 @@ export const servicesData: ServiceDetail[] = [
       {
         stepNumber: "02",
         title: "Design & UX Prototyping",
-        description: "We craft custom layout mockups focusing on trust signals, trade credentials, and mobile usability."
+        description: "We craft custom layout mockups focusing on trust signals, trade credentials and mobile usability."
       },
       {
         stepNumber: "03",
@@ -81,7 +81,7 @@ export const servicesData: ServiceDetail[] = [
       {
         stepNumber: "04",
         title: "Launch & Verification",
-        description: "We deploy your site to fast edge servers, verify indexing, and test mobile conversion actions."
+        description: "We deploy your site to fast edge servers, verify indexing and test mobile conversion actions."
       }
     ],
     faq: [
@@ -99,8 +99,8 @@ export const servicesData: ServiceDetail[] = [
     slug: "generative-engine-optimization",
     name: "Generative Engine Optimization (GEO)",
     tagline: "Be the top AI search answer when local customers ask.",
-    shortDescription: "Comprehensive optimization and auditing for traditional search engines and AI tools like ChatGPT, Perplexity, and Gemini to maximize your local visibility.",
-    heroDescription: "Traditional SEO is no longer enough. Local consumers are now asking AI assistants like ChatGPT, Perplexity, and Google AI Overviews for trade recommendations. GEO ensures your business is recommended first.",
+    shortDescription: "Comprehensive audit of your current website for traditional search engines and AI tools like ChatGPT, Claude and Gemini to maximize your local online discoverability.",
+    heroDescription: "Traditional SEO is no longer enough. Local consumers are now asking AI assistants like ChatGPT, Perplexity and Google AI Overviews for trade recommendations. GEO ensures your business is recommended first.",
     iconIndex: 1,
     heroImage: "/images/services/geo-image.svg",
     aiImpactTitle: "The Shift from Keyword Searches to Natural Language Prompts",
@@ -108,11 +108,11 @@ export const servicesData: ServiceDetail[] = [
     features: [
       {
         title: "Five Pillars AI Visibility Audit",
-        description: "In-depth inspection of AI search access, entity trust, conversion friction, service boundaries, and data density."
+        description: "In-depth inspection of AI search access, entity trust, conversion friction, service boundaries and data density."
       },
       {
         title: "LLM Citation Optimization",
-        description: "Structuring your business facts, licenses, and reviews into structured formats that AI crawlers synthesize."
+        description: "Structuring your business facts, licenses and reviews into structured formats that AI crawlers synthesize."
       },
       {
         title: "Entity Authority Building",
@@ -125,7 +125,7 @@ export const servicesData: ServiceDetail[] = [
     ],
     deliverables: [
       "Complete 5-Pillars AI Visibility Audit Report",
-      "LLM citation optimization for ChatGPT, Perplexity, and Gemini",
+      "LLM citation optimization for ChatGPT, Perplexity and Gemini",
       "Structured entity data updates and trade credential formatting",
       "Regional search boundary alignment for target cities & counties",
       "Quarterly AI search ranking & citation tracking report"
@@ -139,7 +139,7 @@ export const servicesData: ServiceDetail[] = [
       {
         stepNumber: "02",
         title: "Entity & Credential Mapping",
-        description: "We standardize your licenses, business boundaries, reviews, and service details for machine evaluation."
+        description: "We standardize your licenses, business boundaries, reviews and service details for machine evaluation."
       },
       {
         stepNumber: "03",
@@ -155,7 +155,7 @@ export const servicesData: ServiceDetail[] = [
     faq: [
       {
         question: "What is the difference between SEO and GEO?",
-        answer: "SEO focuses on placing blue links on Google search results pages. GEO (Generative Engine Optimization) ensures conversational AI search tools (like ChatGPT, Gemini, and Perplexity) select and recommend your specific business when answering user questions."
+        answer: "SEO focuses on placing blue links on Google search results pages. GEO (Generative Engine Optimization) ensures conversational AI search tools (like ChatGPT, Gemini and Perplexity) select and recommend your specific business when answering user questions."
       },
       {
         question: "How fast can I see results from GEO?",
@@ -167,12 +167,12 @@ export const servicesData: ServiceDetail[] = [
     slug: "consulting-site-migration",
     name: "Consulting & Site Migration",
     tagline: "Zero downtime migrations & plain-English strategic partner.",
-    shortDescription: "Plain-English strategic guidance for local business owners and seamless site transfers with zero downtime.",
+    shortDescription: "Consulting and strategic guidance for local business owners including seamless website transfers with zero downtime.",
     heroDescription: "Upgrading your website shouldn't risk losing hard-earned search rankings or causing business interruption. We provide hands-on local consulting and seamless site migrations with zero downtime.",
     iconIndex: 2,
     heroImage: "/images/services/migration.svg",
     aiImpactTitle: "Preserving Search Engine & AI Engine Authority During Transfers",
-    aiImpactDescription: "Moving a website without proper 301 redirect mapping, canonical tag setup, and schema migration can destroy years of accumulated search authority. We meticulously preserve all URL paths, backlink juice, and structured entity data so search engines and AI assistants never drop your coverage.",
+    aiImpactDescription: "Moving a website without proper 301 redirect mapping, canonical tag setup and schema migration can destroy years of accumulated search authority. We meticulously preserve all URL paths, backlink juice and structured entity data so search engines and AI assistants never drop your coverage.",
     features: [
       {
         title: "Zero-Downtime Migration",
@@ -188,12 +188,12 @@ export const servicesData: ServiceDetail[] = [
       },
       {
         title: "Domain & DNS Management",
-        description: "Full handling of registrar settings, SSL security certificates, and email MX record preservation."
+        description: "Full handling of registrar settings, SSL security certificates and email MX record preservation."
       }
     ],
     deliverables: [
       "Full URL mapping and 301 redirect implementation schedule",
-      "Domain, DNS, and MX record safety migration checklist",
+      "Domain, DNS and MX record safety migration checklist",
       "Pre- and post-migration SEO rank and indexing audit",
       "Direct 1-on-1 strategy calls with our Pacific Northwest team",
       "Post-launch 30-day monitor to ensure 100% uptime and link health"
@@ -202,7 +202,7 @@ export const servicesData: ServiceDetail[] = [
       {
         stepNumber: "01",
         title: "Website Inventory & Link Audit",
-        description: "We crawl your existing website to index every live URL, image asset, and incoming backlink."
+        description: "We crawl your existing website to index every live URL, image asset and incoming backlink."
       },
       {
         stepNumber: "02",
@@ -217,7 +217,7 @@ export const servicesData: ServiceDetail[] = [
       {
         stepNumber: "04",
         title: "Post-Launch Rank Safeguard",
-        description: "We re-verify search engine indexation, submit sitemaps, and confirm search positions remain intact."
+        description: "We re-verify search engine indexation, submit sitemaps and confirm search positions remain intact."
       }
     ],
     faq: [
@@ -235,8 +235,8 @@ export const servicesData: ServiceDetail[] = [
     slug: "web-hosting-administration",
     name: "Web Hosting & Administration",
     tagline: "Ultra-reliable, high-speed hosting with zero maintenance stress.",
-    shortDescription: "Ensuring your site is well maintained means you won't let your digital presence fall by the wayside.",
-    heroDescription: "Forget slow shared servers, constant plugin crashes, and security worries. We provide managed edge web hosting with automatic backups, high uptime, and proactive technical administration.",
+    shortDescription: "We manage your website hosting, security and updates so you can focus on what matters, running your business.",
+    heroDescription: "Forget slow shared servers, constant plugin crashes and security worries. We provide managed edge web hosting with automatic backups, high uptime and proactive technical administration.",
     iconIndex: 3,
     heroImage: "/images/services/hosting.svg",
     flipHeroImage: true,
@@ -304,16 +304,16 @@ export const servicesData: ServiceDetail[] = [
     slug: "search-engine-readiness",
     name: "Search Engine Readiness",
     tagline: "Machine-readable structured data & clean LLM handshakes.",
-    shortDescription: "Structuring your website's data into a clean, machine-readable format so AI assistants can accurately recommend your business.",
+    shortDescription: "Structure your website's data into a clean, machine-readable format so AI assistants can accurately recommend and cite your business to local customers.",
     heroDescription: "Make your business 100% readable to search engines and AI models. We equip your website with rich JSON-LD schemas and `./llms.txt` integration so AI search tools understand your exact services without confusion.",
     iconIndex: 4,
     heroImage: "/images/services/search-engine-readiness.svg",
     aiImpactTitle: "Direct Handshake via JSON-LD & LLM Files",
-    aiImpactDescription: "When ChatGPT or Google AI Overviews read your website, they don't look at pretty colors—they parse structured data. Search Engine Readiness builds explicit schema representations of your business type, service areas, licenses, and operating hours into clean machine data.",
+    aiImpactDescription: "When ChatGPT or Google AI Overviews read your website, they don't look at pretty colors—they parse structured data. Search Engine Readiness builds explicit schema representations of your business type, service areas, licenses and operating hours into clean machine data.",
     features: [
       {
         title: "Custom JSON-LD Schema Architecture",
-        description: "Comprehensive LocalBusiness, Service, and GeoCoordinates structured data embedded directly in site code."
+        description: "Comprehensive LocalBusiness, Service and GeoCoordinates structured data embedded directly in site code."
       },
       {
         title: "LLM Machine Standard (llms.txt)",
@@ -321,11 +321,11 @@ export const servicesData: ServiceDetail[] = [
       },
       {
         title: "Search Console & Indexing Setup",
-        description: "Direct registration and XML sitemap submission with Google, Bing, and major search portals."
+        description: "Direct registration and XML sitemap submission with Google, Bing and major search portals."
       },
       {
         title: "Entity Disambiguation",
-        description: "Structuring trade badges, review counts, and operational hours to prevent AI hallucinations."
+        description: "Structuring trade badges, review counts and operational hours to prevent AI hallucinations."
       }
     ],
     deliverables: [
@@ -339,7 +339,7 @@ export const servicesData: ServiceDetail[] = [
       {
         stepNumber: "01",
         title: "Business Entity Mapping",
-        description: "We gather exact trade parameters, license details, physical coordinates, and service lists."
+        description: "We gather exact trade parameters, license details, physical coordinates and service lists."
       },
       {
         stepNumber: "02",
@@ -349,7 +349,7 @@ export const servicesData: ServiceDetail[] = [
       {
         stepNumber: "03",
         title: "Search Portal Submission",
-        description: "We submit sitemaps directly to Google Search Console, Bing, and web indexing APIs."
+        description: "We submit sitemaps directly to Google Search Console, Bing and web indexing APIs."
       },
       {
         stepNumber: "04",
@@ -364,7 +364,7 @@ export const servicesData: ServiceDetail[] = [
       },
       {
         question: "How does structured schema help my Google search ranking?",
-        answer: "Schema markup gives search engines direct answers about your business location, hours, and services, making your site eligible for rich search snippets and AI overview recommendations."
+        answer: "Schema markup gives search engines direct answers about your business location, hours and services, making your site eligible for rich search snippets and AI overview recommendations."
       }
     ]
   },
@@ -372,21 +372,21 @@ export const servicesData: ServiceDetail[] = [
     slug: "copywriting-content-adjustments",
     name: "Copywriting & Content Adjustments",
     tagline: "High-converting, factual messaging that drives phone calls.",
-    shortDescription: "Improve brand messaging with search-optimized copy designed to drive customer conversion.",
+    shortDescription: "Improve website messaging and content with search-optimized copy designed to capture customers searching across modern online platforms.",
     heroDescription: "Replace generic filler text with sharp, compelling content rooted in local authority. We write high-density copy designed to convert local web visitors while feeding AI engines exact factual details.",
     iconIndex: 5,
     heroImage: "/images/services/copy-writing-content.svg",
     flipHeroImage: true,
     aiImpactTitle: "High Information Density for Human & Machine Readers",
-    aiImpactDescription: "Generic marketing fluff like 'We deliver quality service' gets ignored by both human customers and AI engines. Factual, dense copy detailing your specific trade processes, emergency response times, and city service areas provides the concrete data AI tools need to select your business.",
+    aiImpactDescription: "Generic marketing fluff like 'We deliver quality service' gets ignored by both human customers and AI engines. Factual, dense copy detailing your specific trade processes, emergency response times and city service areas provides the concrete data AI tools need to select your business.",
     features: [
       {
         title: "Factual Information Density",
-        description: "Clear operational details, response times, and trade specialties that build immediate customer trust."
+        description: "Clear operational details, response times and trade specialties that build immediate customer trust."
       },
       {
         title: "Local Keyword Integration",
-        description: "Natural placement of regional city, county, and community names across Puyallup, Tacoma, Bellevue & PNW."
+        description: "Natural placement of regional city, county and community names across Puyallup, Tacoma, Bellevue & PNW."
       },
       {
         title: "Clear Call-to-Action Messaging",
@@ -398,7 +398,7 @@ export const servicesData: ServiceDetail[] = [
       }
     ],
     deliverables: [
-      "Custom hero headlines, subheadings, and conversion copy",
+      "Custom hero headlines, subheadings and conversion copy",
       "Service area & trade specialty content blocks",
       "Frequently Asked Questions (FAQ) copy formatted for AI search",
       "Meta titles & meta descriptions optimized for click-through rate",
@@ -413,7 +413,7 @@ export const servicesData: ServiceDetail[] = [
       {
         stepNumber: "02",
         title: "Factual Copy Drafting",
-        description: "We craft clear, high-density messaging highlighting your trade licenses, experience, and response times."
+        description: "We craft clear, high-density messaging highlighting your trade licenses, experience and response times."
       },
       {
         stepNumber: "03",
@@ -429,7 +429,7 @@ export const servicesData: ServiceDetail[] = [
     faq: [
       {
         question: "Do you write copy tailored to my specific industry?",
-        answer: "Yes! We work directly with plumbers, electricians, roofers, contractors, and local service professionals to capture the exact terminology, licenses, and trade details that set your business apart."
+        answer: "Yes! We work directly with plumbers, electricians, roofers, contractors and local service professionals to capture the exact terminology, licenses and trade details that set your business apart."
       },
       {
         question: "Will the copy sound natural to human readers?",
@@ -440,26 +440,26 @@ export const servicesData: ServiceDetail[] = [
   {
     slug: "performance-visibility-audit",
     name: "Performance & Visibility Audit",
-    tagline: "Identify speed bottlenecks, indexing gaps, and AI visibility opportunities.",
-    shortDescription: "In-depth analysis of speed benchmarks, mobile responsiveness, search indexation, and AI engine discoverability.",
-    heroDescription: "Uncover exactly what is holding your website back. Our comprehensive audit measures your mobile load speed, Google indexing status, Core Web Vitals, and AI search engine recommendation presence.",
+    tagline: "Identify speed bottlenecks, indexing gaps and AI visibility opportunities.",
+    shortDescription: "Internal analysis of speed benchmarks, mobile responsiveness, accessibility scoring and AI engine discoverability.",
+    heroDescription: "Uncover exactly what is holding your website back. Our comprehensive audit measures your mobile load speed, Google indexing status, Core Web Vitals and AI search engine recommendation presence.",
     iconIndex: 6,
     heroImage: "/images/services/performance.svg",
     flipHeroImage: true,
     aiImpactTitle: "Benchmark Your Position Against Local Competitors",
-    aiImpactDescription: "Our performance & visibility audit inspects your website across all 5 Pillars of AI Visibility. We pinpoint hidden technical errors, slow server response times, missing schemas, and gaps where competitors are outranking you on Google and ChatGPT.",
+    aiImpactDescription: "Our performance & visibility audit inspects your website across all 5 Pillars of AI Visibility. We pinpoint hidden technical errors, slow server response times, missing schemas and gaps where competitors are outranking you on Google and ChatGPT.",
     features: [
       {
         title: "Core Web Vitals Speed Benchmark",
-        description: "Detailed measurement of LCP, FID, and CLS performance metrics on 3G/4G mobile networks."
+        description: "Detailed measurement of LCP, FID and CLS performance metrics on 3G/4G mobile networks."
       },
       {
         title: "AI Engine Visibility Score",
-        description: "Real-world prompt testing across ChatGPT, Perplexity, and Gemini to evaluate recommendation presence."
+        description: "Real-world prompt testing across ChatGPT, Perplexity and Gemini to evaluate recommendation presence."
       },
       {
         title: "Technical SEO & Indexing Check",
-        description: "Scanning for broken links, duplicate content, crawl errors, and missing meta tags."
+        description: "Scanning for broken links, duplicate content, crawl errors and missing meta tags."
       },
       {
         title: "Actionable Prioritized Roadmap",
@@ -477,7 +477,7 @@ export const servicesData: ServiceDetail[] = [
       {
         stepNumber: "01",
         title: "Automated & Manual Inspection",
-        description: "We run deep technical scans across your site's code, speed metrics, and search console accounts."
+        description: "We run deep technical scans across your site's code, speed metrics and search console accounts."
       },
       {
         stepNumber: "02",
@@ -502,7 +502,7 @@ export const servicesData: ServiceDetail[] = [
       },
       {
         question: "Do I need to give you password access to my site for an audit?",
-        answer: "No sensitive login passwords are required for an initial audit. We perform external speed, indexation, and AI prompt analysis safely."
+        answer: "No sensitive login passwords are required for an initial audit. We perform external speed, indexation and AI prompt analysis safely."
       }
     ]
   },
@@ -510,16 +510,16 @@ export const servicesData: ServiceDetail[] = [
     slug: "accessibility-compliance",
     name: "Accessibility Compliance",
     tagline: "WCAG standards for an inclusive, legally compliant website.",
-    shortDescription: "WCAG compliant web standards ensuring inclusivity, legal protection, and a seamless usability experience for all visitors.",
-    heroDescription: "Ensure your website is accessible to every local customer, regardless of ability. We implement WCAG 2.1 standards to improve usability, protect against legal liability, and boost search rankings.",
+    shortDescription: "WCAG compliant web standards ensuring inclusivity, legal protection and a seamless usability experience for all visitors.",
+    heroDescription: "Ensure your website is accessible to every local customer, regardless of ability. We implement WCAG 2.1 standards to improve usability, protect against legal liability and boost search rankings.",
     iconIndex: 7,
     heroImage: "/images/services/accessibility.svg",
     aiImpactTitle: "Accessible Web Design Benefits Both Humans and AI Crawlers",
-    aiImpactDescription: "Accessibility compliance relies on clear color contrast, keyboard navigation, aria-labels, and alt attributes. Remarkably, the exact code structures required for WCAG compliance make it significantly easier for AI search bots to navigate and understand your web pages.",
+    aiImpactDescription: "Accessibility compliance relies on clear color contrast, keyboard navigation, aria-labels and alt attributes. Remarkably, the exact code structures required for WCAG compliance make it significantly easier for AI search bots to navigate and understand your web pages.",
     features: [
       {
         title: "WCAG 2.1 AA Standards",
-        description: "Ensuring proper visual color contrast, screen reader compatibility, and font legibility."
+        description: "Ensuring proper visual color contrast, screen reader compatibility and font legibility."
       },
       {
         title: "Keyboard & Focus Navigation",
@@ -550,7 +550,7 @@ export const servicesData: ServiceDetail[] = [
       {
         stepNumber: "02",
         title: "Code Remediation",
-        description: "We update HTML tags, ARIA attributes, image alt descriptions, and form labels."
+        description: "We update HTML tags, ARIA attributes, image alt descriptions and form labels."
       },
       {
         stepNumber: "03",
@@ -578,13 +578,13 @@ export const servicesData: ServiceDetail[] = [
     slug: "security-privacy-compliance",
     name: "Security & Privacy Compliance",
     tagline: "Protect your local business and customer data with robust security.",
-    shortDescription: "Robust security measures, privacy compliance, and site protection standards to safeguard your business and customer data.",
-    heroDescription: "Protect your local business reputation and build customer trust. We implement enterprise-grade web security headers, HTTPS encryption, privacy policy compliance, and malware protection.",
+    shortDescription: "Robust security measures, privacy compliance and site protection standards to safeguard your business and customer data.",
+    heroDescription: "Protect your local business reputation and build customer trust. We implement enterprise-grade web security headers, HTTPS encryption, privacy policy compliance and malware protection.",
     iconIndex: 8,
     heroImage: "/images/services/security.svg",
     flipHeroImage: true,
     aiImpactTitle: "Build Unshakeable Entity Trust with Secure Infrastructure",
-    aiImpactDescription: "Security and trust are core ranking factors for Google and AI engines. Sites lacking HTTPS certificates, privacy disclosures, or security headers receive lower trust scores from AI crawlers. We ensure your site meets 100% of modern web security and privacy benchmarks.",
+    aiImpactDescription: "Security and trust are core ranking factors for Google and AI engines. Sites lacking HTTPS certificates, privacy disclosures or security headers receive lower trust scores from AI crawlers. We ensure your site meets 100% of modern web security and privacy benchmarks.",
     features: [
       {
         title: "HTTPS Encryption & SSL Shield",
@@ -592,7 +592,7 @@ export const servicesData: ServiceDetail[] = [
       },
       {
         title: "Security Header Configuration",
-        description: "Implementation of Content Security Policy (CSP), HSTS, and X-Frame-Options to block attacks."
+        description: "Implementation of Content Security Policy (CSP), HSTS and X-Frame-Options to block attacks."
       },
       {
         title: "Privacy Policy & Cookie Standards",
@@ -614,12 +614,12 @@ export const servicesData: ServiceDetail[] = [
       {
         stepNumber: "01",
         title: "Vulnerability Scan",
-        description: "We perform security scans to check SSL protocols, header configurations, and form safety."
+        description: "We perform security scans to check SSL protocols, header configurations and form safety."
       },
       {
         stepNumber: "02",
         title: "Header & SSL Hardening",
-        description: "We configure strict transport security, SSL certificates, and security policy headers."
+        description: "We configure strict transport security, SSL certificates and security policy headers."
       },
       {
         stepNumber: "03",
@@ -635,7 +635,7 @@ export const servicesData: ServiceDetail[] = [
     faq: [
       {
         question: "Can an Astro website get hacked like a WordPress site?",
-        answer: "Astro static websites have no database, no underlying PHP code, and no vulnerable plugins, making them virtually immune to traditional web hacks and SQL injection attacks."
+        answer: "Astro static websites have no database, no underlying PHP code and no vulnerable plugins, making them virtually immune to traditional web hacks and SQL injection attacks."
       },
       {
         question: "Do you help with contact form spam protection?",

@@ -12,7 +12,7 @@ interface HeroProps {
 const Hero: React.FC<HeroProps> = ({
   companyName = "Hill Stack Studio",
   tagline = "Locally rooted. AI Optimized.",
-  aboutText = "At Hill Stack Studio, we pair personal consulting with Generative Engine Optimization (GEO) to help our local businesses stand out on traditional search engines like Google and next-generation AI platforms like ChatGPT, Copilot, Perplexity, and Gemini.",
+  aboutText = "At Hill Stack Studio, we pair personal consulting with Generative Engine Optimization (GEO) to help our local businesses stand out on traditional search engines like Google and next-generation AI platforms like ChatGPT, Copilot, Perplexity and Gemini.",
   primaryCallToAction = "See Your Online Visibility",
   regionalKeywords = ["Seattle", "Bellevue", "Tacoma", "King County", "Pierce County", "Pacific Northwest"]
 }) => {

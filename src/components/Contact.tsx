@@ -81,7 +81,7 @@ const Contact: React.FC<ContactProps> = () => {
                   id="message" 
                   rows={4}
                   className="w-full px-4 py-3.5 bg-slate-50 border border-slate-200 rounded-xl focus:bg-white focus:ring-2 focus:ring-[#2563EB] focus:border-transparent transition-all text-slate-900 placeholder:text-slate-400 text-sm resize-none"
-                  placeholder="Tell us about your business, current website, or service area..."
+                  placeholder="Tell us about your business, current website or service area..."
                 ></textarea>
               </div>
             </div>
