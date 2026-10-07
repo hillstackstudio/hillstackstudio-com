@@ -8,7 +8,7 @@ Official website and digital presence for **Hill Stack Studio** — a web engine
 
 ## 🌟 Overview & Mission
 
-Hill Stack Studio bridges the gap between hard-working local business owners and modern web technology. By pairing human-centered consulting with cutting-edge **Generative Engine Optimization (GEO)** and ultra-fast web architecture, we ensure local businesses are easily discovered, recommended and trusted across both traditional search engines (Google) and next-generation AI assistants (**ChatGPT**, **Perplexity**, **Claude**, **Google Gemini** and **Google AI Overviews**).
+Hill Stack Studio bridges the gap between hard-working local business owners and modern web technology. By pairing human-centered consulting with cutting-edge **Answer Engine Optimization (AEO)** and ultra-fast web architecture, we ensure local businesses are easily discovered, recommended and trusted across both traditional search engines (Google) and next-generation AI assistants (**ChatGPT**, **Perplexity**, **Claude**, **Google Gemini** and **Google AI Overviews**).
 
 ### The Five Pillars of AI Visibility
 Our audit and optimization framework inspects and enhances digital presence across:
@@ -25,7 +25,7 @@ Our audit and optimization framework inspects and enhances digital presence acro
 Hill Stack Studio provides 9 specialized services tailored for local service providers and businesses:
 
 1. **Custom Web Design & Development**: Sub-second, high-converting websites built from the ground up on Astro architecture with zero bloat.
-2. **Generative Engine Optimization (GEO)**: End-to-end optimization ensuring conversational AI engines recommend your business first.
+2. **Answer Engine Optimization (AEO)**: End-to-end optimization ensuring conversational AI engines recommend your business first.
 3. **Consulting & Site Migration**: Plain-English strategic guidance and zero-downtime domain/website transfers preserving SEO equity.
 4. **Web Hosting & Administration**: Proactive hosting management, performance tuning and dependable site maintenance.
 5. **Search Engine Readiness**: Structured data formatting and machine-readable schemas (`schema.json`) for seamless crawler parsing.

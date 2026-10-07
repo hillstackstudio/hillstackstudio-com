@@ -6,6 +6,7 @@ export interface WorkItem {
   domain: string;
   category: string;
   image?: string;
+  video?: string;
   testimonial: string;
   author: {
     name: string;
@@ -27,6 +28,7 @@ const defaultWorks: WorkItem[] = [
     company: 'Live Right Chiro',
     domain: 'live-right-chiro.pages.dev',
     category: 'Chiropractic & Wellness',
+    video: '/videos/recent-work-lrc.mp4',
     image: '/images/recent-work/live-right-chiro.png',
     testimonial:
       '"It was a pleasure working with Hill Stack Studio, our traffic has increased significantly with higher rankings on Google and ChatGPT. We’re also converting a larger percentage of website traffic with better user engagement and more patient inquiries."',
@@ -42,6 +44,15 @@ const defaultWorks: WorkItem[] = [
 
 const RecentWork: React.FC<RecentWorkProps> = ({ works = defaultWorks }) => {
   const currentWork = works[0] || defaultWorks[0];
+  const videoRef = React.useRef<HTMLVideoElement>(null);
+
+  React.useEffect(() => {
+    if (videoRef.current) {
+      videoRef.current.defaultMuted = true;
+      videoRef.current.muted = true;
+      videoRef.current.play().catch(() => {});
+    }
+  }, []);
 
   return (
     <section id="recent-work" className="py-20 md:py-28 bg-[#F8FAFC] border-b border-slate-200/80 relative overflow-hidden">
@@ -56,53 +67,28 @@ const RecentWork: React.FC<RecentWorkProps> = ({ works = defaultWorks }) => {
           </h2>
         </div>
 
-        {/* Showcase Layout: Image above link and description */}
+        {/* Showcase Layout: Video showcase above link and description */}
         <div className="max-w-4xl mx-auto flex flex-col items-center">
-          {/* Site Image Display */}
+          {/* Site Showcase Display */}
           <div className="w-full mb-8 sm:mb-10">
             <a
               href={`https://${currentWork.domain}`}
               target="_blank"
               rel="noopener noreferrer"
-              className="block group bg-white rounded-3xl p-3 sm:p-4 border border-slate-200/80 shadow-xl hover:shadow-2xl transition-all duration-300 overflow-hidden"
+              className="block group"
             >
-              <div className="relative rounded-2xl overflow-hidden bg-slate-100 border border-slate-200/70 flex items-center justify-center">
-                {currentWork.image ? (
-                  <img
-                    src={currentWork.image}
-                    alt={`${currentWork.company} Website`}
-                    className="w-full h-auto block object-contain rounded-2xl group-hover:scale-[1.01] transition-transform duration-500"
-                    onError={(e) => {
-                      // Fallback if local image doesn't exist yet
-                      const target = e.currentTarget;
-                      target.style.display = 'none';
-                      if (target.parentElement) {
-                        target.parentElement.innerHTML = `
-                          <div class="flex flex-col items-center justify-center p-8 text-center bg-gradient-to-br from-slate-50 to-blue-50/40 w-full min-h-[360px]">
-                            <div class="w-16 h-16 rounded-2xl bg-blue-50 text-[#2563EB] flex items-center justify-center mb-4 border border-blue-100 shadow-sm">
-                              <svg class="w-8 h-8" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5">
-                                <path stroke-linecap="round" stroke-linejoin="round" d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z" />
-                              </svg>
-                            </div>
-                            <span class="text-base font-bold text-[#0B0F19] mb-1">${currentWork.company} Screenshot</span>
-                            <span class="text-xs text-slate-500 max-w-xs">${currentWork.domain}</span>
-                          </div>
-                        `;
-                      }
-                    }}
-                  />
-                ) : (
-                  <div className="flex flex-col items-center justify-center p-8 text-center bg-gradient-to-br from-slate-50 to-blue-50/40 w-full min-h-[360px]">
-                    <div className="w-16 h-16 rounded-2xl bg-blue-50 text-[#2563EB] flex items-center justify-center mb-4 border border-blue-100 shadow-sm">
-                      <svg className="w-8 h-8" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="1.5">
-                        <path strokeLinecap="round" strokeLinejoin="round" d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z" />
-                      </svg>
-                    </div>
-                    <span className="text-base font-bold text-[#0B0F19] mb-1">{currentWork.company} Screenshot</span>
-                    <span className="text-xs text-slate-500 max-w-xs">{currentWork.domain}</span>
-                  </div>
-                )}
-              </div>
+              <video 
+                ref={videoRef}
+                autoPlay 
+                loop 
+                muted 
+                playsInline 
+                poster={currentWork.image}
+                className="w-full h-auto rounded-xl shadow-lg"
+              >
+                <source src={currentWork.video || "/videos/recent-work-lrc.mp4"} type="video/mp4" />
+                Your browser does not support the video tag.
+              </video>
             </a>
           </div>
 

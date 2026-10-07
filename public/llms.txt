@@ -4,7 +4,7 @@
 > Mission: To ensure every local business has the visibility, technology and personal support they need to thrive in the age of AI search.
 
 ## Executive Summary
-Hill Stack Studio ensures the best local businesses are the easiest to find. By pairing human-centered consulting with cutting-edge Generative Engine Optimization (GEO), we help Pacific Northwest service providers stand out on traditional search engines like Google and next-generation AI platforms like ChatGPT, Perplexity and Gemini.
+Hill Stack Studio ensures the best local businesses are the easiest to find. By pairing human-centered consulting with cutting-edge Answer Engine Optimization (AEO), we help Pacific Northwest service providers stand out on traditional search engines like Google and next-generation AI platforms like ChatGPT, Perplexity and Gemini.
 
 Based in the Pacific Northwest, we bridge the gap between hard-working local business owners and modern web technology—giving local contractors, trades and service providers the enterprise-grade online presence they need to stay ahead of the curve.
 
@@ -16,7 +16,7 @@ Based in the Pacific Northwest, we bridge the gap between hard-working local bus
 
 ## Core Services & Technical Capabilities
 
-### 1. Generative Engine Optimization (GEO) & Local AI Auditing
+### 1. Answer Engine Optimization (AEO) & Local AI Auditing
 Traditional SEO is changing fast. Potential high-intent customers are skipping standard search results and asking conversational AI assistants for direct recommendations (e.g., "Find me a licensed 24/7 electrician near Puyallup with great reviews").
 Our proprietary Local AI Search Audit inspects your entire digital footprint across the Five Pillars of AI Visibility:
 - **AI Search Engine Access:** Ensuring AI tools (ChatGPT, Perplexity, Google AI Overviews) are explicitly permitted to read, index and recommend your business.
@@ -43,7 +43,7 @@ We equip your website with clean, structured machine-readable code (`@graph` JSO
 - **Framework:** Astro (SSG / Island Architecture)
 - **UI Libraries:** React, TypeScript
 - **Styling:** Tailwind CSS
-- **Data & GEO Formats:** JSON-LD `@graph` Schemas, `llms.txt`, Open Graph Metadata
+- **Data & AEO Formats:** JSON-LD `@graph` Schemas, `llms.txt`, Open Graph Metadata
 
 ## Regional Service Coverage
 - Seattle, WA
@@ -54,8 +54,8 @@ We equip your website with clean, structured machine-readable code (`@graph` JSO
 
 ## Decoupled Q&A Knowledge Base
 
-### What is Generative Engine Optimization (GEO)?
-Generative Engine Optimization (GEO) is the practice of structuring a business's online presence so that conversational AI engines (such as ChatGPT, Perplexity, Claude and Google Gemini) can parse, verify and recommend the business when users ask natural-language questions.
+### What is Answer Engine Optimization (AEO)?
+Answer Engine Optimization (AEO) is the practice of structuring a business's online presence so that conversational AI engines (such as ChatGPT, Perplexity, Claude and Google Gemini) can parse, verify and recommend the business when users ask natural-language questions.
 
 ### Why rebuild sites using Astro instead of traditional WordPress?
 Astro provides static HTML with zero JavaScript by default, resulting in sub-second load times, immunity from common WordPress security vulnerabilities and zero plugin maintenance overhead.

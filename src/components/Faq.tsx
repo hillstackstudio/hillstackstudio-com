@@ -13,8 +13,8 @@ interface FaqProps {
 
 const defaultFaqs: FaqItem[] = [
   {
-    question: "What is Generative Engine Optimization (GEO) and why does my business need it?",
-    answer: "Traditional SEO focuses on Google keyword ranking. Generative Engine Optimization (GEO) ensures conversational AI platforms—including ChatGPT, Google Gemini, Copilot, and Perplexity—actively recognize, cite, and recommend your local business when customers ask natural questions about services in your area."
+    question: "What is Answer Engine Optimization (AEO) and why does my business need it?",
+    answer: "Traditional SEO focuses on Google keyword ranking. Answer Engine Optimization (AEO) ensures conversational AI platforms—including ChatGPT, Google Gemini, Copilot, and Perplexity—actively recognize, cite, and recommend your local business when customers ask natural questions about services in your area."
   },
   {
     question: "Why do you build websites with Astro instead of WordPress or Squarespace?",
@@ -35,7 +35,7 @@ const defaultFaqs: FaqItem[] = [
 ];
 
 const Faq: React.FC<FaqProps> = ({
-  eyebrow = "Common Questions",
+  eyebrow = "FAQ",
   title = "Frequently Asked Questions",
   items = defaultFaqs
 }) => {

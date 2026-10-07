@@ -96,15 +96,15 @@ export const servicesData: ServiceDetail[] = [
     ]
   },
   {
-    slug: "generative-engine-optimization",
-    name: "Generative Engine Optimization (GEO)",
+    slug: "answer-engine-optimization",
+    name: "Answer Engine Optimization (AEO)",
     tagline: "Be the top AI search answer when local customers ask.",
     shortDescription: "Comprehensive audit of your current website for traditional search engines and AI tools like ChatGPT, Claude and Gemini to maximize your local online discoverability.",
-    heroDescription: "Traditional SEO is no longer enough. Local consumers are now asking AI assistants like ChatGPT, Perplexity and Google AI Overviews for trade recommendations. GEO ensures your business is recommended first.",
+    heroDescription: "Traditional SEO is no longer enough. Local consumers are now asking AI assistants like ChatGPT, Perplexity and Google AI Overviews for trade recommendations. AEO ensures your business is recommended first.",
     iconIndex: 1,
     heroImage: "/images/services/geo-image.svg",
     aiImpactTitle: "The Shift from Keyword Searches to Natural Language Prompts",
-    aiImpactDescription: "Consumers don't just type 'electrician near me' anymore. They ask detailed prompts like 'Find me a licensed 24/7 electrician in Puyallup with great reviews'. Generative Engine Optimization aligns your digital presence across the 5 Pillars of AI Visibility so conversational search tools cite your business as the authoritative answer.",
+    aiImpactDescription: "Consumers don't just type 'electrician near me' anymore. They ask detailed prompts like 'Find me a licensed 24/7 electrician in Puyallup with great reviews'. Answer Engine Optimization aligns your digital presence across the 5 Pillars of AI Visibility so conversational search tools cite your business as the authoritative answer.",
     features: [
       {
         title: "Five Pillars AI Visibility Audit",
@@ -154,11 +154,11 @@ export const servicesData: ServiceDetail[] = [
     ],
     faq: [
       {
-        question: "What is the difference between SEO and GEO?",
-        answer: "SEO focuses on placing blue links on Google search results pages. GEO (Generative Engine Optimization) ensures conversational AI search tools (like ChatGPT, Gemini and Perplexity) select and recommend your specific business when answering user questions."
+        question: "What is the difference between SEO and AEO?",
+        answer: "SEO focuses on placing blue links on Google search results pages. AEO (Answer Engine Optimization) ensures conversational AI search tools (like ChatGPT, Gemini and Perplexity) select and recommend your specific business when answering user questions."
       },
       {
-        question: "How fast can I see results from GEO?",
+        question: "How fast can I see results from AEO?",
         answer: "AI search engines constantly update their web crawls. Most local businesses see improved AI recommendation accuracy and citations within 4 to 8 weeks after structured entity optimization."
       }
     ]
@@ -417,7 +417,7 @@ export const servicesData: ServiceDetail[] = [
       },
       {
         stepNumber: "03",
-        title: "SEO & GEO Optimization",
+        title: "SEO & AEO Optimization",
         description: "We naturally integrate city boundaries and conversational keywords without keyword stuffing."
       },
       {

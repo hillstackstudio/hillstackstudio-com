@@ -1,13 +1,13 @@
 # ====================================================================
 # robots.txt for Hill Stack Studio | Locally rooted. AI Optimized.
-# Generated for GEO & Machine Data Access
+# Generated for AEO & Machine Data Access
 # ====================================================================
 
 # 1. Global Rule for Traditional Search
 User-agent: *
 Allow: /
 
-# 2. Explicitly Allow AI & LLM Crawlers for GEO
+# 2. Explicitly Allow AI & LLM Crawlers for AEO
 User-agent: GPTBot
 Allow: /
 
