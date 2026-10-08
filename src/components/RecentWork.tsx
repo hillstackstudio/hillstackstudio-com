@@ -33,8 +33,8 @@ const defaultWorks: WorkItem[] = [
     testimonial:
       '"It was a pleasure working with Hill Stack Studio, our traffic has increased significantly with higher rankings on Google and ChatGPT. We’re also converting a larger percentage of website traffic with better user engagement and more patient inquiries."',
     author: {
-      name: 'Calvin Smolich',
-      title: 'Owner & Doctor of Chiropractic',
+      name: 'Dr. Calvin Smolich',
+      title: 'Owner, Live Right Chiro',
       initials: 'CS',
     },
     metrics: ['+140% Web Traffic', '97/100 Performance', '100/100 SEO Score'],
@@ -67,8 +67,8 @@ const RecentWork: React.FC<RecentWorkProps> = ({ works = defaultWorks }) => {
           </h2>
         </div>
 
-        {/* Showcase Layout: Video showcase above link and description */}
-        <div className="max-w-4xl mx-auto flex flex-col items-center">
+        {/* Showcase Layout: Video showcase above description */}
+        <div className="max-w-4xl mx-auto">
           {/* Site Showcase Display */}
           <div className="w-full mb-8 sm:mb-10">
             <a
@@ -92,62 +92,34 @@ const RecentWork: React.FC<RecentWorkProps> = ({ works = defaultWorks }) => {
             </a>
           </div>
 
-          {/* Details below: Link to site, Description/Testimonial, Metrics, Author */}
-          <div className="w-full max-w-3xl flex flex-col items-center text-center">
-            {/* Domain link with brand accent color */}
-            <a
-              href={`https://${currentWork.domain}`}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-flex items-center gap-1.5 text-[#2563EB] hover:text-[#1D4ED8] font-bold text-lg sm:text-xl transition-colors group mb-6"
-            >
-              <span>{currentWork.domain}</span>
-              <svg
-                className="w-5 h-5 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform"
-                fill="none"
-                viewBox="0 0 24 24"
-                stroke="currentColor"
-                strokeWidth="2.5"
-              >
-                <path strokeLinecap="round" strokeLinejoin="round" d="M7 17L17 7M17 7H7M17 7V17" />
-              </svg>
-            </a>
-
-            {/* Main Testimonial Quote / Description */}
-            <blockquote className="text-xl sm:text-2xl font-bold text-[#0B0F19] leading-snug sm:leading-normal tracking-tight mb-8">
-              {currentWork.testimonial}
-            </blockquote>
-
-            {/* Impact Metrics Badges matching brand primary tint */}
-            {currentWork.metrics && currentWork.metrics.length > 0 && (
-              <div className="flex flex-wrap justify-center gap-2 mb-8">
-                {currentWork.metrics.map((metric, i) => (
-                  <span
-                    key={i}
-                    className="inline-flex items-center px-3.5 py-1.5 rounded-full text-xs sm:text-sm font-bold bg-blue-50 text-[#2563EB] border border-blue-200/80"
-                  >
-                    {metric}
-                  </span>
-                ))}
-              </div>
-            )}
-
-            {/* Author Profile Footer */}
-            <div className="flex flex-col items-center text-center pt-6 border-t border-slate-200/80 w-full max-w-md mx-auto">
-              {currentWork.author.avatar ? (
-                <img
-                  src={currentWork.author.avatar}
-                  alt={currentWork.author.name}
-                  className="w-14 h-14 rounded-full object-cover border-2 border-white shadow-sm mb-3"
-                />
-              ) : (
-                <div className="w-14 h-14 rounded-full bg-[#2563EB] text-white font-bold flex items-center justify-center text-base shadow-md mb-3">
-                  {currentWork.author.initials}
+          {/* Details below: Tailwind Horizontal Card with Author on Left, Description on Right */}
+          <div className="bg-white rounded-2xl sm:rounded-3xl p-6 sm:p-8 md:p-10 border border-slate-200/80 shadow-xl">
+            <div className="flex flex-col md:flex-row md:items-center justify-between gap-8">
+              {/* Author Profile (CS icon and text below): below description on mobile, on left on desktop */}
+              <div className="order-2 md:order-1 w-full md:w-auto flex flex-col items-center text-center pt-6 md:pt-0 border-t md:border-t-0 md:border-r border-slate-200/80 md:pr-8 md:min-w-[240px] shrink-0">
+                {currentWork.author.avatar ? (
+                  <img
+                    src={currentWork.author.avatar}
+                    alt={currentWork.author.name}
+                    className="w-14 h-14 rounded-full object-cover border-2 border-white shadow-sm mb-3"
+                  />
+                ) : (
+                  <div className="w-14 h-14 rounded-full bg-[#2563EB] text-white font-bold flex items-center justify-center text-base shadow-md mb-3">
+                    {currentWork.author.initials}
+                  </div>
+                )}
+                <div>
+                  <h4 className="text-lg font-bold text-[#0B0F19] mb-1">{currentWork.author.name}</h4>
+                  <p className="text-sm sm:text-base text-slate-500 font-normal">{currentWork.author.title}</p>
                 </div>
-              )}
-              <div>
-                <h4 className="text-lg font-bold text-[#0B0F19] mb-1">{currentWork.author.name}</h4>
-                <p className="text-sm sm:text-base text-slate-500 font-normal">{currentWork.author.title}</p>
+              </div>
+
+              {/* Description: above author on mobile, on right on desktop */}
+              <div className="order-1 md:order-2 flex-1 flex flex-col items-start">
+                {/* Main Testimonial Quote / Description */}
+                <blockquote className="text-base sm:text-lg font-normal text-[#0B0F19] leading-relaxed">
+                  {currentWork.testimonial}
+                </blockquote>
               </div>
             </div>
           </div>

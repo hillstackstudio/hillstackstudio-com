@@ -509,21 +509,21 @@ export const servicesData: ServiceDetail[] = [
   {
     slug: "accessibility-compliance",
     name: "Accessibility Compliance",
-    tagline: "WCAG standards for an inclusive, legally compliant website.",
-    shortDescription: "WCAG compliant web standards ensuring inclusivity, legal protection and a seamless usability experience for all visitors.",
-    heroDescription: "Ensure your website is accessible to every local customer, regardless of ability. We implement WCAG 2.1 standards to improve usability, protect against legal liability and boost search rankings.",
+    tagline: "WCAG 2.2 standards for an inclusive, legally compliant website.",
+    shortDescription: "WCAG 2.2 compliant web standards ensuring inclusivity, legal protection and a seamless usability experience for all visitors.",
+    heroDescription: "Ensure your website is accessible to every local customer, regardless of ability. We implement WCAG 2.2 standards to improve usability, protect against legal liability and boost search rankings.",
     iconIndex: 7,
     heroImage: "/images/services/accessibility.svg",
     aiImpactTitle: "Accessible Web Design Benefits Both Humans and AI Crawlers",
     aiImpactDescription: "Accessibility compliance relies on clear color contrast, keyboard navigation, aria-labels and alt attributes. Remarkably, the exact code structures required for WCAG compliance make it significantly easier for AI search bots to navigate and understand your web pages.",
     features: [
       {
-        title: "WCAG 2.1 AA Standards",
-        description: "Ensuring proper visual color contrast, screen reader compatibility and font legibility."
+        title: "WCAG 2.2 AA Standards",
+        description: "Ensuring proper visual color contrast, screen reader compatibility, 24x24px touch targets and font legibility under current W3C standards."
       },
       {
         title: "Keyboard & Focus Navigation",
-        description: "Fully navigable site architecture using standard keyboard controls without mouse dependence."
+        description: "Fully navigable site architecture with unobscured focus indicators and standard keyboard controls without mouse dependence."
       },
       {
         title: "Alt Text & ARIA Labels",
@@ -535,17 +535,17 @@ export const servicesData: ServiceDetail[] = [
       }
     ],
     deliverables: [
-      "WCAG 2.1 AA accessibility audit & remediation report",
+      "WCAG 2.2 AA accessibility audit & remediation report",
       "Screen reader compatibility verification",
-      "Keyboard focus & navigation fixes",
-      "Color contrast and typography legibility enhancements",
+      "Keyboard focus visibility & unobscured navigation fixes",
+      "Color contrast, typography legibility and touch target enhancements",
       "Accessibility Statement page for your website"
     ],
     processSteps: [
       {
         stepNumber: "01",
         title: "Accessibility Audit",
-        description: "We evaluate your site using automated WAVE scanners and manual screen reader tools."
+        description: "We evaluate your site using automated scanners and manual screen reader tools."
       },
       {
         stepNumber: "02",
@@ -554,8 +554,8 @@ export const servicesData: ServiceDetail[] = [
       },
       {
         stepNumber: "03",
-        title: "Color & Focus Tuning",
-        description: "We adjust color contrast ratios and keyboard focus rings to meet AA accessibility standards."
+        title: "Color, Focus & Target Tuning",
+        description: "We adjust color contrast ratios, 24x24px touch target sizes and unobscured keyboard focus rings to meet WCAG 2.2 AA standards."
       },
       {
         stepNumber: "04",
@@ -567,6 +567,10 @@ export const servicesData: ServiceDetail[] = [
       {
         question: "Why is accessibility important for local businesses?",
         answer: "Beyond providing equal access to all members of your community, accessibility compliance protects your business from potential legal lawsuits and significantly improves overall user experience and search engine rankings."
+      },
+      {
+        question: "What is the difference between WCAG 2.1 and WCAG 2.2?",
+        answer: "WCAG 2.2 is the latest official W3C accessibility recommendation. It builds on WCAG 2.1 by introducing new criteria focused on modern mobile usability—such as minimum 24x24px touch target sizes, ensuring keyboard focus indicators are never obscured by sticky headers or popups, and eliminating cognitive hurdles in forms."
       },
       {
         question: "Does accessibility compliance slow down my site?",
