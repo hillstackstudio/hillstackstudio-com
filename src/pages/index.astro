@@ -27,8 +27,8 @@ import siteContext from '../data/siteContext.json';
       primaryCallToAction={siteContext.primaryCallToAction}
       regionalKeywords={siteContext.regionalKeywords}
     />
-    <Services client:load services={siteContext.services} />
     <RecentWork client:visible />
+    <Services client:load services={siteContext.services} />
     <Advantage />
     <Faq client:visible />
     <Contact 

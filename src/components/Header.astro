@@ -13,8 +13,8 @@ const {
   companyName = "Hill Stack Studio",
   navItems = [
     { label: "Company", href: "/#advantage" },
-    { label: "Services", href: "/services" },
     { label: "Work", href: "/#recent-work" },
+    { label: "Services", href: "/services" },
     { label: "Contact", href: "/#contact" }
   ],
   transparentAtTop = false
@@ -238,6 +238,14 @@ const serviceSvgPaths = [
         </div>
       </div>
 
+      {/* Work Link */}
+      <a
+        href="/#recent-work"
+        class="mobile-nav-link py-3 px-3 text-xl sm:text-2xl font-medium text-slate-800 hover:text-[#2563EB] rounded-xl hover:bg-blue-50/60 transition-colors"
+      >
+        Work
+      </a>
+
       {/* Services Link & Accordion */}
       <div class="mobile-accordion-item pb-1">
         <div class="flex items-center justify-start">
@@ -275,14 +283,6 @@ const serviceSvgPaths = [
           ))}
         </div>
       </div>
-
-      {/* Work Link */}
-      <a
-        href="/#recent-work"
-        class="mobile-nav-link py-3 px-3 text-xl sm:text-2xl font-medium text-slate-800 hover:text-[#2563EB] rounded-xl hover:bg-blue-50/60 transition-colors"
-      >
-        Work
-      </a>
 
       {/* Contact Link */}
       <a
