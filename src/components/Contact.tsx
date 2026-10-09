@@ -7,7 +7,7 @@ interface ContactProps {
 
 const Contact: React.FC<ContactProps> = () => {
   return (
-    <section id="contact" className="py-20 md:py-28 bg-[#F8FAFC] border-b border-slate-200/80">
+    <section id="contact" className="py-20 md:py-28 bg-[#F8FAFC]">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-12 max-w-3xl mx-auto">
           <span className="text-[#2563EB] text-sm font-bold uppercase tracking-wider mb-2 block">

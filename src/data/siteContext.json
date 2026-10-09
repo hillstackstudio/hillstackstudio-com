@@ -2,7 +2,7 @@
   "companyName": "Hill Stack Studio",
   "tagline": "Locally rooted. AI Optimized.",
   "mission": "To ensure every local business has the visibility, technology and personal support they need to thrive in the age of AI search.",
-  "aboutText": "We help our local businesses stand out on traditional search engines like Google and next-generation AI platforms like ChatGPT, Copilot, Perplexity and Gemini.",
+  "aboutText": "We help our local businesses stand out on traditional search engines like Google and next-generation AI platforms like ChatGPT, Gemini and Siri / Apple Intelligence.",
   "contact": {
     "email": "team@hillstackstudio.com",
     "address": "[INSERT HILL STACK STUDIO STREET ADDRESS]",
@@ -15,11 +15,11 @@
     },
     {
       "name": "Answer Engine Optimization (AEO)",
-      "description": "Comprehensive audit of your current website for traditional search engines and AI tools like ChatGPT, Claude and Gemini to maximize your local online discoverability."
+      "description": "Our comprehensive audit ensures AI tools like ChatGPT, Gemini and Siri actively recommend your business when locals search for your services."
     },
     {
       "name": "Consulting & Site Migration",
-      "description": "Consulting and strategic guidance for local business owners including seamless website transfers with zero downtime."
+      "description": "Strategic guidance on website redesign. Once built, we transfer your existing site smoothly without losing your domain, emails, or active leads."
     },
     {
       "name": "Web Hosting & Administration",
@@ -27,19 +27,19 @@
     },
     {
       "name": "Search Engine Readiness",
-      "description": "Structure your website's data into a clean, machine-readable format so AI assistants can accurately recommend and cite your business to local customers."
+      "description": "We organize your prices, hours and services in a clean format that AI bots can easily read, verify and quote to local callers."
     },
     {
       "name": "Copywriting & Content Adjustments",
-      "description": "Improve website messaging and content with search-optimized copy designed to capture customers searching across modern online platforms."
+      "description": "Clear website text that communicates your value instantly. Encouraging local clients to call or book online and AI bots to recommend your business."
     },
     {
       "name": "Performance & Visibility Audit",
-      "description": "Internal analysis of speed benchmarks, mobile responsiveness, accessibility scoring and AI engine discoverability."
+      "description": "Deep analysis of your current website to uncover hidden speed issues, broken mobile layouts and reasons AI tools are recommending your competitors instead of your business."
     },
     {
       "name": "Accessibility Compliance",
-      "description": "WCAG 2.2 compliant web standards ensuring inclusivity, legal protection and a seamless usability experience for all visitors."
+      "description": "WCAG 2.2 compliant web standards and clean site layouts, making it easy for every customer to navigate your website smoothly on any device while keeping you legally compliant."
     },
     {
       "name": "Security & Privacy Compliance",

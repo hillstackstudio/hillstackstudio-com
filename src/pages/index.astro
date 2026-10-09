@@ -7,7 +7,6 @@ import RecentWork from '../components/RecentWork.tsx';
 import Advantage from '../components/Advantage.astro';
 import Faq from '../components/Faq.tsx';
 import Contact from '../components/Contact.tsx';
-import ServiceAreas from '../components/ServiceAreas.astro';
 import Footer from '../components/Footer.astro';
 import siteContext from '../data/siteContext.json';
 ---
@@ -34,9 +33,7 @@ import siteContext from '../data/siteContext.json';
     <Contact 
       client:visible
       email={siteContext.contact.email}
-      regionalKeywords={siteContext.regionalKeywords}
     />
-    <ServiceAreas regionalKeywords={siteContext.regionalKeywords} />
     <!-- Gradient transition from light site background into Footer blue -->
     <div class="w-full h-24 sm:h-32 md:h-36 bg-gradient-to-b from-[#F8FAFC] to-[#EFF6FF]" aria-hidden="true"></div>
   </main>
