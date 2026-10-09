@@ -2,7 +2,8 @@ import React, { useState } from 'react';
 
 export interface FaqItem {
   question: string;
-  answer: string;
+  answer: React.ReactNode;
+  schemaAnswer?: string;
 }
 
 interface FaqProps {
@@ -13,24 +14,39 @@ interface FaqProps {
 
 const defaultFaqs: FaqItem[] = [
   {
-    question: "What is Answer Engine Optimization (AEO) and why does my business need it?",
-    answer: "Traditional SEO focuses on Google keyword ranking. Answer Engine Optimization (AEO) ensures conversational AI platforms—including ChatGPT, Google Gemini, Copilot, and Perplexity—actively recognize, cite, and recommend your local business when customers ask natural questions about services in your area."
+    question: "What is Answer Engine Optimization (AEO)?",
+    answer: "Traditional SEO gets your website listed and ranked on Google's search links. AEO makes sure AI tools like ChatGPT, Google AI and Siri actually recommend your business by name when locals ask for help in your area."
   },
   {
-    question: "Why do you build websites with Astro instead of WordPress or Squarespace?",
-    answer: "WordPress and visual page builders rely on bloated plugins and heavy database queries that slow down page speeds and require constant security maintenance. We use Astro to compile clean, ultra-fast static HTML. Your website loads in under a second on mobile devices, scores 95-100 on performance, and has zero plugin maintenance headaches."
+    question: "Why is AI visibility critical for local businesses right now?",
+    answer: (
+      <>
+        People aren't clicking through long lists of Google links like they used to, they are asking AI for quick answers. When someone asks ChatGPT or Siri, <em className="italic">"Who is the best plumber near me for an emergency?"</em>, the AI gives them 2 or 3 direct names. If your website isn't built for AI, those calls / bookings go straight to your competitors.
+      </>
+    ),
+    schemaAnswer: "People aren't clicking through long lists of Google links like they used to, they are asking AI for quick answers. When someone asks ChatGPT or Siri, \"Who is the best plumber near me for an emergency?\", the AI gives them 2 or 3 direct names. If your website isn't built for AI, those calls / bookings go straight to your competitors."
   },
   {
-    question: "Will my business email or existing Google rankings be affected during a migration?",
-    answer: "No, your daily operations and email services (such as Google Workspace or Microsoft 365) experience zero downtime. We carefully audit your existing URLs, implement proper 301 redirects, and transfer all metadata so you retain your hard-earned domain authority and search visibility."
+    question: "My customers are local and older. Do they really use AI like ChatGPT to find businesses?",
+    answer: (
+      <>
+        <strong className="font-semibold text-[#0B0F19]">Yes, even if they don't realize it!</strong> While younger generations might open the ChatGPT app, older customers use AI every day through Google's new top-of-page summary boxes, voice search on iPhones (Siri) and smart speakers. Whenever someone speaks or types a question into Google today, an AI engine is generating the answer.
+      </>
+    ),
+    schemaAnswer: "Yes, even if they don't realize it! While younger generations might open the ChatGPT app, older customers use AI every day through Google's new top-of-page summary boxes, voice search on iPhones (Siri) and smart speakers. Whenever someone speaks or types a question into Google today, an AI engine is generating the answer."
   },
   {
-    question: "How do your websites convert mobile visitors into paying customers?",
-    answer: "Over 70% of local service inquiries happen on mobile phones. Our websites are built mobile-first with instant tap-to-call buttons, frictionless quote consultation forms, and lightning-fast navigation that removes hesitation and converts visitors into leads."
+    question: "How much time will my business need to invest during the project?",
+    answer: (
+      <>
+        <strong className="font-semibold text-[#0B0F19]">Less than an hour total.</strong> After one 30-minute intake call where we learn about your business, goals and brand, our team handles everything else. From the design to technical setup. We respect your time so you can stay focused on running your business.
+      </>
+    ),
+    schemaAnswer: "Less than an hour total. After one 30-minute intake call where we learn about your business, goals and brand, our team handles everything else. From the design to technical setup. We respect your time so you can stay focused on running your business."
   },
   {
-    question: "What ongoing website administration and support is included?",
-    answer: "We provide hassle-free hosting, high-performance edge delivery, SSL certificate management, and hands-on updates. When you need text or photo adjustments, our team takes care of it directly—giving you peace of mind without surprise agency retainer fees."
+    question: "Do I own my website and digital assets after the website rebuild?",
+    answer: "Yes, 100%. You own your domain, website code, images and content. We build on modern, scalable infrastructure that you own outright."
   }
 ];
 
@@ -54,7 +70,7 @@ const Faq: React.FC<FaqProps> = ({
       "name": item.question,
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": item.answer
+        "text": item.schemaAnswer || (typeof item.answer === 'string' ? item.answer : '')
       }
     }))
   };
