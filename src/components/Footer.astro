@@ -1,20 +1,24 @@
 ---
+import siteContext from '../data/siteContext.json';
+
 export interface Props {
   companyName?: string;
   email?: string;
   hours?: string;
+  regionalKeywords?: string[];
 }
 
 const {
-  companyName = "Hill Stack Studio",
-  email = "team@hillstackstudio.com",
-  hours = "Mon-Fri 8am-6pm PST"
+  companyName = siteContext.companyName,
+  email = siteContext.contact.email,
+  hours = siteContext.contact.hours,
+  regionalKeywords = siteContext.regionalKeywords
 } = Astro.props;
 ---
 
 <footer class="w-full bg-[#EFF6FF] text-slate-600 py-16 pb-28 md:pb-16">
   <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid grid-cols-1 md:grid-cols-4 gap-10">
-    <!-- Brand Info -->
+    <!-- Brand Info & Regional Presence -->
     <div class="md:col-span-2">
       <div class="flex items-center mb-3">
         <img 
@@ -36,6 +40,21 @@ const {
           </svg>
           <span>Serving Clients Across the Pacific Northwest</span>
         </div>
+      </div>
+
+      <!-- Regional Presence (Desktop: inside Column 1) -->
+      <div class="hidden md:block mt-6 pt-5 border-t border-slate-200/60 max-w-lg">
+        <h4 class="text-[#0B0F19] text-xs font-bold uppercase tracking-wider mb-2.5">Regional Presence</h4>
+        <ul class="flex flex-wrap items-center gap-x-2.5 gap-y-1.5 text-sm text-slate-600">
+          {regionalKeywords
+            .filter((area) => area.toLowerCase() !== 'pacific northwest')
+            .map((area, index, arr) => (
+              <li class="flex items-center gap-2.5">
+                <span>{area}</span>
+                {index < arr.length - 1 && <span class="text-slate-300" aria-hidden="true">•</span>}
+              </li>
+            ))}
+        </ul>
       </div>
     </div>
 
@@ -65,6 +84,21 @@ const {
           <span class="text-slate-600">{hours}</span>
         </li>
       </ul>
+
+      <!-- Regional Presence (Mobile: under Contact Info) -->
+      <div class="block md:hidden mt-8 pt-6 border-t border-slate-200/60">
+        <h4 class="text-[#0B0F19] text-xs font-bold uppercase tracking-wider mb-2.5">Regional Presence</h4>
+        <ul class="flex flex-wrap items-center gap-x-2.5 gap-y-1.5 text-sm text-slate-600">
+          {regionalKeywords
+            .filter((area) => area.toLowerCase() !== 'pacific northwest')
+            .map((area, index, arr) => (
+              <li class="flex items-center gap-2.5">
+                <span>{area}</span>
+                {index < arr.length - 1 && <span class="text-slate-300" aria-hidden="true">•</span>}
+              </li>
+            ))}
+        </ul>
+      </div>
     </div>
   </div>
 

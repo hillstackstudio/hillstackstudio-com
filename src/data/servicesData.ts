@@ -30,7 +30,7 @@ export const servicesData: ServiceDetail[] = [
   {
     slug: "custom-web-design-development",
     name: "Custom Web Design & Development",
-    tagline: "Ultra-fast, high-converting websites engineered on Astro.",
+    tagline: "Fast, reliable, high-converting websites engineered for your business needs.",
     shortDescription: "Clean custom code and modern website redesigns engineered for fast page loads, AI search recommendations and customer conversion.",
     heroDescription: "Clean custom code and modern website redesigns engineered for fast page loads, AI search recommendations and customer conversion.",
     iconIndex: 0,
@@ -56,11 +56,11 @@ export const servicesData: ServiceDetail[] = [
       }
     ],
     deliverables: [
-      "Custom Astro web project tailored to your local business",
-      "Mobile-responsive design verified on iOS and Android devices",
+      "Custom-built for speed and reliability, tailored directly to your local market.",
+      "Clean mobile designs verified on iOS and Android devices",
       "Integrated tap-to-call buttons and interactive contact forms",
-      "Core Web Vitals green-check optimization (95+ Lighthouse scores)",
-      "Zero-downtime deployment on global edge servers"
+      "Core Web Vitals green-check optimization (90+ Lighthouse scores)",
+      "Continuous updates with zero interruptions to your business."
     ],
     processSteps: [
       {
@@ -86,8 +86,8 @@ export const servicesData: ServiceDetail[] = [
     ],
     faq: [
       {
-        question: "Why do you use Astro instead of WordPress?",
-        answer: "WordPress relies on bloated database queries and plugin updates that slow down your site and create security vulnerabilities. Astro generates ultra-fast static HTML, loading near-instantaneously on mobile phones and providing zero maintenance overhead."
+        question: "How is this different from a Squarespace or Wordpress website?",
+        answer: "Most websites built on platforms like WordPress or Squarespace are loaded down with heavy templates and unnecessary background code that degrades your load speeds over time.<br>Instead, we build your site from the ground up using lean, clean code. Because there is no unnecessary clutter under the hood, your site opens instantly and runs smoothly on mobile phones."
       },
       {
         question: "Will my custom website work well on mobile phones?",
@@ -98,7 +98,7 @@ export const servicesData: ServiceDetail[] = [
   {
     slug: "answer-engine-optimization",
     name: "Answer Engine Optimization (AEO)",
-    tagline: "Be the top AI search answer when local customers ask.",
+    tagline: "Be the top AI recommended answer when local customers ask.",
     shortDescription: "Our comprehensive audit ensures AI tools like ChatGPT, Gemini and Siri actively recommend your business when locals search for your services.",
     heroDescription: "Our comprehensive audit ensures AI tools like ChatGPT, Gemini and Siri actively recommend your business when locals search for your services.",
     iconIndex: 1,
@@ -124,11 +124,10 @@ export const servicesData: ServiceDetail[] = [
       }
     ],
     deliverables: [
-      "Complete 5-Pillars AI Visibility Audit Report",
-      "LLM citation optimization for ChatGPT, Perplexity and Gemini",
-      "Structured entity data updates and trade credential formatting",
-      "Regional search boundary alignment for target cities & counties",
-      "Quarterly AI search ranking & citation tracking report"
+      "Complete AI Visibility and SEO Audit Report",
+      "Enable your business to be recommended when locals ask ChatGPT, Gemini or Siri for services you provide.",
+      "Organize your licenses, credentials and business info so search systems easily verify who you are and what you do.",
+      "Define your exact coverage area so nearby customers will be directed to you"
     ],
     processSteps: [
       {
@@ -192,11 +191,10 @@ export const servicesData: ServiceDetail[] = [
       }
     ],
     deliverables: [
-      "Full URL mapping and 301 redirect implementation schedule",
-      "Domain, DNS and MX record safety migration checklist",
-      "Pre- and post-migration SEO rank and indexing audit",
-      "Direct 1-on-1 strategy calls with our Pacific Northwest team",
-      "Post-launch 30-day monitor to ensure 100% uptime and link health"
+      "Forward all old web pages to the new website so customers never hit a broken link",
+      "Safeguards to your web address and business email so you never miss a client message",
+      "Review your Google rank and AI recommendations before and after launch to protect your search traffic",
+      "Direct phone or video calls with our team whenever you need us"
     ],
     processSteps: [
       {
@@ -223,11 +221,11 @@ export const servicesData: ServiceDetail[] = [
     faq: [
       {
         question: "Will my business email or phone service be affected during migration?",
-        answer: "No. We separate your web hosting records from your domain email records (MX settings) to ensure your business communication remains active without a second of downtime."
+        answer: "No. We separate your web hosting records from your domain email records to ensure your business communication remains active without a second of downtime."
       },
       {
         question: "Will I lose my current Google rankings?",
-        answer: "Not with our process. Our 301 redirect mapping and sitemap re-submission preserve all existing search engine authority and index points."
+        answer: "Not with our process. We safely transfer every page and link so you keep all the Google reputation you already have. Even better, because our infrastructure is clean and optimized for machines to read / cite, modern AI tools like ChatGPT, Google Gemini and Siri can actually find and recommend your business much more easily after launch."
       }
     ]
   },
@@ -261,11 +259,10 @@ export const servicesData: ServiceDetail[] = [
       }
     ],
     deliverables: [
-      "High-speed CDN static hosting environment",
-      "Free SSL security certificate (HTTPS) setup & maintenance",
-      "Automated daily backups and instant rollback capability",
-      "24/7 technical monitoring and uptime protection",
-      "Direct technical support for DNS & domain settings"
+      "Premium cloud hosting engineered for instant page loads on any device",
+      "Full website security & encryption",
+      "Automated daily backups with restore protection",
+      "Full management and direct support for your domain name and web address settings"
     ],
     processSteps: [
       {
