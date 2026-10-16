@@ -38,7 +38,7 @@ const defaultWorks: WorkItem[] = [
       initials: 'CS',
     },
     metrics: ['+140% Web Traffic', '97/100 Performance', '100/100 SEO Score'],
-    color: '#2563EB',
+    color: '#0B0F19',
   },
 ];
 
@@ -55,15 +55,21 @@ const RecentWork: React.FC<RecentWorkProps> = ({ works = defaultWorks }) => {
   }, []);
 
   return (
-    <section id="recent-work" className="py-20 md:py-28 bg-[#F8FAFC] border-b border-slate-200/80 relative overflow-hidden">
+    <section id="recent-work" className="py-20 md:py-28 bg-[#F9FAFC] border-b border-slate-200/80 relative overflow-hidden">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Header matching site design system */}
         <div className="text-center mb-12 sm:mb-16 max-w-3xl mx-auto">
-          <span className="text-[#2563EB] text-sm font-bold uppercase tracking-wider mb-2 block">
-            Our Work
-          </span>
-          <h2 className="text-3xl sm:text-4xl md:text-5xl font-extrabold text-[#0B0F19] tracking-tight leading-[1.15]">
-            Discoverable Websites & Optimized Results
+          <h2 
+            className="text-[2.5rem] sm:text-4xl md:text-5xl font-black text-[#0B0F19] tracking-[-0.03em] leading-[1.06] sm:leading-[1.08]"
+            style={{
+              fontFamily: "'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif",
+              fontWeight: 800,
+              letterSpacing: '-0.03em',
+              lineHeight: 1.06
+            }}
+          >
+            <span className="block">Built for discovery,</span>
+            <span className="block">Designed to stand out</span>
           </h2>
         </div>
 
@@ -104,7 +110,7 @@ const RecentWork: React.FC<RecentWorkProps> = ({ works = defaultWorks }) => {
                     className="w-14 h-14 rounded-full object-cover border-2 border-white shadow-sm mb-3"
                   />
                 ) : (
-                  <div className="w-14 h-14 rounded-full bg-[#2563EB] text-white font-bold flex items-center justify-center text-base shadow-md mb-3">
+                  <div className="w-14 h-14 rounded-full bg-black text-white font-bold flex items-center justify-center text-base shadow-md mb-3">
                     {currentWork.author.initials}
                   </div>
                 )}

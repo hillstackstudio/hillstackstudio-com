@@ -7,28 +7,28 @@ export interface AiBrand {
 
 const aiBrands: AiBrand[] = [
   {
-    name: 'ChatGPT',
-    logoSrc: '/images/ai-logos/chatgpt-logo.png.webp',
-  },
-  {
-    name: 'Claude',
-    logoSrc: '/images/ai-logos/claude-ai-logo.png.webp',
-  },
-  {
     name: 'Copilot',
     logoSrc: '/images/ai-logos/co-pilot-ai-logo.png.webp',
   },
   {
-    name: 'Perplexity',
-    logoSrc: '/images/ai-logos/perplexity-ai-logo.png.webp',
+    name: 'Google',
+    logoSrc: '/images/ai-logos/google-logo-1.png.webp',
+  },
+  {
+    name: 'Apple Siri',
+    logoSrc: '/images/ai-logos/apple-siri.png.webp',
   },
   {
     name: 'Gemini',
     logoSrc: '/images/ai-logos/gemini-logo.png.webp',
   },
   {
-    name: 'Google',
-    logoSrc: '/images/ai-logos/google-logo-1.png.webp',
+    name: 'ChatGPT',
+    logoSrc: '/images/ai-logos/chatgpt-logo.png.webp',
+  },
+  {
+    name: 'Perplexity',
+    logoSrc: '/images/ai-logos/perplexity-ai-logo.png.webp',
   },
 ];
 
@@ -43,26 +43,37 @@ export const AiMarquee: React.FC<AiMarqueeProps> = ({
   const marqueeItems = [...aiBrands, ...aiBrands, ...aiBrands, ...aiBrands];
 
   return (
-    <div className="w-full my-6 sm:my-8 md:my-10">
+    <div className="relative w-full my-6 sm:my-8 md:my-10">
+      {/* Radial Glow behind AI Marquee (#F9FAFC) for contrast and readability */}
+      <div 
+        className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[95%] max-w-[900px] h-[180px] sm:h-[220px] rounded-full pointer-events-none -z-10"
+        style={{
+          background: 'radial-gradient(ellipse at center, rgba(249, 250, 252, 0.96) 0%, rgba(249, 250, 252, 0.88) 45%, rgba(249, 250, 252, 0.45) 70%, rgba(249, 250, 252, 0) 85%)',
+          filter: 'blur(30px)'
+        }}
+        aria-hidden="true"
+      />
+
       {/* Title above marquee matching site design system */}
-      <span className="text-[#2563EB] text-sm font-bold uppercase tracking-wider mb-4 sm:mb-5 block text-center">
+      <span className="relative z-10 text-[#0B0F19] text-sm font-bold uppercase tracking-wider mb-4 sm:mb-5 block text-center">
         {title}
       </span>
 
-      {/* Marquee Outer Container with horizontal fade mask */}
-      <div className="relative w-full overflow-hidden py-2 sm:py-3 [mask-image:linear-gradient(to_right,transparent,black_10%,black_90%,transparent)]">
-        {/* Infinite Moving Row */}
-        <div className="flex w-max items-center gap-10 sm:gap-14 md:gap-16 lg:gap-20 animate-marquee hover:[animation-play-state:paused] focus-within:[animation-play-state:paused]">
+      {/* Marquee Outer Container with horizontal fade mask - non-interactive continuous scroll */}
+      <div className="relative z-10 w-full overflow-hidden py-2 sm:py-3 [mask-image:linear-gradient(to_right,transparent,black_10%,black_90%,transparent)] pointer-events-none select-none">
+        {/* Infinite Moving Row - continuously scrolls uninterrupted */}
+        <div className="flex w-max items-center gap-10 sm:gap-14 md:gap-16 lg:gap-20 animate-marquee">
           {marqueeItems.map((brand, index) => (
             <div
               key={`${brand.name}-${index}`}
-              className="flex-shrink-0 flex items-center justify-center h-9 sm:h-11 md:h-13 lg:h-14 px-3 select-none group cursor-pointer transition-transform duration-300 hover:scale-110"
+              className="flex-shrink-0 flex items-center justify-center h-9 sm:h-11 md:h-13 lg:h-14 px-3"
             >
               <img
                 src={brand.logoSrc}
                 alt={`${brand.name} logo`}
-                className="h-full w-auto object-contain max-w-[140px] sm:max-w-[180px] md:max-w-[220px] opacity-90 group-hover:opacity-100 transition-opacity duration-200"
+                className="h-full w-auto object-contain max-w-[140px] sm:max-w-[180px] md:max-w-[220px] opacity-90"
                 loading="lazy"
+                draggable={false}
               />
             </div>
           ))}

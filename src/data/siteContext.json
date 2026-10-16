@@ -2,7 +2,7 @@
   "companyName": "Hill Stack Studio",
   "tagline": "Locally rooted. AI Optimized.",
   "mission": "To ensure every local business has the visibility, technology and personal support they need to thrive in the age of AI search.",
-  "aboutText": "We help our local businesses stand out on traditional search engines like Google and next-generation AI platforms like ChatGPT, Gemini and Siri / Apple Intelligence.",
+  "aboutText": "We rebuild your website to better reflect your business. We run our audit so local searches can lead customers straight to you.",
   "contact": {
     "email": "team@hillstackstudio.com",
     "address": "[INSERT HILL STACK STUDIO STREET ADDRESS]",
@@ -14,8 +14,8 @@
       "description": "Clean custom code and modern website redesigns engineered for fast page loads, AI search recommendations and customer conversion."
     },
     {
-      "name": "Answer Engine Optimization (AEO)",
-      "description": "Our comprehensive audit ensures AI tools like ChatGPT, Gemini and Siri actively recommend your business when locals search for your services."
+      "name": "AEO & SEO Website Audit",
+      "description": "Our comprehensive audit identifies why your business is not recommended to local customers. Allowing us to fix these issues so local searches can lead more customers to you."
     },
     {
       "name": "Consulting & Site Migration",
@@ -46,7 +46,7 @@
       "description": "Robust security measures, privacy compliance and site protection standards to safeguard your business and customer data."
     }
   ],
-  "primaryCallToAction": "Audit Your Online Visibility",
+  "primaryCallToAction": "Audit Your Website",
   "regionalKeywords": [
     "Seattle",
     "Bellevue",

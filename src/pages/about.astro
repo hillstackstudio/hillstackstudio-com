@@ -2,7 +2,6 @@
 import BaseLayout from '../layouts/BaseLayout.astro';
 import Header from '../components/Header.astro';
 import Footer from '../components/Footer.astro';
-import AiMarquee from '../components/AiMarquee';
 import siteContext from '../data/siteContext.json';
 const teamMembers = [
   {
@@ -27,74 +26,116 @@ const teamMembers = [
     email={siteContext.contact.email}
   />
 
-  <main class="bg-[#F8FAFC] flex-grow flex flex-col">
+  <main class="bg-[#F9FAFC] flex-grow flex flex-col">
     {/* Page Header Hero */}
-    <section class="bg-gradient-to-b from-[#EFF6FF] via-[#F5F9FF] to-[#F8FAFC] pt-14 pb-16 md:pt-20 md:pb-24 border-b border-slate-200/60 relative">
-      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+    <section class="bg-gradient-to-b from-[#EFF6FF] via-[#F4F8FD] to-[#F9FAFC] pt-14 pb-16 md:pt-20 md:pb-24 border-b border-slate-200/60 relative">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Breadcrumbs */}
         <nav class="flex items-center justify-start gap-2 text-xs md:text-sm text-slate-500 mb-6 font-medium">
-          <a href="/" class="hover:text-[#2563EB] transition-colors">
+          <a href="/" class="hover:text-black transition-colors">
             Home
           </a>
-          <span>/</span>
+          <svg class="w-3.5 h-3.5 text-slate-400 stroke-[2.5]" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="M9 18l6-6-6-6" />
+          </svg>
           <span class="text-slate-800 font-bold">About Us</span>
         </nav>
 
-        <span class="text-[#2563EB] text-sm font-bold uppercase tracking-wider mb-3 block">
-          Our Mission
-        </span>
-        <h1 class="text-4xl md:text-5xl font-extrabold text-[#0B0F19] tracking-tight mb-6 max-w-4xl mx-auto leading-[1.15]">
-          Locally Rooted.<br />
-          AI Optimized.
-        </h1>
-        <p class="text-lg sm:text-xl text-slate-600 max-w-3xl mx-auto leading-relaxed">
-          We take pride in helping Pacific Northwest businesses stand out on Google, convert visitors into customers and remain discoverable in the rapidly evolving world of AI search.
-        </p>
-
-        <AiMarquee
-          client:load
-          title="Modernize Your Business with Discoverability in AI Search"
-        />
-      </div>
-    </section>
-
-    {/* The Hill Stack Story Section */}
-    <section class="py-16 md:py-24">
-      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-center">
           <div class="lg:col-span-7">
-            <span class="text-[#2563EB] text-sm font-bold uppercase tracking-wider mb-3 block">
-              Our Story
-            </span>
-            <h2 class="text-3xl sm:text-4xl font-extrabold text-[#0B0F19] tracking-tight mb-6 leading-snug">
-              The internet and search have moved forward. Most small business websites haven't.
-            </h2>
-            <div class="space-y-4 text-slate-600 text-base sm:text-lg leading-relaxed">
-              <p>
-                How people discover local businesses has fundamentally transformed. Customers aren't just typing keywords into Google anymore. They're asking AI assistants like <strong>ChatGPT, Gemini and Claude</strong> for trusted recommendations. Companies with teams of software developers are currently making this transition, but most small business websites are outdated and completely invisible to these modern AI search engines.
-              </p>
-              <p>
-                <strong>Hill Stack Studio</strong> was founded to solve this problem. We provide modern engineering, Answer Engine Optimization (AEO) and full website redesign combined with the strategic consulting our local businesses deserve.
-              </p>
-            </div>
-            
-            <div class="mt-8 flex flex-wrap items-center gap-4">
-              <a
-                href="/#contact"
-                class="inline-flex items-center gap-2 bg-[#2563EB] hover:bg-[#1D4ED8] text-white font-bold py-3.5 px-8 rounded-full shadow-sm hover:shadow-md transition-all duration-200 active:scale-95 text-base"
-              >
-                <span>Request a Consultation</span>
-                <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5">
-                  <path stroke-linecap="round" stroke-linejoin="round" d="M14 5l7 7m0 0l-7 7m7-7H3" />
+            <h1 class="text-5xl sm:text-6xl md:text-7xl font-extrabold text-[#0B0F19] tracking-tight mb-4 sm:mb-6 max-w-4xl leading-[1.05]">
+              <span class="hand-drawn-wrapper">
+                <span class="hand-drawn-text">Vision</span>
+                <svg 
+                  class="hand-drawn-underline" 
+                  viewBox="0 0 280 24" 
+                  fill="none" 
+                  xmlns="http://www.w3.org/2000/svg"
+                  preserveAspectRatio="none"
+                  aria-hidden="true"
+                >
+                  <defs>
+                    <filter id="crayon-roughness-vision" x="-10%" y="-40%" width="120%" height="180%" filterUnits="objectBoundingBox">
+                      <feTurbulence type="fractalNoise" baseFrequency="0.65" numOctaves="4" result="noise" />
+                      <feDisplacementMap in="SourceGraphic" in2="noise" scale="2.4" xChannelSelector="R" yChannelSelector="G" result="displaced" />
+                      <feMerge>
+                        <feMergeNode in="displaced" />
+                      </feMerge>
+                    </filter>
+                  </defs>
+                  <path 
+                    class="hand-drawn-path"
+                    d="M 6,17 C 52,19 118,13 182,10 C 218,8.5 254,9 275,13"
+                    stroke="#FBF719" 
+                    stroke-width="7" 
+                    stroke-linecap="round" 
+                    stroke-linejoin="round" 
+                    filter="url(#crayon-roughness-vision)"
+                    opacity="0.95"
+                  />
+                  <path 
+                    class="hand-drawn-path"
+                    d="M 16,16 C 68,17.5 132,13 192,10.5 C 224,9.2 250,9.8 268,12"
+                    stroke="#FBF719" 
+                    stroke-width="4" 
+                    stroke-linecap="round" 
+                    stroke-linejoin="round" 
+                    filter="url(#crayon-roughness-vision)"
+                    opacity="0.85"
+                  />
                 </svg>
-              </a>
-              <a
-                href="/services"
-                class="inline-flex items-center gap-2 bg-white hover:bg-slate-50 text-slate-700 font-bold py-3.5 px-7 rounded-full border border-slate-200/90 shadow-xs hover:shadow-md transition-all duration-200 text-base"
-              >
-                <span>View Our Services</span>
-              </a>
-            </div>
+              </span>
+            </h1>
+            <p class="text-lg sm:text-xl text-slate-600 max-w-3xl leading-relaxed mb-10 md:mb-12">
+              Technology should serve all business, including small businesses.
+            </p>
+
+            <h2 class="text-5xl sm:text-6xl md:text-7xl font-extrabold text-[#0B0F19] tracking-tight mb-4 sm:mb-6 max-w-4xl leading-[1.05]">
+              <span class="hand-drawn-wrapper">
+                <span class="hand-drawn-text">Mission</span>
+                <svg 
+                  class="hand-drawn-underline" 
+                  viewBox="0 0 280 24" 
+                  fill="none" 
+                  xmlns="http://www.w3.org/2000/svg"
+                  preserveAspectRatio="none"
+                  aria-hidden="true"
+                >
+                  <defs>
+                    <filter id="crayon-roughness-mission" x="-10%" y="-40%" width="120%" height="180%" filterUnits="objectBoundingBox">
+                      <feTurbulence type="fractalNoise" baseFrequency="0.65" numOctaves="4" result="noise" />
+                      <feDisplacementMap in="SourceGraphic" in2="noise" scale="2.4" xChannelSelector="R" yChannelSelector="G" result="displaced" />
+                      <feMerge>
+                        <feMergeNode in="displaced" />
+                      </feMerge>
+                    </filter>
+                  </defs>
+                  <path 
+                    class="hand-drawn-path"
+                    d="M 6,17 C 52,19 118,13 182,10 C 218,8.5 254,9 275,13"
+                    stroke="#FBF719" 
+                    stroke-width="7" 
+                    stroke-linecap="round" 
+                    stroke-linejoin="round" 
+                    filter="url(#crayon-roughness-mission)"
+                    opacity="0.95"
+                  />
+                  <path 
+                    class="hand-drawn-path"
+                    d="M 16,16 C 68,17.5 132,13 192,10.5 C 224,9.2 250,9.8 268,12"
+                    stroke="#FBF719" 
+                    stroke-width="4" 
+                    stroke-linecap="round" 
+                    stroke-linejoin="round" 
+                    filter="url(#crayon-roughness-mission)"
+                    opacity="0.85"
+                  />
+                </svg>
+              </span>
+            </h2>
+            <p class="text-lg sm:text-xl text-slate-600 max-w-3xl leading-relaxed">
+              We take pride in helping Pacific Northwest businesses stand out on Google, convert visitors into customers and remain discoverable in the rapidly evolving world of AI search.
+            </p>
           </div>
 
           <div class="lg:col-span-5">
@@ -103,7 +144,7 @@ const teamMembers = [
                 <div class="w-12 h-12 rounded-2xl bg-blue-50 text-[#2563EB] flex items-center justify-center font-bold text-xl shadow-xs shrink-0">
                   ✦
                 </div>
-                <h3 class="text-2xl font-extrabold text-[#0B0F19]">Our Commitment</h3>
+                <h3 class="text-2xl font-extrabold text-[#0B0F19]">Our commitment</h3>
               </div>
               <ul class="space-y-4 text-slate-600 text-base">
                 <li class="flex items-start gap-3">
@@ -136,15 +177,47 @@ const teamMembers = [
       </div>
     </section>
 
+    {/* The Hill Stack Story Section */}
+    <section class="py-16 md:py-24">
+      <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+        <h2 class="text-3xl sm:text-4xl font-extrabold text-[#0B0F19] tracking-tight mb-6 leading-snug">
+          The internet and search have moved forward. Most small business websites haven't.
+        </h2>
+        <div class="space-y-4 text-slate-600 text-base sm:text-lg leading-relaxed">
+          <p>
+            How people discover local businesses has fundamentally transformed. Customers aren't just typing keywords into Google anymore. They're asking AI assistants like <strong>ChatGPT, Gemini and Claude</strong> for trusted recommendations. Companies with teams of software developers are currently making this transition, but most small business websites are outdated and completely invisible to these modern AI search engines.
+          </p>
+          <p>
+            <strong>Hill Stack Studio</strong> was founded to solve this problem. We provide modern engineering, Answer Engine Optimization (AEO) and full website redesign combined with the strategic consulting our local businesses deserve.
+          </p>
+        </div>
+        
+        <div class="mt-8 flex flex-wrap items-center gap-4">
+          <a
+            href="/#contact"
+            class="inline-flex items-center gap-2 bg-[#2563EB] hover:bg-[#1D4ED8] text-white font-bold py-3.5 px-8 rounded-full shadow-sm hover:shadow-md transition-all duration-200 active:scale-95 text-base"
+          >
+            <span>Request a Consultation</span>
+            <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M14 5l7 7m0 0l-7 7m7-7H3" />
+            </svg>
+          </a>
+          <a
+            href="/services"
+            class="inline-flex items-center gap-2 bg-white hover:bg-slate-50 text-slate-700 font-bold py-3.5 px-7 rounded-full border border-slate-200/90 shadow-xs hover:shadow-md transition-all duration-200 text-base"
+          >
+            <span>View Our Services</span>
+          </a>
+        </div>
+      </div>
+    </section>
+
     {/* Our Team Section */}
-    <section class="py-16 md:py-24 bg-[#F8FAFC] border-t border-slate-200/80">
+    <section class="py-16 md:py-24 bg-[#F9FAFC] border-t border-slate-200/80">
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div class="text-center max-w-3xl mx-auto mb-14 sm:mb-16">
-          <span class="text-[#2563EB] text-sm font-bold uppercase tracking-wider mb-2 block">
-            Our Team
-          </span>
           <h2 class="text-3xl sm:text-4xl md:text-5xl font-extrabold text-[#0B0F19] tracking-tight">
-            Modern Engineering, Dedicated Partnership
+            Modern engineering, dedicated partnership
           </h2>
         </div>
 
@@ -171,34 +244,19 @@ const teamMembers = [
       </div>
     </section>
 
-    {/* Regional Service Focus Banner */}
-    <section class="py-12 bg-white border-t border-slate-200/80">
-      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-        <span class="text-slate-500 text-xs sm:text-sm font-semibold uppercase tracking-wider block mb-4">
-          Proudly Serving Communities Across the Pacific Northwest
-        </span>
-        <div class="flex flex-wrap items-center justify-center gap-2 sm:gap-3">
-          {siteContext.regionalKeywords.map((city) => (
-            <span class="inline-flex items-center px-4 py-2 rounded-full text-xs sm:text-sm font-bold bg-blue-50 text-[#2563EB] border border-blue-200/60">
-              {city}
-            </span>
-          ))}
-        </div>
-      </div>
-    </section>
 
     {/* Bottom Call to Action Banner */}
-    <section class="py-16 md:py-20 bg-[#EFF6FF]/60 border-t border-slate-200/80">
+    <section class="py-16 md:py-20 bg-[#F4EFEA] border-t border-slate-200/80">
       <div class="max-w-4xl mx-auto px-4 text-center">
         <h2 class="text-3xl sm:text-4xl font-extrabold text-[#0B0F19] mb-4">
-          Ready to Elevate Your Online Presence?
+          Ready to elevate your online presence?
         </h2>
         <p class="text-slate-600 text-lg mb-8 max-w-xl mx-auto leading-relaxed">
           Contact Hill Stack Studio today for a consultation and a custom audit of your website's performance and AI discoverability.
         </p>
         <a
           href="/#contact"
-          class="inline-flex items-center gap-2 bg-[#2563EB] hover:bg-[#1D4ED8] text-white font-bold py-3.5 px-8 rounded-full shadow-sm hover:shadow-md transition-all duration-200 active:scale-95 text-base"
+          class="inline-flex items-center gap-2 bg-black hover:bg-slate-900 text-white font-bold py-3.5 px-8 rounded-full shadow-md hover:shadow-lg transition-all duration-200 active:scale-95 text-base"
         >
           <span>Schedule Your Consultation</span>
           <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5">

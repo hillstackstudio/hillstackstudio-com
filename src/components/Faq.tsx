@@ -76,7 +76,7 @@ const Faq: React.FC<FaqProps> = ({
   };
 
   return (
-    <section id="faq" className="py-20 md:py-28 bg-[#F8FAFC] border-b border-slate-200/80">
+    <section id="faq" className="py-20 md:py-28 bg-[#F9FAFC] border-b border-slate-200/80">
       {/* FAQ Schema Markup for Search Engines and AI Crawlers */}
       <script
         type="application/ld+json"
@@ -85,97 +85,97 @@ const Faq: React.FC<FaqProps> = ({
 
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Header matching site design system */}
-        <div className="text-center mb-12 sm:mb-16">
-          <span className="text-[#2563EB] text-xs sm:text-sm font-bold uppercase tracking-widest mb-3 block">
+        <div className="text-center mb-12 sm:mb-16 max-w-3xl mx-auto">
+          <span className="inline-flex items-center px-3.5 py-1.5 rounded-full text-xs font-bold uppercase tracking-wider bg-blue-50 text-[#2663EB] border border-blue-100 mb-4">
             {eyebrow}
           </span>
-          <h2 className="text-3xl sm:text-4xl md:text-5xl font-extrabold text-[#0B0F19] tracking-tight leading-[1.15]">
-            Frequently <br className="hidden sm:inline" />
-            Asked Questions
+          <h2 className="text-[2.5rem] sm:text-4xl md:text-5xl font-extrabold text-[#0B0F19] tracking-tight leading-[1.08] mb-4">
+            {title}
           </h2>
+          <p className="text-lg text-slate-600 leading-relaxed font-normal">
+            Everything you need to know about our web engineering, AEO, and how we help your local business get discovered.
+          </p>
         </div>
 
-        {/* FAQ Accordion List matching component reference */}
-        <div className="space-y-3 sm:space-y-3.5 max-w-2xl sm:max-w-3xl mx-auto">
+        {/* FAQ Accordion List matching site design system */}
+        <div className="space-y-4 max-w-2xl sm:max-w-3xl mx-auto">
           {items.map((item, index) => {
             const isOpen = openIndex === index;
 
-            if (isOpen) {
-              return (
-                <div
-                  key={index}
-                  className="bg-white rounded-3xl sm:rounded-[28px] p-6 sm:p-7 border border-slate-200/90 shadow-sm transition-all duration-300"
+            return (
+              <div
+                key={index}
+                className={`bg-white rounded-2xl sm:rounded-3xl border transition-all duration-200 overflow-hidden ${
+                  isOpen
+                    ? 'border-slate-300 shadow-md ring-1 ring-black/5'
+                    : 'border-slate-200/80 shadow-xs hover:border-slate-300 hover:shadow-sm'
+                }`}
+              >
+                <button
+                  type="button"
+                  onClick={() => toggleItem(index)}
+                  aria-expanded={isOpen}
+                  aria-controls={`faq-answer-${index}`}
+                  className="w-full flex items-center justify-between text-left p-6 sm:p-7 group cursor-pointer focus:outline-none focus-visible:ring-2 focus-visible:ring-black"
                 >
-                  <button
-                    type="button"
-                    onClick={() => toggleItem(index)}
-                    aria-expanded="true"
-                    aria-controls={`faq-answer-${index}`}
-                    className="w-full flex items-center justify-between text-left group cursor-pointer focus:outline-none"
+                  <span className={`text-base sm:text-lg font-bold pr-4 leading-snug transition-colors ${
+                    isOpen ? 'text-[#0B0F19]' : 'text-slate-800 group-hover:text-black'
+                  }`}>
+                    {item.question}
+                  </span>
+                  <span 
+                    className={`w-9 h-9 sm:w-10 sm:h-10 rounded-full flex items-center justify-center shrink-0 transition-all duration-300 ${
+                      isOpen 
+                        ? 'bg-[#0B0F19] text-white rotate-45 shadow-xs' 
+                        : 'bg-slate-100 text-slate-700 group-hover:bg-[#0B0F19] group-hover:text-white'
+                    }`}
+                    aria-label={isOpen ? "Collapse question" : "Expand question"}
                   >
-                    <span className="text-base sm:text-lg font-bold text-[#0B0F19] pr-4 leading-snug">
-                      {item.question}
-                    </span>
-                    <span 
-                      className="w-9 h-9 sm:w-10 sm:h-10 rounded-full bg-[#EBF2FE] hover:bg-blue-100 text-slate-800 flex items-center justify-center shrink-0 transition-colors"
-                      aria-label="Close question"
+                    <svg 
+                      className="w-4 h-4 transition-transform duration-300" 
+                      viewBox="0 0 16 16" 
+                      fill="none" 
+                      stroke="currentColor" 
+                      strokeWidth="2.2" 
+                      strokeLinecap="round" 
+                      strokeLinejoin="round"
                     >
-                      <svg 
-                        className="w-3.5 h-3.5 text-slate-800" 
-                        viewBox="0 0 14 14" 
-                        fill="none" 
-                        stroke="currentColor" 
-                        strokeWidth="2" 
-                        strokeLinecap="round" 
-                        strokeLinejoin="round"
-                      >
-                        <path d="M2 2l10 10M12 2l-10 10" />
-                      </svg>
-                    </span>
-                  </button>
+                      <line x1="8" y1="2" x2="8" y2="14" />
+                      <line x1="2" y1="8" x2="14" y2="8" />
+                    </svg>
+                  </span>
+                </button>
 
+                {isOpen && (
                   <div 
                     id={`faq-answer-${index}`} 
                     role="region"
-                    className="text-slate-600 text-sm sm:text-base leading-relaxed mt-3.5 pt-1 pr-6 sm:pr-10 text-left border-t border-slate-100/90 pt-3.5"
+                    className="px-6 pb-6 pt-0 sm:px-7 sm:pb-7 text-slate-600 text-sm sm:text-base leading-relaxed text-left"
                   >
-                    <p>{item.answer}</p>
+                    <div className="pt-3.5 border-t border-slate-100">
+                      <p>{item.answer}</p>
+                    </div>
                   </div>
-                </div>
-              );
-            }
-
-            return (
-              <button
-                key={index}
-                type="button"
-                onClick={() => toggleItem(index)}
-                aria-expanded="false"
-                aria-controls={`faq-answer-${index}`}
-                className="w-full flex items-center justify-between py-3.5 px-6 sm:py-4 sm:px-8 bg-[#EEF4FB] hover:bg-[#E5EEF9] border border-[#E2E8F0]/70 rounded-full transition-all duration-200 text-left group cursor-pointer focus:outline-none focus:ring-2 focus:ring-[#2563EB]/40"
-              >
-                <span className="text-base sm:text-lg font-semibold text-[#0B0F19] pr-4 leading-snug">
-                  {item.question}
-                </span>
-                <span 
-                  className="w-9 h-9 sm:w-10 sm:h-10 rounded-full bg-white shadow-xs border border-slate-200/60 text-slate-800 flex items-center justify-center shrink-0 transition-transform group-hover:scale-105"
-                  aria-label="Expand question"
-                >
-                  <svg 
-                    className="w-3.5 h-3.5 text-slate-800" 
-                    viewBox="0 0 14 14" 
-                    fill="none" 
-                    stroke="currentColor" 
-                    strokeWidth="2" 
-                    strokeLinecap="round" 
-                    strokeLinejoin="round"
-                  >
-                    <path d="M7 2v10M2 7h10" />
-                  </svg>
-                </span>
-              </button>
+                )}
+              </div>
             );
           })}
+        </div>
+
+        {/* Bottom Callout / Still have questions CTA */}
+        <div className="mt-12 sm:mt-16 text-center max-w-2xl sm:max-w-3xl mx-auto bg-white rounded-2xl sm:rounded-3xl p-8 sm:p-10 border border-slate-200/80 shadow-xs">
+          <h3 className="text-xl sm:text-2xl font-bold text-[#0B0F19] mb-2">
+            Still have questions?
+          </h3>
+          <p className="text-slate-600 text-sm sm:text-base mb-6 max-w-md mx-auto leading-relaxed">
+            We're happy to answer any questions about your website, local visibility, or custom engineering needs.
+          </p>
+          <a
+            href="#contact"
+            className="inline-flex items-center justify-center bg-black hover:bg-slate-900 text-white font-bold text-base px-8 py-3.5 rounded-full transition-all duration-200 active:scale-95 shadow-md hover:shadow-lg"
+          >
+            Get in Touch
+          </a>
         </div>
       </div>
     </section>

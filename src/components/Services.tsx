@@ -17,9 +17,9 @@ const getServiceIcon = (index: number) => {
     <svg className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="2">
       <path strokeLinecap="round" strokeLinejoin="round" d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
     </svg>,
-    // 2. Answer Engine Optimization (Lightning)
+    // 2. AEO & SEO Website Audit (Chart/Bar)
     <svg className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="2">
-      <path strokeLinecap="round" strokeLinejoin="round" d="M13 10V3L4 14h7v7l9-11h-7z" />
+      <path strokeLinecap="round" strokeLinejoin="round" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z" />
     </svg>,
     // 3. Consulting & Site Migration (Arrows/Exchange)
     <svg className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="2">
@@ -55,7 +55,8 @@ const getServiceIcon = (index: number) => {
 };
 
 const Services: React.FC<ServicesProps> = ({ services }) => {
-  const displayServices = servicesData.map((dataItem, index) => {
+  // Only display the first two core services (Custom Web Design & Development, and Answer Engine Optimization)
+  const displayServices = servicesData.slice(0, 2).map((dataItem, index) => {
     const override = services ? services[index] : null;
     return {
       name: override?.name || dataItem.name,
@@ -100,23 +101,20 @@ const Services: React.FC<ServicesProps> = ({ services }) => {
   }, [displayServices.length]);
 
   return (
-    <section id="services" className="py-20 md:py-28 bg-[#F8FAFC] border-b border-slate-200/80 relative">
+    <section id="services" className="py-20 md:py-28 bg-[#F9FAFC] border-b border-slate-200/80 relative">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Header */}
         <div className="text-center mb-16 max-w-3xl mx-auto">
-          <span className="text-[#2563EB] text-sm font-bold uppercase tracking-wider mb-2 block">
-            What We Do
-          </span>
-          <h2 className="text-3xl sm:text-4xl md:text-5xl font-extrabold text-[#0B0F19] tracking-tight mb-6">
-            Core Services
+          <h2 className="text-[2.5rem] sm:text-4xl md:text-5xl font-extrabold text-[#0B0F19] tracking-tight leading-[1.08] mb-6">
+            Our solutions
           </h2>
           <p className="text-lg text-slate-600 leading-relaxed font-normal">
-             We ensure the best local businesses are the easiest to find by maximizing your visibility across traditional & AI search engines.
+            We ensure the best businesses are seen as trusted and recommended by local online searches.
           </p>
         </div>
 
-        {/* 3-Column Agency Service Cards Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        {/* 2-Column Agency Service Cards Grid */}
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
           {displayServices.map((service, index) => {
             const isVisible = visibleIndices.has(index);
             return (
@@ -135,17 +133,17 @@ const Services: React.FC<ServicesProps> = ({ services }) => {
                 }`}
               >
                 <div className="flex flex-col items-center text-center">
-                  <div className="w-12 h-12 rounded-xl bg-blue-50 text-[#2563EB] flex items-center justify-center mb-6 mx-auto group-hover:bg-[#2563EB] group-hover:text-white transition-colors duration-300">
+                  <div className="w-12 h-12 rounded-xl bg-slate-100 text-[#0B0F19] flex items-center justify-center mb-6 mx-auto group-hover:bg-black group-hover:text-white transition-colors duration-300">
                     {getServiceIcon(index)}
                   </div>
-                  <h3 className="text-xl font-bold text-[#0B0F19] mb-3 group-hover:text-[#2563EB] transition-colors">
+                  <h3 className="text-xl font-bold text-[#0B0F19] mb-3 group-hover:text-black transition-colors">
                     {service.name}
                   </h3>
                   <p className="text-slate-600 leading-relaxed text-base md:text-lg">
                     {service.description}
                   </p>
                 </div>
-                <div className="mt-6 pt-4 border-t border-slate-100 flex items-center justify-center text-[#2563EB] text-sm font-bold">
+                <div className="mt-6 pt-4 border-t border-slate-100 flex items-center justify-center text-[#0B0F19] text-sm font-bold group-hover:underline">
                   <span>Learn more</span>
                 </div>
               </a>
@@ -156,16 +154,16 @@ const Services: React.FC<ServicesProps> = ({ services }) => {
         {/* Section Bottom Action */}
         <div className="mt-16 text-center flex flex-col sm:flex-row items-center justify-center gap-4">
           <a
-            href="/services"
-            className="inline-flex items-center gap-2 bg-white hover:bg-slate-50 text-slate-800 font-bold py-3.5 px-8 rounded-full border border-slate-200 shadow-sm hover:shadow-md transition-all duration-200 active:scale-95 text-base"
-          >
-            <span>View All Service Pages</span>
-          </a>
-          <a
             href="#contact"
-            className="inline-flex items-center gap-2 bg-[#2563EB] hover:bg-[#1D4ED8] text-white font-bold py-3.5 px-8 rounded-full shadow-sm hover:shadow-md transition-all duration-200 active:scale-95 text-base"
+            className="inline-flex items-center gap-2 bg-black hover:bg-slate-900 text-white font-bold py-3.5 px-8 rounded-full shadow-md hover:shadow-lg transition-all duration-200 active:scale-95 text-base"
           >
             <span>Request a Consultation</span>
+          </a>
+          <a
+            href="/services"
+            className="inline-flex items-center gap-2 bg-transparent hover:bg-black/5 text-[#0B0F19] font-bold py-3.5 px-8 rounded-full border border-black shadow-none transition-all duration-200 active:scale-95 text-base"
+          >
+            <span>View Our Process</span>
           </a>
         </div>
       </div>

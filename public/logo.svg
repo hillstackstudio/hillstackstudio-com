@@ -2,11 +2,11 @@
   <!-- Symbol / Mark -->
   <g id="mark">
     <!-- Letter H -->
-    <path d="M20 20h20v25h30V20h20v80H70V70H40v30H20V20z" fill="#2563EB"/>
+    <path d="M20 20h20v25h30V20h20v80H70V70H40v30H20V20z" fill="#000000"/>
     <!-- Stacked Bars -->
-    <rect x="110" y="25" width="110" height="16" rx="8" fill="#2563EB" fill-opacity="1.0"/>
-    <rect x="110" y="52" width="75" height="16" rx="8" fill="#2563EB" fill-opacity="0.6"/>
-    <rect x="110" y="79" width="40" height="16" rx="8" fill="#2563EB" fill-opacity="0.2"/>
+    <rect x="110" y="25" width="110" height="16" rx="8" fill="#000000" fill-opacity="1.0"/>
+    <rect x="110" y="52" width="75" height="16" rx="8" fill="#000000" fill-opacity="0.6"/>
+    <rect x="110" y="79" width="40" height="16" rx="8" fill="#000000" fill-opacity="0.2"/>
   </g>
 
   <!-- High-Contrast Wordmark -->

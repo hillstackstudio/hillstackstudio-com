@@ -12,81 +12,97 @@ interface HeroProps {
 const Hero: React.FC<HeroProps> = ({
   companyName = "Hill Stack Studio",
   tagline = "Locally rooted. AI Optimized.",
-  aboutText = "We help our local businesses stand out on traditional search engines like Google and next-generation AI platforms like ChatGPT, Gemini and Siri / Apple Intelligence.",
-  primaryCallToAction = "See Your Online Visibility",
+  aboutText = "We rebuild your website to better reflect your business. We run our audit so local searches can lead customers straight to you.",
+  primaryCallToAction = "Audit Your Website",
   regionalKeywords = ["Seattle", "Bellevue", "Tacoma", "King County", "Pierce County", "Pacific Northwest"]
 }) => {
   return (
     <section className="relative overflow-hidden -mt-20 pt-28 pb-16 sm:pt-36 md:pt-44 md:pb-20 border-b border-slate-200/70">
-      {/* 1. Base Vertical Gradient: flows smoothly from header blue (#EFF6FF) down into next section (#F8FAFC) */}
-      <div 
-        className="absolute inset-0 pointer-events-none" 
-        style={{
-          background: 'linear-gradient(180deg, #EFF6FF 0%, #F1F7FE 30%, #F5F9FD 60%, #F8FAFC 90%, #F8FAFC 100%)'
-        }}
-        aria-hidden="true" 
-      />
-
-      {/* 2. Top-Center Ambient Illumination: encompasses the header nav bar and upper fold in soft radiant light */}
-      <div 
-        className="absolute -top-10 sm:-top-16 left-1/2 -translate-x-1/2 w-[700px] sm:w-[950px] md:w-[1250px] h-[320px] sm:h-[400px] rounded-full pointer-events-none" 
-        style={{
-          background: 'radial-gradient(ellipse at 50% 20%, rgba(191, 219, 254, 0.45) 0%, rgba(219, 234, 254, 0.22) 50%, transparent 80%)',
-          filter: 'blur(55px)'
-        }}
-        aria-hidden="true" 
-      />
-
-      {/* 3. Left-Side Ambient Depth Glow (established site brand blues: #3B82F6 / #60A5FA / #93C5FD) */}
-      <div 
-        className="absolute -left-20 sm:-left-12 md:left-[2%] lg:left-[5%] top-[8%] sm:top-[12%] w-[380px] h-[380px] sm:w-[500px] sm:h-[500px] lg:w-[600px] lg:h-[600px] rounded-full pointer-events-none" 
-        style={{
-          background: 'radial-gradient(circle, rgba(59, 130, 246, 0.22) 0%, rgba(96, 165, 250, 0.18) 45%, rgba(147, 197, 253, 0.06) 70%, transparent 85%)',
-          filter: 'blur(75px)'
-        }}
-        aria-hidden="true" 
-      />
-
-      {/* 4. Right-Side Ambient Depth Glow (established site brand blues: #2563EB / #3B82F6 / #93C5FD) */}
-      <div 
-        className="absolute -right-20 sm:-right-12 md:right-[2%] lg:right-[5%] top-[18%] sm:top-[22%] w-[400px] h-[400px] sm:w-[520px] sm:h-[520px] lg:w-[620px] lg:h-[620px] rounded-full pointer-events-none" 
-        style={{
-          background: 'radial-gradient(circle, rgba(37, 99, 235, 0.20) 0%, rgba(59, 130, 246, 0.16) 45%, rgba(147, 197, 253, 0.06) 70%, transparent 85%)',
-          filter: 'blur(85px)'
-        }}
-        aria-hidden="true" 
-      />
-
-      {/* 5. Center Focal Luminous Core (Highlight keeping main text ultra-crisp & high contrast) */}
-      <div 
-        className="absolute top-[16%] sm:top-[20%] left-1/2 -translate-x-1/2 w-[520px] sm:w-[720px] md:w-[920px] lg:w-[1080px] h-[360px] sm:h-[420px] md:h-[480px] rounded-full pointer-events-none" 
-        style={{
-          background: 'radial-gradient(ellipse at center, rgba(255, 255, 255, 0.94) 0%, rgba(255, 255, 255, 0.6) 50%, rgba(255, 255, 255, 0) 80%)',
-          filter: 'blur(35px)'
-        }}
-        aria-hidden="true" 
-      />
-
-      {/* 6. Bottom Ambient Resolution: smoothly gradients all depth into #F8FAFC of the next section */}
-      <div 
-        className="absolute bottom-0 inset-x-0 h-44 pointer-events-none" 
-        style={{
-          background: 'linear-gradient(to bottom, transparent 0%, rgba(248, 250, 252, 0.6) 45%, #F8FAFC 100%)'
-        }}
-        aria-hidden="true" 
-      />
+      {/* Hero Background Image */}
+      <div className="absolute inset-0 pointer-events-none -z-0 overflow-hidden" aria-hidden="true">
+        <img 
+          src="/images/water-bg2.webp" 
+          alt="" 
+          className="w-full h-full object-cover object-center"
+        />
+        {/* Bottom gradient fade into next section (#F9FAFC) */}
+        <div 
+          className="absolute inset-x-0 bottom-0 h-32 sm:h-44 md:h-56 pointer-events-none"
+          style={{
+            background: 'linear-gradient(to bottom, rgba(249, 250, 252, 0) 0%, rgba(249, 250, 252, 0.4) 35%, rgba(249, 250, 252, 0.85) 70%, #F9FAFC 100%)'
+          }}
+        />
+      </div>
 
       {/* Foreground Content */}
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-        {/* Subtitle Text */}
-        <span className="text-[#2563EB] text-sm font-bold uppercase tracking-wider mb-6 sm:mb-8 block">
-          Performance Web Design &amp; Search Optimization
-        </span>
+        {/* Radial Glow behind text for high contrast readability (#F9FAFC) */}
+        <div 
+          className="absolute top-[42%] sm:top-[44%] left-1/2 -translate-x-1/2 -translate-y-1/2 w-[95%] sm:w-[90%] md:w-[85%] max-w-[1050px] h-[520px] sm:h-[620px] md:h-[680px] rounded-full pointer-events-none -z-10"
+          style={{
+            background: 'radial-gradient(ellipse at center, rgba(249, 250, 252, 0.96) 0%, rgba(249, 250, 252, 0.90) 38%, rgba(249, 250, 252, 0.55) 62%, rgba(249, 250, 252, 0) 82%)',
+            filter: 'blur(35px)'
+          }}
+          aria-hidden="true"
+        />
 
         {/* Main Headline */}
-        <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-extrabold text-[#0B0F19] tracking-tight max-w-4xl mx-auto leading-[1.15] mb-8 sm:mb-12">
-          Empower Your Business <br className="hidden sm:inline" />
-          in the Age of AI Search
+        <h1 
+          className="hero-landing-headline text-[clamp(2.75rem,8vw,5rem)] font-bold text-[#0B0F19] tracking-tight max-w-5xl mx-auto leading-[1.08] sm:leading-[1.12] mb-8 sm:mb-12 font-heading"
+          style={{ 
+            fontFamily: "'Syne', sans-serif",
+            fontWeight: 700
+          }}
+        >
+          Help Local Customers <br />
+          Find Your Business{" "}
+          <span className="hand-drawn-wrapper">
+            <span className="hand-drawn-text">Instantly</span>
+            {/* Hand-drawn organic angled underline */}
+            <svg 
+              className="hand-drawn-underline" 
+              viewBox="0 0 280 24" 
+              fill="none" 
+              xmlns="http://www.w3.org/2000/svg"
+              preserveAspectRatio="none"
+              aria-hidden="true"
+            >
+              <defs>
+                {/* SVG Filter creating natural crayon / chalk rough edge and grain texture */}
+                <filter id="crayon-roughness" x="-10%" y="-40%" width="120%" height="180%" filterUnits="objectBoundingBox">
+                  <feTurbulence type="fractalNoise" baseFrequency="0.65" numOctaves="4" result="noise" />
+                  <feDisplacementMap in="SourceGraphic" in2="noise" scale="2.4" xChannelSelector="R" yChannelSelector="G" result="displaced" />
+                  <feMerge>
+                    <feMergeNode in="displaced" />
+                  </feMerge>
+                </filter>
+              </defs>
+
+              {/* Primary expressive hand-drawn stroke with a natural hand-drawn slight angle */}
+              <path 
+                className="hand-drawn-path"
+                d="M 6,17 C 52,19 118,13 182,10 C 218,8.5 254,9 275,13"
+                stroke="#FBF719" 
+                strokeWidth="7" 
+                strokeLinecap="round" 
+                strokeLinejoin="round" 
+                filter="url(#crayon-roughness)"
+                opacity="0.95"
+              />
+
+              {/* Secondary overlapping hand pressure accent */}
+              <path 
+                className="hand-drawn-path"
+                d="M 16,16 C 68,17.5 132,13 192,10.5 C 224,9.2 250,9.8 268,12"
+                stroke="#FBF719" 
+                strokeWidth="4" 
+                strokeLinecap="round" 
+                strokeLinejoin="round" 
+                filter="url(#crayon-roughness)"
+                opacity="0.85"
+              />
+            </svg>
+          </span>
         </h1>
 
         {/* Subtitle Paragraph */}
@@ -94,19 +110,19 @@ const Hero: React.FC<HeroProps> = ({
           {aboutText}
         </p>
 
-        {/* Action Buttons (Swapped Positions) */}
+        {/* Action Buttons: Audit on left, Learn More on right */}
         <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-14 sm:mb-20 md:mb-24">
           <a
-            href="/about"
-            className="w-full sm:w-auto inline-flex items-center justify-center bg-white hover:bg-slate-50 text-[#0B0F19] border border-slate-300 hover:border-slate-400 px-8 py-3.5 rounded-full font-bold text-base transition-all duration-200 shadow-sm"
-          >
-            Learn More
-          </a>
-          <a
             href="#contact"
-            className="w-full sm:w-auto inline-flex items-center justify-center bg-[#2563EB] hover:bg-[#1D4ED8] text-white px-8 py-3.5 rounded-full font-bold text-base transition-all duration-200 active:scale-95 shadow-md shadow-blue-500/20 hover:shadow-lg hover:shadow-blue-500/30"
+            className="w-full sm:w-auto inline-flex items-center justify-center bg-black hover:bg-slate-900 text-white border border-black px-8 py-3.5 rounded-full font-bold text-base transition-all duration-200 active:scale-95 shadow-md hover:shadow-lg"
           >
             <span>{primaryCallToAction}</span>
+          </a>
+          <a
+            href="/about"
+            className="w-full sm:w-auto inline-flex items-center justify-center bg-transparent hover:bg-black/5 text-[#0B0F19] border border-black px-8 py-3.5 rounded-full font-bold text-base transition-all duration-200 shadow-none active:scale-95"
+          >
+            Learn More
           </a>
         </div>
 
