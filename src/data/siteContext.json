@@ -1,7 +1,7 @@
 {
   "companyName": "Hill Stack Studio",
   "tagline": "Locally rooted. AI Optimized.",
-  "mission": "To ensure every local business has the visibility, technology and personal support they need to thrive in the age of AI search.",
+  "mission": "To help small businesses by providing access to quality engineering and the same technical solutions large companies use to stay ahead.",
   "aboutText": "We rebuild your website to better reflect your business. We run our audit so local searches can lead customers straight to you.",
   "contact": {
     "email": "team@hillstackstudio.com",
@@ -16,34 +16,6 @@
     {
       "name": "AEO & SEO Website Audit",
       "description": "Our comprehensive audit identifies why your business is not recommended to local customers. Allowing us to fix these issues so local searches can lead more customers to you."
-    },
-    {
-      "name": "Consulting & Site Migration",
-      "description": "Strategic guidance on website redesign. Once built, we transfer your existing site smoothly without losing your domain, emails, or active leads."
-    },
-    {
-      "name": "Web Hosting & Administration",
-      "description": "We manage your website hosting, security and updates so you can focus on what matters, running your business."
-    },
-    {
-      "name": "Search Engine Readiness",
-      "description": "We organize your prices, hours and services in a clean format that AI bots can easily read, verify and quote to local callers."
-    },
-    {
-      "name": "Copywriting & Content Adjustments",
-      "description": "Clear website text that communicates your value instantly. Encouraging local clients to call or book online and AI bots to recommend your business."
-    },
-    {
-      "name": "Performance & Visibility Audit",
-      "description": "Deep analysis of your current website to uncover hidden speed issues, broken mobile layouts and reasons AI tools are recommending your competitors instead of your business."
-    },
-    {
-      "name": "Accessibility Compliance",
-      "description": "WCAG 2.2 compliant web standards and clean site layouts, making it easy for every customer to navigate your website smoothly on any device while keeping you legally compliant."
-    },
-    {
-      "name": "Security & Privacy Compliance",
-      "description": "Robust security measures, privacy compliance and site protection standards to safeguard your business and customer data."
     }
   ],
   "primaryCallToAction": "Audit Your Website",

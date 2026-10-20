@@ -101,7 +101,7 @@ const Services: React.FC<ServicesProps> = ({ services }) => {
   }, [displayServices.length]);
 
   return (
-    <section id="services" className="py-20 md:py-28 bg-[#F9FAFC] border-b border-slate-200/80 relative">
+    <section id="services" className="py-20 md:py-28 bg-[#F4F4F8] border-b border-slate-200/80 relative">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Header */}
         <div className="text-center mb-16 max-w-3xl mx-auto">

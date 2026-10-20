@@ -55,7 +55,7 @@ const RecentWork: React.FC<RecentWorkProps> = ({ works = defaultWorks }) => {
   }, []);
 
   return (
-    <section id="recent-work" className="py-20 md:py-28 bg-[#F9FAFC] border-b border-slate-200/80 relative overflow-hidden">
+    <section id="recent-work" className="py-20 md:py-28 bg-[#F4F4F8] border-b border-slate-200/80 relative overflow-hidden">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Header matching site design system */}
         <div className="text-center mb-12 sm:mb-16 max-w-3xl mx-auto">

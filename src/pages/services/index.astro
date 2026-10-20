@@ -8,16 +8,16 @@ import HandDrawnArrow from '../../components/HandDrawnArrow.astro';
 
 <BaseLayout 
   title={`Our Solutions & Services | ${siteContext.companyName}`}
-  description="Discover Hill Stack Studio's 3 core solutions: Intake Call strategy, Answer Engine Optimization (AEO) Audit, and Custom Website Rebuilds."
+  description="Discover Hill Stack Studio's 4 core solutions: Intake Call strategy, Answer Engine Optimization (AEO) Audit, Custom Website Rebuilds, and Website Hosting & Administration."
 >
   <Header 
     companyName={siteContext.companyName}
     email={siteContext.contact.email}
   />
 
-  <main class="bg-[#F9FAFC] flex-grow flex flex-col">
+  <main class="bg-[#F4F4F8] flex-grow flex flex-col">
     {/* Page Header Hero */}
-    <section class="bg-gradient-to-b from-[#EFF6FF] via-[#F4F8FD] to-[#F9FAFC] pt-14 pb-16 md:pt-20 md:pb-24 border-b border-slate-200/60 relative">
+    <section class="bg-gradient-to-b from-[#EFF6FF] via-[#F4F8FD] to-[#F4F4F8] pt-14 pb-16 md:pt-20 md:pb-24 border-b border-slate-200/60 relative">
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
         
         {/* Breadcrumbs */}
@@ -40,7 +40,7 @@ import HandDrawnArrow from '../../components/HandDrawnArrow.astro';
       </div>
     </section>
 
-    {/* 3 Horizontal Solution Cards */}
+    {/* 4 Horizontal Solution Cards */}
     <section class="py-16 md:py-24">
       <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         <div class="flex flex-col">
@@ -195,6 +195,54 @@ import HandDrawnArrow from '../../components/HandDrawnArrow.astro';
                 >
                   <span>Explore Engineering Details</span>
                   <span>&rarr;</span>
+                </a>
+              </div>
+            </div>
+          </div>
+
+          {/* Hand-drawn Arrow connecting Rebuild Custom Website to Website Hosting & Administration */}
+          <HandDrawnArrow />
+
+          {/* Card 4: Website Hosting & Administration */}
+          <div class="bg-white rounded-3xl p-8 sm:p-10 md:p-12 border border-slate-200/80 shadow-md hover:shadow-xl transition-all duration-300">
+            <div class="flex flex-col lg:flex-row lg:items-center justify-between gap-8 lg:gap-12">
+              <div class="flex-1">
+                <div class="flex flex-wrap items-center gap-3 sm:gap-4 mb-4">
+                  <span class="inline-flex items-center px-3.5 py-1 rounded-full text-xs font-bold uppercase tracking-wider bg-slate-100 text-[#0B0F19] border border-slate-200/80 shrink-0">
+                    Step 04
+                  </span>
+                  <h2 class="text-[2rem] sm:text-3xl md:text-4xl font-extrabold text-[#0B0F19] tracking-tight leading-[1.08]">
+                    Website hosting &amp; administration
+                  </h2>
+                </div>
+                <p class="text-slate-600 text-base sm:text-lg leading-relaxed mb-6 max-w-2xl">
+                  Fast, worry-free cloud hosting and ongoing site administration. We manage server performance, continuous security updates, automated backups, and routine content adjustments so your website stays ultra-fast, secure, and always accessible to customers.
+                </p>
+                <ul class="space-y-2.5 text-sm sm:text-base text-slate-700">
+                  <li class="flex items-start gap-2.5">
+                    <span class="text-emerald-600 font-bold shrink-0 mt-0.5">✓</span>
+                    <span>High-speed global edge hosting with 99.9% uptime</span>
+                  </li>
+                  <li class="flex items-start gap-2.5">
+                    <span class="text-emerald-600 font-bold shrink-0 mt-0.5">✓</span>
+                    <span>Automated SSL certificates, security patches &amp; regular backups</span>
+                  </li>
+                  <li class="flex items-start gap-2.5">
+                    <span class="text-emerald-600 font-bold shrink-0 mt-0.5">✓</span>
+                    <span>Hands-off maintenance and ongoing content adjustments</span>
+                  </li>
+                </ul>
+              </div>
+
+              <div class="lg:w-80 shrink-0 pt-6 lg:pt-0 border-t lg:border-t-0 lg:border-l border-slate-100 lg:pl-10 flex flex-col justify-center">
+                <a
+                  href="/#contact"
+                  class="inline-flex items-center justify-center gap-2 bg-black hover:bg-slate-900 text-white font-bold py-3.5 px-6 rounded-full shadow-md hover:shadow-lg transition-all duration-200 active:scale-95 text-base w-full"
+                >
+                  <span>Inquire About Hosting</span>
+                  <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M14 5l7 7m0 0l-7 7m7-7H3" />
+                  </svg>
                 </a>
               </div>
             </div>

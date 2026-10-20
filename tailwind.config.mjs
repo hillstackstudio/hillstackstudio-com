@@ -9,7 +9,7 @@ export default {
           primary: '#2563EB',
           'primary-hover': '#1D4ED8',
           cardText: '#1E293B',
-          bg: '#F9FAFC',
+          bg: '#F4F4F8',
           surface: '#FFFFFF',
         }
       },
@@ -20,8 +20,8 @@ export default {
       },
       keyframes: {
         marquee: {
-          '0%': { transform: 'translateX(0%)' },
-          '100%': { transform: 'translateX(-50%)' },
+          '0%': { transform: 'translate3d(0%, 0, 0)' },
+          '100%': { transform: 'translate3d(-50%, 0, 0)' },
         },
       },
       animation: {

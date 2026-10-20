@@ -7,7 +7,6 @@ export interface FaqItem {
 }
 
 interface FaqProps {
-  eyebrow?: string;
   title?: string;
   items?: FaqItem[];
 }
@@ -27,7 +26,7 @@ const defaultFaqs: FaqItem[] = [
     schemaAnswer: "People aren't clicking through long lists of Google links like they used to, they are asking AI for quick answers. When someone asks ChatGPT or Siri, \"Who is the best plumber near me for an emergency?\", the AI gives them 2 or 3 direct names. If your website isn't built for AI, those calls / bookings go straight to your competitors."
   },
   {
-    question: "My customers are local and older. Do they really use AI like ChatGPT to find businesses?",
+    question: "Do older customers really use AI like ChatGPT to find businesses?",
     answer: (
       <>
         <strong className="font-semibold text-[#0B0F19]">Yes, even if they don't realize it!</strong> While younger generations might open the ChatGPT app, older customers use AI every day through Google's new top-of-page summary boxes, voice search on iPhones (Siri) and smart speakers. Whenever someone speaks or types a question into Google today, an AI engine is generating the answer.
@@ -51,7 +50,6 @@ const defaultFaqs: FaqItem[] = [
 ];
 
 const Faq: React.FC<FaqProps> = ({
-  eyebrow = "FAQ",
   title = "Frequently Asked Questions",
   items = defaultFaqs
 }) => {
@@ -76,7 +74,7 @@ const Faq: React.FC<FaqProps> = ({
   };
 
   return (
-    <section id="faq" className="py-20 md:py-28 bg-[#F9FAFC] border-b border-slate-200/80">
+    <section id="faq" className="py-20 md:py-28 bg-[#F4F4F8] border-b border-slate-200/80">
       {/* FAQ Schema Markup for Search Engines and AI Crawlers */}
       <script
         type="application/ld+json"
@@ -86,9 +84,6 @@ const Faq: React.FC<FaqProps> = ({
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Header matching site design system */}
         <div className="text-center mb-12 sm:mb-16 max-w-3xl mx-auto">
-          <span className="inline-flex items-center px-3.5 py-1.5 rounded-full text-xs font-bold uppercase tracking-wider bg-blue-50 text-[#2663EB] border border-blue-100 mb-4">
-            {eyebrow}
-          </span>
           <h2 className="text-[2.5rem] sm:text-4xl md:text-5xl font-extrabold text-[#0B0F19] tracking-tight leading-[1.08] mb-4">
             {title}
           </h2>
@@ -162,21 +157,6 @@ const Faq: React.FC<FaqProps> = ({
           })}
         </div>
 
-        {/* Bottom Callout / Still have questions CTA */}
-        <div className="mt-12 sm:mt-16 text-center max-w-2xl sm:max-w-3xl mx-auto bg-white rounded-2xl sm:rounded-3xl p-8 sm:p-10 border border-slate-200/80 shadow-xs">
-          <h3 className="text-xl sm:text-2xl font-bold text-[#0B0F19] mb-2">
-            Still have questions?
-          </h3>
-          <p className="text-slate-600 text-sm sm:text-base mb-6 max-w-md mx-auto leading-relaxed">
-            We're happy to answer any questions about your website, local visibility, or custom engineering needs.
-          </p>
-          <a
-            href="#contact"
-            className="inline-flex items-center justify-center bg-black hover:bg-slate-900 text-white font-bold text-base px-8 py-3.5 rounded-full transition-all duration-200 active:scale-95 shadow-md hover:shadow-lg"
-          >
-            Get in Touch
-          </a>
-        </div>
       </div>
     </section>
   );

@@ -8,7 +8,7 @@
   html, body {
     font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
     scroll-behavior: smooth;
-    background-color: #F9FAFC;
+    background-color: #F4F4F8;
   }
 
   h1, h2, h3, .font-display, .font-heading {
@@ -71,9 +71,42 @@
   }
 }
 
+@keyframes marquee {
+  0% {
+    transform: translate3d(0%, 0, 0);
+    -webkit-transform: translate3d(0%, 0, 0);
+  }
+  100% {
+    transform: translate3d(-50%, 0, 0);
+    -webkit-transform: translate3d(-50%, 0, 0);
+  }
+}
+
+@-webkit-keyframes marquee {
+  0% {
+    -webkit-transform: translate3d(0%, 0, 0);
+  }
+  100% {
+    -webkit-transform: translate3d(-50%, 0, 0);
+  }
+}
+
+.animate-marquee {
+  animation: marquee 60s linear infinite;
+  -webkit-animation: marquee 60s linear infinite;
+  will-change: transform;
+  transform: translate3d(0, 0, 0);
+  -webkit-transform: translate3d(0, 0, 0);
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  -webkit-perspective: 1000;
+  perspective: 1000;
+}
+
 @media (prefers-reduced-motion: reduce) {
   .animate-marquee {
     animation: none !important;
+    -webkit-animation: none !important;
   }
   .hand-drawn-path {
     stroke-dashoffset: 0 !important;

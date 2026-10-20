@@ -7,7 +7,7 @@ interface ContactProps {
 
 const Contact: React.FC<ContactProps> = () => {
   return (
-    <section id="contact" className="py-20 md:py-28 bg-[#F9FAFC]">
+    <section id="contact" className="py-20 md:py-28 bg-[#F4F4F8]">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-12 max-w-3xl mx-auto">
           <h2 className="text-[2.5rem] sm:text-4xl md:text-5xl font-extrabold text-[#0B0F19] tracking-tight leading-[1.08] mb-6">
@@ -33,32 +33,12 @@ const Contact: React.FC<ContactProps> = () => {
               </div>
 
               <div>
-                <label htmlFor="company" className="block text-sm font-bold text-[#0B0F19] mb-2">Company Name</label>
-                <input 
-                  type="text" 
-                  id="company" 
-                  className="w-full px-4 py-3.5 bg-slate-50 border border-slate-200 rounded-xl focus:bg-white focus:ring-2 focus:ring-black focus:border-transparent transition-all text-slate-900 placeholder:text-slate-400 text-sm"
-                  placeholder="e.g. Acme Services"
-                />
-              </div>
-              
-              <div>
                 <label htmlFor="email" className="block text-sm font-bold text-[#0B0F19] mb-2">Email</label>
                 <input 
                   type="email" 
                   id="email" 
                   className="w-full px-4 py-3.5 bg-slate-50 border border-slate-200 rounded-xl focus:bg-white focus:ring-2 focus:ring-black focus:border-transparent transition-all text-slate-900 placeholder:text-slate-400 text-sm"
                   placeholder="john@yourbusiness.com"
-                />
-              </div>
-
-              <div>
-                <label htmlFor="website" className="block text-sm font-bold text-[#0B0F19] mb-2">Website URL</label>
-                <input 
-                  type="url" 
-                  id="website" 
-                  className="w-full px-4 py-3.5 bg-slate-50 border border-slate-200 rounded-xl focus:bg-white focus:ring-2 focus:ring-black focus:border-transparent transition-all text-slate-900 placeholder:text-slate-400 text-sm"
-                  placeholder="https://yourbusiness.com"
                 />
               </div>
 
@@ -71,6 +51,16 @@ const Contact: React.FC<ContactProps> = () => {
                   placeholder="(253) 555-0199"
                 />
               </div>
+
+              <div>
+                <label htmlFor="website" className="block text-sm font-bold text-[#0B0F19] mb-2">Website URL</label>
+                <input 
+                  type="url" 
+                  id="website" 
+                  className="w-full px-4 py-3.5 bg-slate-50 border border-slate-200 rounded-xl focus:bg-white focus:ring-2 focus:ring-black focus:border-transparent transition-all text-slate-900 placeholder:text-slate-400 text-sm"
+                  placeholder="https://www.yourbusiness.com"
+                />
+              </div>
               
               <div className="sm:col-span-2">
                 <label htmlFor="message" className="block text-sm font-bold text-[#0B0F19] mb-2">Project Summary</label>
@@ -78,7 +68,7 @@ const Contact: React.FC<ContactProps> = () => {
                   id="message" 
                   rows={4}
                   className="w-full px-4 py-3.5 bg-slate-50 border border-slate-200 rounded-xl focus:bg-white focus:ring-2 focus:ring-black focus:border-transparent transition-all text-slate-900 placeholder:text-slate-400 text-sm resize-none"
-                  placeholder="Tell us about your business, current website or service area..."
+                  placeholder="Tell us about your business or current website..."
                 ></textarea>
               </div>
             </div>
