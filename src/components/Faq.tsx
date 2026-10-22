@@ -50,7 +50,7 @@ const defaultFaqs: FaqItem[] = [
 ];
 
 const Faq: React.FC<FaqProps> = ({
-  title = "Frequently Asked Questions",
+  title = "Frequently asked questions",
   items = defaultFaqs
 }) => {
   // First item open by default matching reference design

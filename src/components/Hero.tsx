@@ -48,14 +48,14 @@ const Hero: React.FC<HeroProps> = ({
 
         {/* Main Headline */}
         <h1 
-          className="hero-landing-headline text-[clamp(2.75rem,8vw,5rem)] font-bold text-[#0B0F19] tracking-tight max-w-5xl mx-auto leading-[1.08] sm:leading-[1.12] mb-8 sm:mb-12 font-heading"
+          className="hero-landing-headline font-fraunces text-[clamp(2.75rem,8vw,5rem)] font-bold text-[#0B0F19] tracking-tight max-w-5xl mx-auto leading-[1.08] sm:leading-[1.12] mb-8 sm:mb-12"
           style={{ 
-            fontFamily: "'Syne', sans-serif",
+            fontFamily: "'Fraunces', Georgia, serif",
             fontWeight: 700
           }}
         >
           Help Local Customers <br />
-          Find Your Business{" "}
+          Find Your Business <br />
           <span className="hand-drawn-wrapper">
             <span className="hand-drawn-text">Instantly</span>
             {/* Hand-drawn organic angled underline */}
