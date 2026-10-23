@@ -9,7 +9,7 @@ export default {
           primary: '#2563EB',
           'primary-hover': '#1D4ED8',
           cardText: '#1E293B',
-          bg: '#F4F4F8',
+          bg: '#E3E9EF',
           surface: '#FFFFFF',
         }
       },
@@ -21,6 +21,7 @@ export default {
         cormorant: ["'Cormorant'", "'Cormorant Garamond'", 'Georgia', 'serif'],
         fraunces: ["'Fraunces'", 'Georgia', 'serif'],
         'alegreya-sans': ["'Alegreya Sans'", 'sans-serif'],
+        'homemade-apple': ["'Homemade Apple'", 'cursive'],
       },
       keyframes: {
         marquee: {

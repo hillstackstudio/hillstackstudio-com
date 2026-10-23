@@ -13,21 +13,21 @@ interface ServicesProps {
 
 const getServiceIcon = (index: number) => {
   const icons = [
-    // 1. Custom Web Design & Development (Monitor)
+    // 1. AEO & SEO Website Audit (Magnifying Glass)
     <svg className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="2">
-      <path strokeLinecap="round" strokeLinejoin="round" d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+      <path strokeLinecap="round" strokeLinejoin="round" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
     </svg>,
-    // 2. AEO & SEO Website Audit (Chart/Bar)
+    // 2. Custom Web Design & Development (Code </>)
     <svg className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="2">
-      <path strokeLinecap="round" strokeLinejoin="round" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z" />
+      <path strokeLinecap="round" strokeLinejoin="round" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4" />
     </svg>,
-    // 3. Consulting & Site Migration (Arrows/Exchange)
-    <svg className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="2">
-      <path strokeLinecap="round" strokeLinejoin="round" d="M8 7h12m0 0l-4-4m4 4l-4 4m0 6H4m0 0l4 4m-4-4l4-4" />
-    </svg>,
-    // 4. Web Hosting & Administration (Server)
+    // 3. Hosting & Administration (Server)
     <svg className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="2">
       <path strokeLinecap="round" strokeLinejoin="round" d="M5 12h14M5 12a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v4a2 2 0 01-2 2M5 12a2 2 0 00-2 2v4a2 2 0 002 2h14a2 2 0 002-2v-4a2 2 0 00-2-2m-2-4h.01M17 16h.01" />
+    </svg>,
+    // 4. Consulting & Site Migration (Arrows/Exchange)
+    <svg className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="2">
+      <path strokeLinecap="round" strokeLinejoin="round" d="M8 7h12m0 0l-4-4m4 4l-4 4m0 6H4m0 0l4 4m-4-4l4-4" />
     </svg>,
     // 5. Search Engine Readiness (Code/Schema Data)
     <svg className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="2">
@@ -54,14 +54,35 @@ const getServiceIcon = (index: number) => {
   return icons[index % icons.length];
 };
 
+const defaultServices: ServiceItem[] = [
+  {
+    name: "AEO & SEO Website Audit",
+    description: "An in-depth look at why local customers might be missing your business online. We uncover why search engines and AI assistants are skipping over your website.",
+    slug: "answer-engine-optimization",
+    href: "/services/answer-engine-optimization"
+  },
+  {
+    name: "Custom Web Design & Development",
+    description: "Clean custom code and modern website redesigns engineered for fast page loads, AI search recommendations and customer conversion.",
+    slug: "custom-web-design-development",
+    href: "/services/custom-web-design-development"
+  },
+  {
+    name: "Hosting & Administration",
+    description: "Fast, worry-free cloud hosting, continuous security updates, automated backups, and routine content adjustments to keep your website fast, secure, and always accessible.",
+    slug: "hosting-administration",
+    href: "/services#hosting"
+  }
+];
+
 const Services: React.FC<ServicesProps> = ({ services }) => {
-  // Only display the first two core services (Custom Web Design & Development, and Answer Engine Optimization)
-  const displayServices = servicesData.slice(0, 2).map((dataItem, index) => {
+  const displayServices = defaultServices.map((defaultItem, index) => {
     const override = services ? services[index] : null;
     return {
-      name: override?.name || dataItem.name,
-      description: override?.description || dataItem.shortDescription,
-      slug: dataItem.slug
+      name: override?.name || defaultItem.name,
+      description: override?.description || defaultItem.description,
+      slug: override?.slug || defaultItem.slug,
+      href: override?.href || defaultItem.href
     };
   });
 
@@ -101,7 +122,7 @@ const Services: React.FC<ServicesProps> = ({ services }) => {
   }, [displayServices.length]);
 
   return (
-    <section id="services" className="py-20 md:py-28 bg-[#F4F4F8] border-b border-slate-200/80 relative">
+    <section id="services" className="py-20 md:py-28 border-b border-slate-200/80 relative">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Header */}
         <div className="text-center mb-16 max-w-3xl mx-auto">
@@ -113,8 +134,8 @@ const Services: React.FC<ServicesProps> = ({ services }) => {
           </p>
         </div>
 
-        {/* 2-Column Agency Service Cards Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+        {/* 3-Column Agency Service Cards Grid */}
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
           {displayServices.map((service, index) => {
             const isVisible = visibleIndices.has(index);
             return (
@@ -122,18 +143,18 @@ const Services: React.FC<ServicesProps> = ({ services }) => {
                 key={index}
                 data-index={index}
                 ref={(el) => (cardRefs.current[index] = el)}
-                href={`/services/${service.slug}`}
+                href={service.href || (service.slug ? `/services/${service.slug}` : '/services')}
                 style={{
                   transitionDelay: `${(index % 3) * 120}ms`
                 }}
-                className={`group bg-white rounded-2xl p-8 border border-slate-200/80 shadow-xs hover:shadow-xl hover:-translate-y-1.5 flex flex-col justify-between transition-all duration-700 ease-out motion-reduce:transition-none motion-reduce:transform-none motion-reduce:opacity-100 ${
+                className={`group bg-white/80 backdrop-blur-xl rounded-2xl p-8 border border-white/60 shadow-[0_8px_30px_rgb(0,0,0,0.05)] hover:bg-white/90 hover:border-white/80 hover:shadow-[0_16px_36px_-6px_rgba(15,23,42,0.1)] hover:-translate-y-1.5 flex flex-col justify-between transition-all duration-700 ease-out motion-reduce:transition-none motion-reduce:transform-none motion-reduce:opacity-100 ${
                   isVisible
                     ? 'opacity-100 translate-y-0'
                     : 'opacity-0 translate-y-10'
                 }`}
               >
                 <div className="flex flex-col items-center text-center">
-                  <div className="w-12 h-12 rounded-xl bg-slate-100 text-[#0B0F19] flex items-center justify-center mb-6 mx-auto group-hover:bg-black group-hover:text-white transition-colors duration-300">
+                  <div className="w-12 h-12 rounded-xl bg-black border border-black shadow-[0_2px_8px_rgba(0,0,0,0.18)] text-[#169F94] flex items-center justify-center mb-6 mx-auto group-hover:scale-105 transition-transform duration-300">
                     {getServiceIcon(index)}
                   </div>
                   <h3 className="text-xl font-bold text-[#0B0F19] mb-3 group-hover:text-black transition-colors">
@@ -143,7 +164,7 @@ const Services: React.FC<ServicesProps> = ({ services }) => {
                     {service.description}
                   </p>
                 </div>
-                <div className="mt-6 pt-4 border-t border-slate-100 flex items-center justify-center text-[#0B0F19] text-sm font-bold group-hover:underline">
+                <div className="mt-6 pt-4 border-t border-slate-200/60 flex items-center justify-center text-[#0B0F19] text-sm font-bold group-hover:underline">
                   <span>Learn more</span>
                 </div>
               </a>

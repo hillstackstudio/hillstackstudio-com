@@ -3,7 +3,6 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
 import Header from '../../components/Header.astro';
 import Footer from '../../components/Footer.astro';
 import siteContext from '../../data/siteContext.json';
-import HandDrawnArrow from '../../components/HandDrawnArrow.astro';
 ---
 
 <BaseLayout 
@@ -15,9 +14,9 @@ import HandDrawnArrow from '../../components/HandDrawnArrow.astro';
     email={siteContext.contact.email}
   />
 
-  <main class="bg-[#F4F4F8] flex-grow flex flex-col">
+  <main class="flex-grow flex flex-col">
     {/* Page Header Hero */}
-    <section class="bg-gradient-to-b from-[#EFF6FF] via-[#F4F8FD] to-[#F4F4F8] pt-14 pb-16 md:pt-20 md:pb-24 border-b border-slate-200/60 relative">
+    <section class="pt-14 pb-16 md:pt-20 md:pb-24 border-b border-slate-200/60 relative">
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
         
         {/* Breadcrumbs */}
@@ -46,11 +45,11 @@ import HandDrawnArrow from '../../components/HandDrawnArrow.astro';
         <div class="flex flex-col">
           
           {/* Card 1: Intake Call */}
-          <div class="bg-white rounded-3xl p-8 sm:p-10 md:p-12 border border-slate-200/80 shadow-md hover:shadow-xl transition-all duration-300">
+          <div class="bg-white/80 backdrop-blur-xl rounded-3xl p-8 sm:p-10 md:p-12 border border-white/60 shadow-[0_8px_30px_rgb(0,0,0,0.05)] hover:bg-white/90 hover:border-white/80 hover:shadow-[0_16px_36px_-6px_rgba(15,23,42,0.1)] transition-all duration-300">
             <div class="flex flex-col lg:flex-row lg:items-center justify-between gap-8 lg:gap-12">
               <div class="flex-1">
                 <div class="flex flex-wrap items-center gap-3 sm:gap-4 mb-4">
-                  <span class="inline-flex items-center px-3.5 py-1 rounded-full text-xs font-bold uppercase tracking-wider bg-slate-100 text-[#0B0F19] border border-slate-200/80 shrink-0">
+                  <span class="inline-flex items-center px-3.5 py-1 rounded-full text-xs font-bold uppercase tracking-wider bg-white/85 backdrop-blur-md text-[#0B0F19] border border-white/60 shadow-xs shrink-0">
                     Step 01
                   </span>
                   <h2 class="text-[2rem] sm:text-3xl md:text-4xl font-extrabold text-[#0B0F19] tracking-tight leading-[1.08]">
@@ -76,7 +75,7 @@ import HandDrawnArrow from '../../components/HandDrawnArrow.astro';
                 </ul>
               </div>
 
-              <div class="lg:w-80 shrink-0 pt-6 lg:pt-0 border-t lg:border-t-0 lg:border-l border-slate-100 lg:pl-10 flex flex-col justify-center">
+              <div class="lg:w-80 shrink-0 pt-6 lg:pt-0 border-t lg:border-t-0 lg:border-l border-slate-200/60 lg:pl-10 flex flex-col justify-center">
                 <a
                   href="/#contact"
                   class="inline-flex items-center justify-center gap-2 bg-black hover:bg-slate-900 text-white font-bold py-3.5 px-6 rounded-full shadow-md hover:shadow-lg transition-all duration-200 active:scale-95 text-base w-full"
@@ -90,15 +89,15 @@ import HandDrawnArrow from '../../components/HandDrawnArrow.astro';
             </div>
           </div>
 
-          {/* Hand-drawn Arrow connecting Intake Call to AEO Audit */}
-          <HandDrawnArrow />
+          {/* Vertical Dashed Line Divider */}
+          <div class="w-px h-[72px] mx-auto my-8 sm:my-10 border-l border-dashed border-black" aria-hidden="true"></div>
 
           {/* Card 2: AEO Audit */}
-          <div class="bg-white rounded-3xl p-8 sm:p-10 md:p-12 border border-slate-200/80 shadow-md hover:shadow-xl transition-all duration-300">
+          <div class="bg-white/80 backdrop-blur-xl rounded-3xl p-8 sm:p-10 md:p-12 border border-white/60 shadow-[0_8px_30px_rgb(0,0,0,0.05)] hover:bg-white/90 hover:border-white/80 hover:shadow-[0_16px_36px_-6px_rgba(15,23,42,0.1)] transition-all duration-300">
             <div class="flex flex-col lg:flex-row lg:items-center justify-between gap-8 lg:gap-12">
               <div class="flex-1">
                 <div class="flex flex-wrap items-center gap-3 sm:gap-4 mb-4">
-                  <span class="inline-flex items-center px-3.5 py-1 rounded-full text-xs font-bold uppercase tracking-wider bg-slate-100 text-[#0B0F19] border border-slate-200/80 shrink-0">
+                  <span class="inline-flex items-center px-3.5 py-1 rounded-full text-xs font-bold uppercase tracking-wider bg-white/85 backdrop-blur-md text-[#0B0F19] border border-white/60 shadow-xs shrink-0">
                     Step 02
                   </span>
                   <h2 class="text-[2rem] sm:text-3xl md:text-4xl font-extrabold text-[#0B0F19] tracking-tight leading-[1.08]">
@@ -106,7 +105,7 @@ import HandDrawnArrow from '../../components/HandDrawnArrow.astro';
                   </h2>
                 </div>
                 <p class="text-slate-600 text-base sm:text-lg leading-relaxed mb-6 max-w-2xl">
-                  An exhaustive inspection of how conversational AI engines (ChatGPT, Google Gemini, Claude, Siri) and search crawlers perceive, index, and cite your business against local competitors.
+                  An in-depth look at why local customers might be missing your business online. We uncover why search engines and AI assistants are skipping over your website, then use those exact insights as the foundation to build a site that accurately reflects the quality of your business.
                 </p>
                 <ul class="space-y-2.5 text-sm sm:text-base text-slate-700">
                   <li class="flex items-start gap-2.5">
@@ -124,7 +123,7 @@ import HandDrawnArrow from '../../components/HandDrawnArrow.astro';
                 </ul>
               </div>
 
-              <div class="lg:w-80 shrink-0 pt-6 lg:pt-0 border-t lg:border-t-0 lg:border-l border-slate-100 lg:pl-10 flex flex-col justify-center">
+              <div class="lg:w-80 shrink-0 pt-6 lg:pt-0 border-t lg:border-t-0 lg:border-l border-slate-200/60 lg:pl-10 flex flex-col justify-center">
                 <a
                   href="/#contact"
                   class="inline-flex items-center justify-center gap-2 bg-black hover:bg-slate-900 text-white font-bold py-3.5 px-6 rounded-full shadow-md hover:shadow-lg transition-all duration-200 active:scale-95 text-base w-full mb-3"
@@ -145,15 +144,15 @@ import HandDrawnArrow from '../../components/HandDrawnArrow.astro';
             </div>
           </div>
 
-          {/* Hand-drawn Arrow connecting AEO Audit to Rebuild Custom Website */}
-          <HandDrawnArrow />
+          {/* Vertical Dashed Line Divider */}
+          <div class="w-px h-[72px] mx-auto my-8 sm:my-10 border-l border-dashed border-black" aria-hidden="true"></div>
 
           {/* Card 3: Rebuild Custom Website */}
-          <div class="bg-white rounded-3xl p-8 sm:p-10 md:p-12 border border-slate-200/80 shadow-md hover:shadow-xl transition-all duration-300">
+          <div class="bg-white/80 backdrop-blur-xl rounded-3xl p-8 sm:p-10 md:p-12 border border-white/60 shadow-[0_8px_30px_rgb(0,0,0,0.05)] hover:bg-white/90 hover:border-white/80 hover:shadow-[0_16px_36px_-6px_rgba(15,23,42,0.1)] transition-all duration-300">
             <div class="flex flex-col lg:flex-row lg:items-center justify-between gap-8 lg:gap-12">
               <div class="flex-1">
                 <div class="flex flex-wrap items-center gap-3 sm:gap-4 mb-4">
-                  <span class="inline-flex items-center px-3.5 py-1 rounded-full text-xs font-bold uppercase tracking-wider bg-slate-100 text-[#0B0F19] border border-slate-200/80 shrink-0">
+                  <span class="inline-flex items-center px-3.5 py-1 rounded-full text-xs font-bold uppercase tracking-wider bg-white/85 backdrop-blur-md text-[#0B0F19] border border-white/60 shadow-xs shrink-0">
                     Step 03
                   </span>
                   <h2 class="text-[2rem] sm:text-3xl md:text-4xl font-extrabold text-[#0B0F19] tracking-tight leading-[1.08]">
@@ -179,7 +178,7 @@ import HandDrawnArrow from '../../components/HandDrawnArrow.astro';
                 </ul>
               </div>
 
-              <div class="lg:w-80 shrink-0 pt-6 lg:pt-0 border-t lg:border-t-0 lg:border-l border-slate-100 lg:pl-10 flex flex-col justify-center">
+              <div class="lg:w-80 shrink-0 pt-6 lg:pt-0 border-t lg:border-t-0 lg:border-l border-slate-200/60 lg:pl-10 flex flex-col justify-center">
                 <a
                   href="/#contact"
                   class="inline-flex items-center justify-center gap-2 bg-black hover:bg-slate-900 text-white font-bold py-3.5 px-6 rounded-full shadow-md hover:shadow-lg transition-all duration-200 active:scale-95 text-base w-full mb-3"
@@ -200,15 +199,15 @@ import HandDrawnArrow from '../../components/HandDrawnArrow.astro';
             </div>
           </div>
 
-          {/* Hand-drawn Arrow connecting Rebuild Custom Website to Website Hosting & Administration */}
-          <HandDrawnArrow />
+          {/* Vertical Dashed Line Divider */}
+          <div class="w-px h-[72px] mx-auto my-8 sm:my-10 border-l border-dashed border-black" aria-hidden="true"></div>
 
           {/* Card 4: Website Hosting & Administration */}
-          <div class="bg-white rounded-3xl p-8 sm:p-10 md:p-12 border border-slate-200/80 shadow-md hover:shadow-xl transition-all duration-300">
+          <div id="hosting" class="bg-white/80 backdrop-blur-xl rounded-3xl p-8 sm:p-10 md:p-12 border border-white/60 shadow-[0_8px_30px_rgb(0,0,0,0.05)] hover:bg-white/90 hover:border-white/80 hover:shadow-[0_16px_36px_-6px_rgba(15,23,42,0.1)] transition-all duration-300">
             <div class="flex flex-col lg:flex-row lg:items-center justify-between gap-8 lg:gap-12">
               <div class="flex-1">
                 <div class="flex flex-wrap items-center gap-3 sm:gap-4 mb-4">
-                  <span class="inline-flex items-center px-3.5 py-1 rounded-full text-xs font-bold uppercase tracking-wider bg-slate-100 text-[#0B0F19] border border-slate-200/80 shrink-0">
+                  <span class="inline-flex items-center px-3.5 py-1 rounded-full text-xs font-bold uppercase tracking-wider bg-white/85 backdrop-blur-md text-[#0B0F19] border border-white/60 shadow-xs shrink-0">
                     Step 04
                   </span>
                   <h2 class="text-[2rem] sm:text-3xl md:text-4xl font-extrabold text-[#0B0F19] tracking-tight leading-[1.08]">
@@ -234,7 +233,7 @@ import HandDrawnArrow from '../../components/HandDrawnArrow.astro';
                 </ul>
               </div>
 
-              <div class="lg:w-80 shrink-0 pt-6 lg:pt-0 border-t lg:border-t-0 lg:border-l border-slate-100 lg:pl-10 flex flex-col justify-center">
+              <div class="lg:w-80 shrink-0 pt-6 lg:pt-0 border-t lg:border-t-0 lg:border-l border-slate-200/60 lg:pl-10 flex flex-col justify-center">
                 <a
                   href="/#contact"
                   class="inline-flex items-center justify-center gap-2 bg-black hover:bg-slate-900 text-white font-bold py-3.5 px-6 rounded-full shadow-md hover:shadow-lg transition-all duration-200 active:scale-95 text-base w-full"

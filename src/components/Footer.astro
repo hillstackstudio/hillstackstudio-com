@@ -16,17 +16,24 @@ const {
 } = Astro.props;
 ---
 
-<footer class="w-full bg-[#F0F6FF] text-slate-600 py-16 pb-28 md:pb-16 border-t border-slate-200/80">
+<footer class="w-full text-slate-600 py-16 pb-28 md:pb-16 border-t border-slate-200/80">
   <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid grid-cols-1 md:grid-cols-4 gap-10">
     <!-- Brand Info & Regional Presence -->
     <div class="md:col-span-2">
-      <div class="flex items-center mb-3">
+      <a 
+        href="/" 
+        class="flex items-center gap-2.5 sm:gap-3 mb-4 select-none group w-fit transition-all duration-200" 
+        aria-label="Hill Stack Studio Home"
+      >
         <img 
-          src="/logo.svg" 
+          src="/dark-logo.svg" 
           alt="Hill Stack Studio Logo" 
-          class="h-9 sm:h-10 w-auto object-contain" 
+          class="h-9 sm:h-10 w-auto object-contain rounded-xl shadow-xs group-hover:scale-105 transition-transform shrink-0" 
         />
-      </div>
+        <span class="text-base sm:text-lg font-bold text-[#0f172a] tracking-tight whitespace-nowrap leading-none pl-0.5">
+          Hill Stack <span class="font-normal text-slate-500">Studio</span>
+        </span>
+      </a>
       <div class="space-y-2">
         <div class="flex items-center gap-2 text-base text-slate-600 font-medium">
           <svg class="w-5 h-5 text-[#0B0F19] shrink-0" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">

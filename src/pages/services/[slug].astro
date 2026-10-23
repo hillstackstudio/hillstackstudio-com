@@ -28,10 +28,10 @@ if (!currentService) {
 // 9 SVG Icons matching the rest of the site
 const getServiceSvgPath = (index: number) => {
   const paths = [
-    // 0. Custom Web Design & Development (Monitor)
-    "M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z",
-    // 1. Answer Engine Optimization (Lightning)
-    "M13 10V3L4 14h7v7l9-11h-7z",
+    // 0. Custom Web Design & Development (Code </>)
+    "M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4",
+    // 1. Answer Engine Optimization (Magnifying Glass)
+    "M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z",
     // 2. Consulting & Site Migration (Exchange)
     "M8 7h12m0 0l-4-4m4 4l-4 4m0 6H4m0 0l4 4m-4-4l4-4",
     // 3. Web Hosting & Administration (Server)
@@ -60,9 +60,9 @@ const getServiceSvgPath = (index: number) => {
     email={siteContext.contact.email}
   />
 
-  <main class="bg-[#F4F4F8] flex-grow flex flex-col">
+  <main class="flex-grow flex flex-col">
     {/* Hero Section */}
-    <section class="bg-gradient-to-b from-[#EFF6FF] via-[#F4F8FD] to-[#F4F4F8] pt-12 pb-16 md:pt-16 md:pb-24 border-b border-slate-200/60 relative overflow-hidden">
+    <section class="pt-12 pb-16 md:pt-16 md:pb-24 border-b border-slate-200/60 relative overflow-hidden">
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         
         {/* Breadcrumbs */}
@@ -152,7 +152,7 @@ const getServiceSvgPath = (index: number) => {
 
 
     {/* Deliverables Section */}
-    <section class="py-16 md:py-24 bg-[#F4F4F8] border-b border-slate-200/80">
+    <section class="py-16 md:py-24 border-b border-slate-200/80">
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
           <div class="lg:col-span-5">
@@ -203,7 +203,7 @@ const getServiceSvgPath = (index: number) => {
 
           <div class="space-y-6">
             {currentService.faq.map((item) => (
-              <div class="bg-[#F4F4F8] rounded-2xl p-6 sm:p-8 border border-slate-200/80 shadow-xs">
+              <div class="bg-slate-50 rounded-2xl p-6 sm:p-8 border border-slate-200/80 shadow-xs">
                 <h3 class="text-lg font-bold text-[#0B0F19] mb-3">
                   {item.question}
                 </h3>

@@ -25,11 +25,11 @@ const Hero: React.FC<HeroProps> = ({
           alt="" 
           className="w-full h-full object-cover object-center"
         />
-        {/* Bottom gradient fade into next section (#F4F4F8) */}
+        {/* Bottom gradient fade into next section (#E3E9EF) */}
         <div 
           className="absolute inset-x-0 bottom-0 h-32 sm:h-44 md:h-56 pointer-events-none"
           style={{
-            background: 'linear-gradient(to bottom, rgba(244, 244, 248, 0) 0%, rgba(244, 244, 248, 0.4) 35%, rgba(244, 244, 248, 0.85) 70%, #F4F4F8 100%)'
+            background: 'linear-gradient(to bottom, rgba(227, 233, 239, 0) 0%, rgba(227, 233, 239, 0.4) 35%, rgba(227, 233, 239, 0.85) 70%, #E3E9EF 100%)'
           }}
         />
       </div>

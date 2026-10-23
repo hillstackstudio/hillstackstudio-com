@@ -74,7 +74,7 @@ const Faq: React.FC<FaqProps> = ({
   };
 
   return (
-    <section id="faq" className="py-20 md:py-28 bg-[#F4F4F8] border-b border-slate-200/80">
+    <section id="faq" className="py-20 md:py-28 border-b border-slate-200/80">
       {/* FAQ Schema Markup for Search Engines and AI Crawlers */}
       <script
         type="application/ld+json"
@@ -121,8 +121,8 @@ const Faq: React.FC<FaqProps> = ({
                   <span 
                     className={`w-9 h-9 sm:w-10 sm:h-10 rounded-full flex items-center justify-center shrink-0 transition-all duration-300 ${
                       isOpen 
-                        ? 'bg-[#0B0F19] text-white rotate-45 shadow-xs' 
-                        : 'bg-slate-100 text-slate-700 group-hover:bg-[#0B0F19] group-hover:text-white'
+                        ? 'bg-black text-[#169F94] rotate-45 shadow-xs' 
+                        : 'bg-slate-100 text-slate-700 group-hover:bg-black group-hover:text-[#169F94]'
                     }`}
                     aria-label={isOpen ? "Collapse question" : "Expand question"}
                   >

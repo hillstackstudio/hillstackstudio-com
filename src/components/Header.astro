@@ -1,6 +1,5 @@
 ---
 import siteContext from '../data/siteContext.json';
-import { servicesData } from '../data/servicesData';
 
 export interface Props {
   companyName?: string;
@@ -12,7 +11,7 @@ export interface Props {
 const {
   companyName = "Hill Stack Studio",
   navItems = [
-    { label: "Company", href: "/#advantage" },
+    { label: "About Us", href: "/about" },
     { label: "Work", href: "/#recent-work" },
     { label: "Services", href: "/services" },
     { label: "Contact", href: "/#contact" }
@@ -20,19 +19,25 @@ const {
   transparentAtTop = false
 } = Astro.props;
 
-// 2 core services for the dropdown
-const servicesList = servicesData.map((service, index) => ({
-  ...service,
-  name: siteContext.services[index]?.name || service.name,
-}));
-
-// SVG Icons matching services
-const serviceSvgPaths = [
-  // 1. Custom Web Design & Development (Monitor)
-  "M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z",
-  // 2. AEO & SEO Website Audit (Chart/Bar)
-  "M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"
+// 3 core services for the dropdown matching "Our solutions" section order
+const servicesList = [
+  {
+    name: siteContext.services[0]?.name || "AEO & SEO Website Audit",
+    href: "/services/answer-engine-optimization",
+    svgPath: "M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"
+  },
+  {
+    name: siteContext.services[1]?.name || "Custom Web Design & Development",
+    href: "/services/custom-web-design-development",
+    svgPath: "M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4"
+  },
+  {
+    name: siteContext.services[2]?.name || "Hosting & Administration",
+    href: "/services#hosting",
+    svgPath: "M5 12h14M5 12a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v4a2 2 0 01-2 2M5 12a2 2 0 00-2 2v4a2 2 0 002 2h14a2 2 0 002-2v-4a2 2 0 00-2-2m-2-4h.01M17 16h.01"
+  }
 ];
+
 ---
 
 <header 
@@ -42,7 +47,7 @@ const serviceSvgPaths = [
   <!-- Floating Pill Navbar Bar -->
   <div 
     id="navbar-inner"
-    class="pointer-events-auto max-w-6xl mx-auto bg-white/70 backdrop-blur-xl backdrop-saturate-150 rounded-2xl sm:rounded-[22px] border border-white/80 shadow-[0_8px_32px_0_rgba(15,23,42,0.08),inset_0_1px_0_0_rgba(255,255,255,0.9)] px-4 sm:px-6 h-16 sm:h-[66px] flex items-center justify-between relative transition-all duration-300"
+    class="pointer-events-auto max-w-6xl mx-auto bg-white/75 backdrop-blur-xl rounded-2xl sm:rounded-[22px] border border-white/60 shadow-[0_8px_30px_rgb(0,0,0,0.06)] px-4 sm:px-6 h-16 sm:h-[66px] flex items-center justify-between relative transition-all duration-300"
   >
     <!-- Brand Logo & Wordmark (Left) -->
     <a 
@@ -64,49 +69,7 @@ const serviceSvgPaths = [
     <!-- Desktop Navigation Links (Center) -->
     <nav class="hidden md:flex items-center gap-1 lg:gap-2">
       {navItems.map(item => {
-        const isCompany = item.label === "Company";
         const isServices = item.label === "Services";
-
-        if (isCompany) {
-          return (
-            <div class="relative group/dropdown py-2">
-              <a 
-                href={item.href} 
-                class="flex items-center gap-1.5 px-3.5 py-1.5 rounded-xl text-sm lg:text-[15px] font-medium text-slate-700 hover:text-black hover:bg-white/60 group-hover/dropdown:bg-white/80 group-hover/dropdown:text-black group-hover/dropdown:shadow-xs transition-all"
-              >
-                <span>{item.label}</span>
-                <svg 
-                  class="w-3.5 h-3.5 text-slate-400 group-hover/dropdown:text-black group-hover/dropdown:rotate-180 transition-transform duration-200" 
-                  fill="none" 
-                  viewBox="0 0 24 24" 
-                  stroke="currentColor" 
-                  stroke-width="2.5"
-                >
-                  <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7" />
-                </svg>
-              </a>
-
-              {/* Company Dropdown Panel */}
-              <div class="absolute top-full left-0 pt-2 opacity-0 invisible group-hover/dropdown:opacity-100 group-hover/dropdown:visible transition-all duration-200 transform translate-y-1 group-hover/dropdown:translate-y-0 pointer-events-none group-hover/dropdown:pointer-events-auto z-50">
-                <div class="w-56 bg-white/85 backdrop-blur-2xl rounded-2xl border border-white/80 shadow-[0_20px_50px_-10px_rgba(15,23,42,0.15),inset_0_1px_0_0_rgba(255,255,255,0.95)] p-2">
-                  <a 
-                    href="/about" 
-                    class="flex items-center gap-3 p-2 rounded-xl hover:bg-white/70 transition-colors group/item"
-                  >
-                    <div class="w-9 h-9 rounded-xl bg-slate-100/80 text-slate-700 group-hover/item:bg-white group-hover/item:shadow-xs flex items-center justify-center shrink-0 transition-colors">
-                      <svg class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
-                        <path stroke-linecap="round" stroke-linejoin="round" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4" />
-                      </svg>
-                    </div>
-                    <span class="text-sm font-semibold text-slate-900 group-hover/item:text-black leading-tight">
-                      About Us
-                    </span>
-                  </a>
-                </div>
-              </div>
-            </div>
-          );
-        }
 
         if (isServices) {
           return (
@@ -129,16 +92,16 @@ const serviceSvgPaths = [
 
               {/* Services Dropdown Panel */}
               <div class="absolute top-full left-1/2 -translate-x-1/2 pt-2 opacity-0 invisible group-hover/dropdown:opacity-100 group-hover/dropdown:visible transition-all duration-200 transform translate-y-1 group-hover/dropdown:translate-y-0 pointer-events-none group-hover/dropdown:pointer-events-auto z-50">
-                <div class="w-[320px] sm:w-[340px] bg-white/85 backdrop-blur-2xl rounded-2xl border border-white/80 shadow-[0_20px_50px_-10px_rgba(15,23,42,0.15),inset_0_1px_0_0_rgba(255,255,255,0.95)] p-2">
+                <div class="w-[320px] sm:w-[340px] bg-white/85 backdrop-blur-2xl rounded-2xl border border-white/60 shadow-[0_16px_40px_-8px_rgba(15,23,42,0.12)] p-2">
                   <div class="flex flex-col gap-1">
-                    {servicesList.map((service, index) => (
+                    {servicesList.map((service) => (
                       <a 
-                        href={`/services/${service.slug}`} 
+                        href={service.href} 
                         class="flex items-center gap-3 p-2 rounded-xl hover:bg-white/70 transition-colors group/item"
                       >
                         <div class="w-9 h-9 rounded-xl bg-slate-100/80 text-slate-700 group-hover/item:bg-white group-hover/item:shadow-xs flex items-center justify-center shrink-0 transition-colors">
                           <svg class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
-                            <path stroke-linecap="round" stroke-linejoin="round" d={serviceSvgPaths[index % serviceSvgPaths.length]} />
+                            <path stroke-linecap="round" stroke-linejoin="round" d={service.svgPath} />
                           </svg>
                         </div>
                         <span class="text-sm font-semibold text-slate-900 group-hover/item:text-black transition-colors leading-tight">
@@ -146,17 +109,6 @@ const serviceSvgPaths = [
                         </span>
                       </a>
                     ))}
-                  </div>
-                  <div class="pt-2 mt-1 border-t border-slate-100/80 flex items-center justify-between px-2">
-                    <a 
-                      href="/services" 
-                      class="text-xs font-semibold text-slate-700 hover:text-black flex items-center gap-1 transition-colors"
-                    >
-                      <span>View all services</span>
-                      <svg class="w-3.5 h-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5">
-                        <path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7" />
-                      </svg>
-                    </a>
                   </div>
                 </div>
               </div>
@@ -208,42 +160,16 @@ const serviceSvgPaths = [
   <!-- Mobile / Tablet Floating Navigation Panel (Overlays the page without shifting content) -->
   <div
     id="mobile-menu"
-    class="pointer-events-auto hidden md:hidden absolute top-full left-3 right-3 sm:left-6 sm:right-6 max-w-6xl mx-auto mt-2 bg-white/85 backdrop-blur-2xl rounded-2xl border border-white/80 shadow-[0_20px_50px_-10px_rgba(15,23,42,0.15),inset_0_1px_0_0_rgba(255,255,255,0.95)] p-4 transition-all duration-200 z-50 max-h-[calc(100dvh-5.5rem)] overflow-y-auto overscroll-contain"
+    class="pointer-events-auto hidden md:hidden absolute top-full left-3 right-3 sm:left-6 sm:right-6 max-w-6xl mx-auto mt-2 bg-white/85 backdrop-blur-2xl rounded-2xl border border-white/60 shadow-[0_16px_40px_-8px_rgba(15,23,42,0.12)] p-4 transition-all duration-200 z-50 max-h-[calc(100dvh-5.5rem)] overflow-y-auto overscroll-contain"
   >
     <div class="flex flex-col gap-1">
-      {/* Company Link & Accordion */}
-      <div class="mobile-accordion-item rounded-xl overflow-hidden">
-        <div class="flex items-center justify-between p-2 rounded-xl hover:bg-slate-100/80 transition-colors">
-          <a
-            href="/#advantage"
-            class="mobile-nav-link text-base font-medium text-slate-800 hover:text-black transition-colors"
-          >
-            Company
-          </a>
-          <button
-            type="button"
-            class="mobile-accordion-button p-1 text-slate-500 hover:text-black rounded-lg transition-colors"
-            aria-label="Toggle Company Menu"
-          >
-            <svg class="w-4 h-4 transition-transform duration-200" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5">
-              <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7" />
-            </svg>
-          </button>
-        </div>
-        <div class="mobile-accordion-content hidden border-t border-slate-100 mt-1 pt-1.5 pl-3">
-          <a
-            href="/about"
-            class="mobile-nav-link flex items-center gap-3 p-2 text-sm font-medium text-slate-700 hover:text-black rounded-lg hover:bg-slate-100/80 transition-colors"
-          >
-            <div class="w-8 h-8 rounded-lg bg-slate-100 text-slate-700 flex items-center justify-center shrink-0">
-              <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
-                <path stroke-linecap="round" stroke-linejoin="round" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4" />
-              </svg>
-            </div>
-            <span>About Us</span>
-          </a>
-        </div>
-      </div>
+      {/* About Us Link */}
+      <a
+        href="/about"
+        class="mobile-nav-link p-2 text-base font-medium text-slate-800 hover:text-black rounded-xl hover:bg-slate-100/80 transition-colors"
+      >
+        About Us
+      </a>
 
       {/* Work Link */}
       <a
@@ -273,14 +199,14 @@ const serviceSvgPaths = [
           </button>
         </div>
         <div class="mobile-accordion-content hidden border-t border-slate-100 mt-1 pt-1.5 pl-2 space-y-1">
-          {servicesList.map((service, index) => (
+          {servicesList.map((service) => (
             <a
-              href={`/services/${service.slug}`}
+              href={service.href}
               class="mobile-nav-link flex items-center gap-3 p-2 rounded-lg hover:bg-slate-100/80 transition-colors"
             >
               <div class="w-8 h-8 rounded-lg bg-slate-100 text-slate-700 flex items-center justify-center shrink-0">
                 <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
-                  <path stroke-linecap="round" stroke-linejoin="round" d={serviceSvgPaths[index % serviceSvgPaths.length]} />
+                  <path stroke-linecap="round" stroke-linejoin="round" d={service.svgPath} />
                 </svg>
               </div>
               <span class="text-sm font-medium text-slate-700 leading-tight">
@@ -316,36 +242,36 @@ const serviceSvgPaths = [
 </header>
 
 <script>
-  // Glassmorphic shadow and opacity elevation on scroll
+  // Frosted glass elevation on scroll
   const navbarInner = document.getElementById('navbar-inner');
   
   if (navbarInner) {
     const handleScroll = () => {
       if (window.scrollY > 15) {
         navbarInner.classList.add(
-          'bg-white/80',
+          'bg-white/85',
           'backdrop-blur-2xl',
-          'border-white/90',
-          'shadow-[0_12px_40px_0_rgba(15,23,42,0.12),inset_0_1px_0_0_rgba(255,255,255,0.95)]'
+          'border-white/70',
+          'shadow-[0_12px_36px_rgb(0,0,0,0.08)]'
         );
         navbarInner.classList.remove(
-          'bg-white/70',
+          'bg-white/75',
           'backdrop-blur-xl',
-          'border-white/80',
-          'shadow-[0_8px_32px_0_rgba(15,23,42,0.08),inset_0_1px_0_0_rgba(255,255,255,0.9)]'
+          'border-white/60',
+          'shadow-[0_8px_30px_rgb(0,0,0,0.06)]'
         );
       } else {
         navbarInner.classList.add(
-          'bg-white/70',
+          'bg-white/75',
           'backdrop-blur-xl',
-          'border-white/80',
-          'shadow-[0_8px_32px_0_rgba(15,23,42,0.08),inset_0_1px_0_0_rgba(255,255,255,0.9)]'
+          'border-white/60',
+          'shadow-[0_8px_30px_rgb(0,0,0,0.06)]'
         );
         navbarInner.classList.remove(
-          'bg-white/80',
+          'bg-white/85',
           'backdrop-blur-2xl',
-          'border-white/90',
-          'shadow-[0_12px_40px_0_rgba(15,23,42,0.12),inset_0_1px_0_0_rgba(255,255,255,0.95)]'
+          'border-white/70',
+          'shadow-[0_12px_36px_rgb(0,0,0,0.08)]'
         );
       }
     };

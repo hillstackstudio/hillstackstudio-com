@@ -10,12 +10,16 @@
   },
   "services": [
     {
+      "name": "AEO & SEO Website Audit",
+      "description": "An in-depth look at why local customers might be missing your business online. We uncover why search engines and AI assistants are skipping over your website."
+    },
+    {
       "name": "Custom Web Design & Development",
       "description": "Clean custom code and modern website redesigns engineered for fast page loads, AI search recommendations and customer conversion."
     },
     {
-      "name": "AEO & SEO Website Audit",
-      "description": "Our comprehensive audit identifies why your business is not recommended to local customers. Allowing us to fix these issues so local searches can lead more customers to you."
+      "name": "Hosting & Administration",
+      "description": "Fast, worry-free cloud hosting, continuous security updates, automated backups, and routine content adjustments to keep your website fast, secure, and always accessible."
     }
   ],
   "primaryCallToAction": "Audit Your Website",

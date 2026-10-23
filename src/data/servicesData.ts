@@ -99,7 +99,7 @@ export const servicesData: ServiceDetail[] = [
     slug: "answer-engine-optimization",
     name: "Answer Engine Optimization (AEO)",
     tagline: "Be the top AI recommended answer when local customers ask.",
-    shortDescription: "Our comprehensive audit identifies why your business is not recommended to local customers. Allowing us to fix these issues so local searches can lead more customers to you.",
+    shortDescription: "An in-depth look at why local customers might be missing your business online. We uncover why search engines and AI assistants are skipping over your website.",
     heroDescription: "Our comprehensive audit identifies why your business is not recommended to local customers. Allowing us to fix these issues so local searches can lead more customers to you.",
     iconIndex: 1,
     heroImage: "/images/services/geo-image.svg",
