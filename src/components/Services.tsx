@@ -1,10 +1,10 @@
 import React, { useEffect, useRef, useState } from 'react';
-import { servicesData } from '../data/servicesData';
 
 export interface ServiceItem {
   name: string;
   description: string;
   slug?: string;
+  href?: string;
 }
 
 interface ServicesProps {
@@ -58,19 +58,16 @@ const defaultServices: ServiceItem[] = [
   {
     name: "AEO & SEO Website Audit",
     description: "An in-depth look at why local customers might be missing your business online. We uncover why search engines and AI assistants are skipping over your website.",
-    slug: "answer-engine-optimization",
-    href: "/services/answer-engine-optimization"
+    href: "/services"
   },
   {
     name: "Custom Web Design & Development",
     description: "Clean custom code and modern website redesigns engineered for fast page loads, AI search recommendations and customer conversion.",
-    slug: "custom-web-design-development",
-    href: "/services/custom-web-design-development"
+    href: "/services"
   },
   {
     name: "Hosting & Administration",
-    description: "Fast, worry-free cloud hosting, continuous security updates, automated backups, and routine content adjustments to keep your website fast, secure, and always accessible.",
-    slug: "hosting-administration",
+    description: "Fast, quality cloud hosting and ongoing technical care. We handle your website's speed, security, backups and regular content updates for you behind the scenes.",
     href: "/services#hosting"
   }
 ];
@@ -143,7 +140,7 @@ const Services: React.FC<ServicesProps> = ({ services }) => {
                 key={index}
                 data-index={index}
                 ref={(el) => (cardRefs.current[index] = el)}
-                href={service.href || (service.slug ? `/services/${service.slug}` : '/services')}
+                href={service.href || '/services'}
                 style={{
                   transitionDelay: `${(index % 3) * 120}ms`
                 }}
@@ -163,9 +160,6 @@ const Services: React.FC<ServicesProps> = ({ services }) => {
                   <p className="text-slate-600 leading-relaxed text-base md:text-lg">
                     {service.description}
                   </p>
-                </div>
-                <div className="mt-6 pt-4 border-t border-slate-200/60 flex items-center justify-center text-[#0B0F19] text-sm font-bold group-hover:underline">
-                  <span>Learn more</span>
                 </div>
               </a>
             );

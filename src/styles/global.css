@@ -6,14 +6,12 @@
 
 @layer base {
   html {
-    scroll-behavior: smooth;
     min-height: 100%;
     background-color: #E3E9EF;
   }
 
   body {
     font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-    scroll-behavior: smooth;
     background-color: #F6F9FB;
     background-image: linear-gradient(180deg, #E3E9EF 0%, #F6F9FB 50%, #F6F9FB 100%);
     background-repeat: no-repeat;

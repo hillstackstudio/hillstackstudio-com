@@ -10,11 +10,11 @@ interface HeroProps {
 }
 
 const Hero: React.FC<HeroProps> = ({
-  companyName = "Hill Stack Studio",
-  tagline = "Locally rooted. AI Optimized.",
+  companyName: _companyName = "Hill Stack Studio",
+  tagline: _tagline = "Locally rooted. AI Optimized.",
   aboutText = "We rebuild your website to better reflect your business. We run our audit so local searches can lead customers straight to you.",
   primaryCallToAction = "Audit Your Website",
-  regionalKeywords = ["Seattle", "Bellevue", "Tacoma", "King County", "Pierce County", "Pacific Northwest"]
+  regionalKeywords: _regionalKeywords = ["Seattle", "Bellevue", "Tacoma", "King County", "Pierce County", "Pacific Northwest"]
 }) => {
   return (
     <section className="relative overflow-hidden -mt-20 pt-28 pb-16 sm:pt-36 md:pt-44 md:pb-20 border-b border-slate-200/70">

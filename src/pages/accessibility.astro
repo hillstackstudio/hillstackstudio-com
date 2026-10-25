@@ -1,0 +1,197 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+import siteContext from '../data/siteContext.json';
+---
+
+<BaseLayout
+  title={`Accessibility Statement | ${siteContext.companyName}`}
+  description="Accessibility Statement for Hill Stack Studio. Learn about our commitment to digital accessibility and WCAG 2.2 Level AA compliance."
+>
+  <Header
+    companyName={siteContext.companyName}
+    email={siteContext.contact.email}
+  />
+
+  <main class="flex-grow flex flex-col">
+    {/* Page Header Hero */}
+    <section class="pt-14 pb-12 md:pt-20 md:pb-16 border-b border-slate-200/60 relative">
+      <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+        
+        {/* Breadcrumbs */}
+        <nav class="flex items-center justify-start gap-2 text-xs md:text-sm text-slate-500 mb-6 font-medium" aria-label="Breadcrumb">
+          <a href="/" class="hover:text-black transition-colors">
+            Home
+          </a>
+          <svg class="w-3.5 h-3.5 text-slate-400 stroke-[2.5]" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="M9 18l6-6-6-6" />
+          </svg>
+          <span class="text-slate-800 font-bold">Accessibility Statement</span>
+        </nav>
+
+        <div class="inline-flex items-center gap-2 px-3.5 py-1 rounded-full text-xs font-bold uppercase tracking-wider bg-white/85 backdrop-blur-md text-[#0B0F19] border border-white/60 shadow-xs mb-4">
+          <span>Effective: 2026-10-24</span>
+        </div>
+
+        <h1 class="text-[2.5rem] sm:text-5xl md:text-6xl font-extrabold text-[#0B0F19] tracking-tight leading-[1.08] sm:leading-[1.12]">
+          Accessibility Statement
+        </h1>
+        <p class="text-base sm:text-lg text-slate-600 mt-4 leading-relaxed font-normal">
+          Hill Stack Studio is committed to ensuring digital accessibility for people with disabilities. We are continually improving the user experience for everyone and applying the relevant accessibility standards on our website at <a href="https://www.hillstackstudio.com" class="text-black font-semibold underline underline-offset-4 hover:text-slate-700 transition-colors">https://www.hillstackstudio.com</a>.
+        </p>
+      </div>
+    </section>
+
+    {/* Statement Content Card */}
+    <section class="py-12 md:py-16">
+      <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="bg-white/80 backdrop-blur-xl rounded-3xl p-8 sm:p-12 md:p-14 border border-white/60 shadow-[0_8px_30px_rgb(0,0,0,0.05)] space-y-10 text-slate-700 text-base sm:text-lg leading-relaxed">
+          
+          {/* 1. Measures to Support Accessibility */}
+          <div>
+            <h2 class="text-2xl sm:text-3xl font-extrabold text-[#0B0F19] tracking-tight mb-4">
+              Measures to Support Accessibility
+            </h2>
+            <p class="mb-4 text-slate-600">
+              We take the following measures to ensure accessibility across our website:
+            </p>
+            <ul class="space-y-3 pl-2">
+              <li class="flex items-start gap-3">
+                <span class="text-emerald-600 font-bold shrink-0 mt-0.5">✓</span>
+                <span>Ensuring the site is fully navigable by keyboard</span>
+              </li>
+              <li class="flex items-start gap-3">
+                <span class="text-emerald-600 font-bold shrink-0 mt-0.5">✓</span>
+                <span>Providing ARIA landmarks for faster navigation</span>
+              </li>
+              <li class="flex items-start gap-3">
+                <span class="text-emerald-600 font-bold shrink-0 mt-0.5">✓</span>
+                <span>Supporting zoom up to 200% without loss of content or functionality</span>
+              </li>
+              <li class="flex items-start gap-3">
+                <span class="text-emerald-600 font-bold shrink-0 mt-0.5">✓</span>
+                <span>Providing alt text for meaningful images</span>
+              </li>
+              <li class="flex items-start gap-3">
+                <span class="text-emerald-600 font-bold shrink-0 mt-0.5">✓</span>
+                <span>Using programmatic labels and instructions on forms</span>
+              </li>
+              <li class="flex items-start gap-3">
+                <span class="text-emerald-600 font-bold shrink-0 mt-0.5">✓</span>
+                <span>Offering clear error identification and suggestions</span>
+              </li>
+            </ul>
+          </div>
+
+          {/* 2. Compliance Status */}
+          <div class="pt-8 border-t border-slate-200/60">
+            <h2 class="text-2xl sm:text-3xl font-extrabold text-[#0B0F19] tracking-tight mb-4">
+              Compliance Status
+            </h2>
+            <div class="flex flex-col sm:flex-row items-start sm:items-center gap-4 bg-slate-50/80 p-5 rounded-2xl border border-slate-200/80">
+              <img 
+                src="/images/wcag-2.2-aa.png" 
+                alt="WCAG 2.2 Level AA Conformance Badge" 
+                class="h-10 w-auto object-contain shrink-0" 
+              />
+              <p class="font-medium text-[#0B0F19]">
+                The website is fully compliant with WCAG 2.2 level AA.
+              </p>
+            </div>
+          </div>
+
+          {/* 3. Colour Contrast & Font Sizing */}
+          <div class="pt-8 border-t border-slate-200/60">
+            <h2 class="text-2xl sm:text-3xl font-extrabold text-[#0B0F19] tracking-tight mb-4">
+              Colour Contrast &amp; Font Sizing
+            </h2>
+            <div class="space-y-4">
+              <p>
+                All text and essential UI components meet the colour-contrast ratios for WCAG 2.2 AA.
+              </p>
+              <p>
+                Where applicable, we aim to align with Americans with Disabilities Act (ADA), informed by the WCAG guidelines.
+              </p>
+            </div>
+          </div>
+
+          {/* 4. Technical Specifications and Compatibility */}
+          <div class="pt-8 border-t border-slate-200/60">
+            <h2 class="text-2xl sm:text-3xl font-extrabold text-[#0B0F19] tracking-tight mb-4">
+              Technical Specifications and Compatibility
+            </h2>
+            <ul class="space-y-3 pl-2">
+              <li class="flex items-start gap-3">
+                <span class="text-black font-bold text-lg leading-none mt-1.5">•</span>
+                <span>We designed and tested the site to work with current versions of Chrome, Safari.</span>
+              </li>
+              <li class="flex items-start gap-3">
+                <span class="text-black font-bold text-lg leading-none mt-1.5">•</span>
+                <span>We tested key user journeys with assistive technologies such as VoiceOver.</span>
+              </li>
+              <li class="flex items-start gap-3">
+                <span class="text-black font-bold text-lg leading-none mt-1.5">•</span>
+                <span>The site relies on HTML, WAI-ARIA, CSS, and JavaScript to ensure accessibility across devices and browsers.</span>
+              </li>
+            </ul>
+          </div>
+
+          {/* 5. Feedback and Contact */}
+          <div class="pt-8 border-t border-slate-200/60">
+            <h2 class="text-2xl sm:text-3xl font-extrabold text-[#0B0F19] tracking-tight mb-4">
+              Feedback and Contact
+            </h2>
+            <p class="mb-6">
+              We welcome your feedback on the accessibility of our website. Please let us know if you encounter accessibility barriers via <a href="/#contact" class="text-black font-semibold underline underline-offset-4 hover:text-slate-700 transition-colors">contact form</a> or by email at <a href={`mailto:${siteContext.contact.email}`} class="text-black font-semibold underline underline-offset-4 hover:text-slate-700 transition-colors">{siteContext.contact.email}</a>.
+            </p>
+            <div class="flex items-center">
+              <a
+                href="/#contact"
+                class="inline-flex items-center justify-center gap-2 bg-black hover:bg-slate-900 text-white font-bold py-3.5 px-8 rounded-full shadow-md hover:shadow-lg transition-all duration-200 active:scale-95 text-base"
+              >
+                <span>Go to Contact Form</span>
+                <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M14 5l7 7m0 0l-7 7m7-7H3" />
+                </svg>
+              </a>
+            </div>
+          </div>
+
+          {/* 6. Preparation of This Statement */}
+          <div class="pt-8 border-t border-slate-200/60">
+            <h2 class="text-2xl sm:text-3xl font-extrabold text-[#0B0F19] tracking-tight mb-4">
+              Preparation of This Statement
+            </h2>
+            <p>
+              This statement was prepared using a self-evaluation of the site against WCAG criteria.
+            </p>
+          </div>
+
+          {/* 7. Ongoing Improvements */}
+          <div class="pt-8 border-t border-slate-200/60">
+            <h2 class="text-2xl sm:text-3xl font-extrabold text-[#0B0F19] tracking-tight mb-4">
+              Ongoing Improvements
+            </h2>
+            <p>
+              We are committed to continuous improvement. As we add new pages and features, we review them for accessibility and prioritize fixes based on impact and feasibility.
+            </p>
+          </div>
+
+          {/* 8. Updates */}
+          <div class="pt-8 border-t border-slate-200/60">
+            <h2 class="text-2xl sm:text-3xl font-extrabold text-[#0B0F19] tracking-tight mb-4">
+              Updates
+            </h2>
+            <p>
+              We may update this statement from time to time. We will change the &ldquo;Effective&rdquo; date above and post the updated version on the Site.
+            </p>
+          </div>
+
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <Footer />
+</BaseLayout>

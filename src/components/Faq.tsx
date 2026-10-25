@@ -84,12 +84,9 @@ const Faq: React.FC<FaqProps> = ({
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Header matching site design system */}
         <div className="text-center mb-12 sm:mb-16 max-w-3xl mx-auto">
-          <h2 className="text-[2.5rem] sm:text-4xl md:text-5xl font-extrabold text-[#0B0F19] tracking-tight leading-[1.08] mb-4">
+          <h2 className="text-[2.5rem] sm:text-4xl md:text-5xl font-extrabold text-[#0B0F19] tracking-tight leading-[1.08]">
             {title}
           </h2>
-          <p className="text-lg text-slate-600 leading-relaxed font-normal">
-            Everything you need to know about our web engineering, AEO, and how we help your local business get discovered.
-          </p>
         </div>
 
         {/* FAQ Accordion List matching site design system */}

@@ -6,6 +6,9 @@ import tailwind from '@astrojs/tailwind';
 export default defineConfig({
   integrations: [react(), tailwind()],
   redirects: {
-    '/services/generative-engine-optimization': '/services/answer-engine-optimization'
+    '/services/generative-engine-optimization': '/services',
+    '/services/answer-engine-optimization': '/services',
+    '/services/custom-web-design-development': '/services',
+    '/accessiblity': '/accessibility'
   }
 });
