@@ -8,6 +8,7 @@
   html {
     min-height: 100%;
     background-color: #E3E9EF;
+    scroll-behavior: auto !important;
   }
 
   body {
@@ -111,6 +112,9 @@
 }
 
 @media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto !important;
+  }
   .animate-marquee {
     animation: none !important;
     -webkit-animation: none !important;

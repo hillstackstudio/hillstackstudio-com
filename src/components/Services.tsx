@@ -58,12 +58,12 @@ const defaultServices: ServiceItem[] = [
   {
     name: "AEO & SEO Website Audit",
     description: "An in-depth look at why local customers might be missing your business online. We uncover why search engines and AI assistants are skipping over your website.",
-    href: "/services"
+    href: "/services#audit"
   },
   {
     name: "Custom Web Design & Development",
     description: "Clean custom code and modern website redesigns engineered for fast page loads, AI search recommendations and customer conversion.",
-    href: "/services"
+    href: "/services#web-design"
   },
   {
     name: "Hosting & Administration",
@@ -160,6 +160,9 @@ const Services: React.FC<ServicesProps> = ({ services }) => {
                   <p className="text-slate-600 leading-relaxed text-base md:text-lg">
                     {service.description}
                   </p>
+                </div>
+                <div className="mt-6 pt-5 border-t border-slate-200/60 flex items-center justify-center text-[#0B0F19] text-sm font-bold group-hover:underline">
+                  <span>Learn More</span>
                 </div>
               </a>
             );
