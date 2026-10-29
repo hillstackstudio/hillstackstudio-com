@@ -1,0 +1,133 @@
+---
+const mainPackageFeaturesCol1 = [
+  "Comprehensive audit of your site's structure to identify the technical issues that has kept you hidden from local search results",
+  "Custom built architecture engineered making it easier for search engines and local customers to find you and book your services.",
+  "Designed mobile first and engineered to look and function great on any smartphone where over 70% of local searches happen.",
+];
+
+const mainPackageFeaturesCol2 = [
+  "Dedicated project manager who gets to know you and your business, to serve as the point of contact for any change requests or updates to your website.",
+  "Dedicated engineer keeping your structured data and web assets synced so your website and digital presence will never fall behind.",
+  "24/7 monitoring so your business always remains online and reachable whenever local customers are looking for your services.",
+];
+---
+
+<section id="pricing" class="py-20 md:py-28 border-b border-slate-200/80 relative">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    {/* Section Headline */}
+    <div class="text-center mb-16 max-w-3xl mx-auto">
+      <h2 class="text-[2.5rem] sm:text-4xl md:text-5xl font-extrabold text-[#0B0F19] tracking-tight leading-[1.08] mb-6">
+        One package,<br class="sm:hidden" /> One partnership
+      </h2>
+      <p class="text-lg text-slate-600 leading-relaxed">
+        Ideal for business owners with outdated websites, ready to connect with local customers.
+      </p>
+    </div>
+
+    {/* Centered Custom Website Package Card */}
+    <div
+      class="max-w-4xl mx-auto relative bg-white rounded-3xl p-6 sm:p-10 md:p-12 border border-slate-200/80 shadow-xl overflow-hidden flex flex-col justify-between"
+      style="background: radial-gradient(circle at top right, rgba(22, 159, 148, 0.16) 0%, rgba(22, 159, 148, 0.04) 45%, transparent 70%), #FFFFFF;"
+    >
+      {/* Logo green ambient corner highlight */}
+      <div
+        class="absolute -top-12 -right-12 w-56 h-56 rounded-full bg-[#169F94]/12 blur-3xl pointer-events-none"
+        aria-hidden="true"
+      />
+
+      <div class="relative z-10">
+        {/* Header Tag */}
+        <span class="text-sm sm:text-sm font-bold uppercase tracking-wider text-[#169F94] block mb-4 text-center sm:text-left">
+          Digital Refresh Package
+        </span>
+
+        {/* Pricing Header Area - Centered '+' between prices on mobile & desktop */}
+        <div class="flex items-start justify-center gap-2 sm:gap-0 sm:grid sm:grid-cols-[1fr_auto_1fr] sm:items-center mb-8">
+          <div class="flex flex-col items-center sm:items-start text-center sm:text-left flex-1 sm:flex-initial max-w-[155px] sm:max-w-none">
+            <span class="text-4xl sm:text-5xl lg:text-6xl font-extrabold text-[#0B0F19] tracking-tight leading-none">
+              $599
+            </span>
+            <span class="text-xs sm:text-base lg:text-lg text-slate-600 font-semibold mt-1.5 sm:mt-2 leading-tight">
+              Custom Website
+            </span>
+          </div>
+
+          <div class="flex items-center justify-center px-1 sm:px-4 pt-1 sm:pt-0 shrink-0">
+            <span class="text-2xl sm:text-3xl font-light text-slate-400 leading-none">
+              +
+            </span>
+          </div>
+
+          <div class="flex flex-col items-center sm:items-end text-center sm:text-right flex-1 sm:flex-initial max-w-[155px] sm:max-w-none">
+            <div class="flex items-baseline gap-1 sm:gap-2">
+              <span class="text-4xl sm:text-5xl lg:text-6xl font-extrabold text-[#0B0F19] tracking-tight leading-none">
+                $199
+              </span>
+              <span class="text-xs sm:text-base font-normal text-slate-500 tracking-normal whitespace-nowrap">
+                /monthly
+              </span>
+            </div>
+            <span class="text-xs sm:text-base lg:text-lg text-slate-600 font-semibold mt-1.5 sm:mt-2 leading-tight">
+              Local Partner Program
+            </span>
+          </div>
+        </div>
+
+        {/* Horizontal Divider */}
+        <div class="border-t border-slate-200/80 my-8"></div>
+
+        {/* 2-Column Checkmark Features with Middle Separator Line */}
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-y-6 sm:gap-y-0 sm:divide-x divide-slate-200/80 mb-10">
+          <ul class="space-y-3.5 sm:pr-8">
+            {mainPackageFeaturesCol1.map((feature) => (
+              <li class="flex items-start gap-2.5 text-slate-700 text-sm sm:text-[0.9375rem] leading-relaxed">
+                <svg
+                  class="w-4 h-4 text-[#169F94] shrink-0 mt-1 stroke-[2.5]"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                >
+                  <polyline points="20 6 9 17 4 12" />
+                </svg>
+                <span>{feature}</span>
+              </li>
+            ))}
+          </ul>
+
+          <ul class="space-y-3.5 sm:pl-8">
+            {mainPackageFeaturesCol2.map((feature) => (
+              <li class="flex items-start gap-2.5 text-slate-700 text-sm sm:text-[0.9375rem] leading-relaxed">
+                <svg
+                  class="w-4 h-4 text-[#169F94] shrink-0 mt-1 stroke-[2.5]"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                >
+                  <polyline points="20 6 9 17 4 12" />
+                </svg>
+                <span>{feature}</span>
+              </li>
+            ))}
+          </ul>
+        </div>
+      </div>
+
+      {/* Action Button & Guarantee Footer */}
+      <div class="relative z-10 pt-2">
+        <a
+          href="#contact"
+          class="inline-flex items-center justify-center bg-black hover:bg-slate-900 text-white font-bold py-4 px-8 rounded-full shadow-md hover:shadow-lg transition-all duration-200 active:scale-95 text-base w-full"
+        >
+          <span>Request a Refresh</span>
+        </a>
+        <p class="text-center text-xs sm:text-sm text-slate-500 mt-3.5 font-medium">
+          No long-term contracts
+        </p>
+      </div>
+    </div>
+  </div>
+</section>

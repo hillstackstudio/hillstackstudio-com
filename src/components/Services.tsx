@@ -142,15 +142,20 @@ const Services: React.FC<ServicesProps> = ({ services }) => {
                 ref={(el) => (cardRefs.current[index] = el)}
                 href={service.href || '/services'}
                 style={{
+                  background: 'radial-gradient(circle at top right, rgba(22, 159, 148, 0.16) 0%, rgba(22, 159, 148, 0.04) 45%, transparent 70%), #FFFFFF',
                   transitionDelay: `${(index % 3) * 120}ms`
                 }}
-                className={`group bg-white/80 backdrop-blur-xl rounded-2xl p-8 border border-white/60 shadow-[0_8px_30px_rgb(0,0,0,0.05)] hover:bg-white/90 hover:border-white/80 hover:shadow-[0_16px_36px_-6px_rgba(15,23,42,0.1)] hover:-translate-y-1.5 flex flex-col justify-between transition-all duration-700 ease-out motion-reduce:transition-none motion-reduce:transform-none motion-reduce:opacity-100 ${
+                className={`group relative overflow-hidden rounded-2xl p-8 border border-slate-200/80 shadow-[0_8px_30px_rgb(0,0,0,0.05)] hover:border-slate-300 hover:shadow-[0_16px_36px_-6px_rgba(15,23,42,0.1)] hover:-translate-y-1.5 flex flex-col justify-between transition-all duration-700 ease-out motion-reduce:transition-none motion-reduce:transform-none motion-reduce:opacity-100 ${
                   isVisible
                     ? 'opacity-100 translate-y-0'
                     : 'opacity-0 translate-y-10'
                 }`}
               >
-                <div className="flex flex-col items-center text-center">
+                <div
+                  className="absolute -top-12 -right-12 w-48 h-48 rounded-full bg-[#169F94]/10 blur-2xl pointer-events-none"
+                  aria-hidden="true"
+                />
+                <div className="relative z-10 flex flex-col items-center text-center">
                   <div className="w-12 h-12 rounded-xl bg-black border border-black shadow-[0_2px_8px_rgba(0,0,0,0.18)] text-[#169F94] flex items-center justify-center mb-6 mx-auto group-hover:scale-105 transition-transform duration-300">
                     {getServiceIcon(index)}
                   </div>
@@ -161,7 +166,7 @@ const Services: React.FC<ServicesProps> = ({ services }) => {
                     {service.description}
                   </p>
                 </div>
-                <div className="mt-6 pt-5 border-t border-slate-200/60 flex items-center justify-center text-[#0B0F19] text-sm font-bold group-hover:underline">
+                <div className="relative z-10 mt-6 pt-5 border-t border-slate-200/60 flex items-center justify-center text-[#0B0F19] text-sm font-bold group-hover:underline">
                   <span>Learn More</span>
                 </div>
               </a>

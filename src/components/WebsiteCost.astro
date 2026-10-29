@@ -1,0 +1,77 @@
+---
+const costRows = [
+  {
+    type: "Basic brochure website",
+    cost: "$2,000 – $4,000",
+    bestFor: "Very small businesses, early-stage projects",
+  },
+  {
+    type: "Service-based small business website",
+    cost: "$4,000 – $6,000",
+    bestFor: "Local service providers, consultants, professionals",
+  },
+  {
+    type: "Custom Business Website",
+    cost: "$6,000 – $10,000",
+    bestFor: "Businesses focused on SEO, leads, and scalability",
+  },
+  {
+    type: "Ecommerce website",
+    cost: "$6,000 – $15,000+",
+    bestFor: "Online stores with products, payments, inventory",
+  },
+  {
+    type: "Custom functionality website",
+    cost: "$8,000 – $20,000+",
+    bestFor: "Portals, integrations, advanced workflows",
+  },
+];
+---
+
+<section id="website-cost" class="py-20 md:py-28 border-b border-slate-200/80">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="text-center mb-16 max-w-3xl mx-auto">
+      <h2 class="text-[2.5rem] sm:text-4xl md:text-5xl font-extrabold text-[#0B0F19] tracking-tight leading-[1.08] mb-6">
+        Average business website cost
+      </h2>
+      <p class="text-lg text-slate-600 leading-relaxed">
+        Here's how costs break down in 2026:
+      </p>
+    </div>
+
+    <div class="max-w-4xl mx-auto bg-white rounded-3xl border border-slate-200/80 shadow-xl overflow-hidden">
+      <div class="overflow-x-auto">
+        <table class="w-full text-left border-collapse">
+          <thead>
+            <tr class="border-b border-slate-200 divide-x divide-slate-200 bg-white">
+              <th scope="col" class="w-[35%] md:w-[31%] py-5 px-4 sm:px-7 text-center text-sm sm:text-base md:text-lg font-bold text-[#0B0F19] align-middle">
+                Website Type
+              </th>
+              <th scope="col" class="w-[22%] md:w-[29%] py-5 px-4 sm:px-7 text-center text-sm sm:text-base md:text-lg font-bold text-[#0B0F19] align-middle md:whitespace-nowrap">
+                Cost Range
+              </th>
+              <th scope="col" class="w-[43%] md:w-[40%] py-5 px-4 sm:px-7 text-center text-sm sm:text-base md:text-lg font-bold text-[#0B0F19] align-middle">
+                Best For
+              </th>
+            </tr>
+          </thead>
+          <tbody class="divide-y divide-slate-200">
+            {costRows.map((row, index) => (
+              <tr class={`divide-x divide-slate-200 ${index % 2 === 0 ? 'bg-slate-50/60' : 'bg-white'}`}>
+                <td class="py-5 px-4 sm:px-7 text-sm md:text-base font-medium text-[#0B0F19] leading-relaxed align-top">
+                  {row.type}
+                </td>
+                <td class="py-5 px-4 sm:px-7 text-sm md:text-base font-medium text-[#0B0F19] leading-relaxed align-top md:whitespace-nowrap">
+                  {row.cost}
+                </td>
+                <td class="py-5 px-4 sm:px-7 text-sm md:text-base text-slate-600 leading-relaxed align-top">
+                  {row.bestFor}
+                </td>
+              </tr>
+            ))}
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+</section>

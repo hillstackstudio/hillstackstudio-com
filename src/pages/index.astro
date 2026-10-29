@@ -5,6 +5,8 @@ import Hero from '../components/Hero.tsx';
 import Services from '../components/Services.tsx';
 import RecentWork from '../components/RecentWork.tsx';
 import Advantage from '../components/Advantage.astro';
+import WebsiteCost from '../components/WebsiteCost.astro';
+import Pricing from '../components/Pricing.astro';
 import Faq from '../components/Faq.tsx';
 import Contact from '../components/Contact.tsx';
 import Footer from '../components/Footer.astro';
@@ -30,6 +32,8 @@ import siteContext from '../data/siteContext.json';
     <RecentWork client:visible />
     <Services client:load services={siteContext.services} />
     <Advantage />
+    <WebsiteCost />
+    <Pricing />
     <Faq client:visible />
     <Contact 
       client:visible
