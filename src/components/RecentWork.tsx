@@ -69,7 +69,7 @@ const RecentWork: React.FC<RecentWorkProps> = ({ works = defaultWorks }) => {
             }}
           >
             <span className="block">Built for discovery,</span>
-            <span className="block">Designed to stand out</span>
+            <span className="block">Designed to convert</span>
           </h2>
         </div>
 
