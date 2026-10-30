@@ -60,16 +60,15 @@ const RecentWork: React.FC<RecentWorkProps> = ({ works = defaultWorks }) => {
         {/* Section Header matching site design system */}
         <div className="text-center mb-12 sm:mb-16 max-w-3xl mx-auto">
           <h2 
-            className="text-[2.5rem] sm:text-4xl md:text-5xl font-black text-[#0B0F19] tracking-[-0.03em] leading-[1.06] sm:leading-[1.08]"
+            className="text-[2rem] xs:text-[2.25rem] sm:text-4xl md:text-5xl font-black text-[#0B0F19] tracking-[-0.03em] leading-[1.12] sm:leading-[1.08]"
             style={{
               fontFamily: "'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif",
               fontWeight: 800,
               letterSpacing: '-0.03em',
-              lineHeight: 1.06
             }}
           >
             <span className="block">Built for discovery,</span>
-            <span className="block">Designed to convert</span>
+            <span className="block whitespace-nowrap">Designed to convert</span>
           </h2>
         </div>
 

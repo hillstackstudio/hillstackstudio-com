@@ -28,7 +28,7 @@ const Contact: React.FC<ContactProps> = () => {
                   type="text" 
                   id="name" 
                   className="w-full px-4 py-3.5 bg-slate-50 border border-slate-200 rounded-xl focus:bg-white focus:ring-2 focus:ring-black focus:border-transparent transition-all text-slate-900 placeholder:text-slate-400 text-sm"
-                  placeholder="e.g. John Doe"
+                  placeholder="e.g. Anita Site"
                 />
               </div>
 
@@ -38,7 +38,7 @@ const Contact: React.FC<ContactProps> = () => {
                   type="email" 
                   id="email" 
                   className="w-full px-4 py-3.5 bg-slate-50 border border-slate-200 rounded-xl focus:bg-white focus:ring-2 focus:ring-black focus:border-transparent transition-all text-slate-900 placeholder:text-slate-400 text-sm"
-                  placeholder="john@yourbusiness.com"
+                  placeholder="anita@example.com"
                 />
               </div>
 
@@ -48,7 +48,7 @@ const Contact: React.FC<ContactProps> = () => {
                   type="tel" 
                   id="phone" 
                   className="w-full px-4 py-3.5 bg-slate-50 border border-slate-200 rounded-xl focus:bg-white focus:ring-2 focus:ring-black focus:border-transparent transition-all text-slate-900 placeholder:text-slate-400 text-sm"
-                  placeholder="(253) 555-0199"
+                  placeholder="+1 (555) 000-0000"
                 />
               </div>
 
@@ -58,7 +58,7 @@ const Contact: React.FC<ContactProps> = () => {
                   type="url" 
                   id="website" 
                   className="w-full px-4 py-3.5 bg-slate-50 border border-slate-200 rounded-xl focus:bg-white focus:ring-2 focus:ring-black focus:border-transparent transition-all text-slate-900 placeholder:text-slate-400 text-sm"
-                  placeholder="https://www.yourbusiness.com"
+                  placeholder="https://example.com"
                 />
               </div>
               
