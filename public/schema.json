@@ -11,8 +11,7 @@
       "email": "team@hillstackstudio.com",
       "address": {
         "@type": "PostalAddress",
-        "streetAddress": "[INSERT HILL STACK STUDIO STREET ADDRESS]",
-        "addressLocality": "Puyallup",
+        "addressLocality": "Seattle",
         "addressRegion": "WA",
         "addressCountry": "US"
       },
@@ -20,6 +19,7 @@
         "Seattle",
         "Bellevue",
         "Tacoma",
+        "Puyallup",
         "King County",
         "Pierce County",
         "Pacific Northwest"
@@ -38,7 +38,7 @@
         "Accessibility"
       ],
       "sameAs": [
-        "[INSERT HILL STACK STUDIO SOCIAL/MAPS URL]"
+        "https://www.instagram.com/hillstackteam"
       ]
     }
   ]

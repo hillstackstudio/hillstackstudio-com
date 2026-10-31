@@ -14,13 +14,13 @@ import siteContext from '../../data/siteContext.json';
     email={siteContext.contact.email}
   />
 
-  <main class="flex-grow flex flex-col">
+  <main id="main-content" class="flex-grow flex flex-col">
     {/* Page Header Hero */}
     <section class="pt-14 pb-16 md:pt-20 md:pb-24 border-b border-slate-200/60 relative">
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
         
         {/* Breadcrumbs */}
-        <nav class="flex items-center justify-start gap-2 text-xs md:text-sm text-slate-500 mb-6 font-medium">
+        <nav class="flex items-center justify-start gap-2 text-xs md:text-sm text-slate-500 mb-6 font-medium" aria-label="Breadcrumb">
           <a href="/" class="hover:text-black transition-colors">
             Home
           </a>

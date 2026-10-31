@@ -1,0 +1,81 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+import siteContext from '../data/siteContext.json';
+---
+
+<BaseLayout
+  title={`Page Not Found (404) | ${siteContext.companyName}`}
+  description="The page you are looking for could not be found. Return to the Hill Stack Studio homepage or explore our web design and AEO services."
+>
+  <Header
+    companyName={siteContext.companyName}
+    email={siteContext.contact.email}
+  />
+
+  <main id="main-content" class="flex-grow flex flex-col justify-center py-16 md:py-24">
+    <section class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 w-full text-center">
+      <div class="relative overflow-hidden bg-white/80 backdrop-blur-xl rounded-3xl p-8 sm:p-12 md:p-16 border border-white/60 shadow-[0_8px_30px_rgb(0,0,0,0.05)]">
+        {/* Background "404" shadow watermark above destinations */}
+        <div 
+          class="absolute inset-x-0 top-1/2 -translate-y-1/2 flex items-center justify-center pointer-events-none select-none z-0 overflow-hidden" 
+          aria-hidden="true"
+        >
+          <span class="text-[12rem] sm:text-[16rem] md:text-[20rem] font-black text-slate-900/[0.08] leading-none tracking-tighter">
+            404
+          </span>
+        </div>
+
+        <div class="relative z-10">
+          <h1 class="text-[2.5rem] sm:text-5xl md:text-6xl font-extrabold text-[#0B0F19] tracking-tight leading-[1.08] sm:leading-[1.12] mb-4">
+            Page not found
+          </h1>
+
+          <p class="text-base sm:text-lg text-slate-600 max-w-xl mx-auto leading-relaxed mb-10">
+            Sorry, we couldn&rsquo;t find the page you were looking for. It may have been moved, renamed, or no longer exists.
+          </p>
+
+          <div class="flex flex-col sm:flex-row items-center justify-center gap-4 mb-12">
+            <a
+              href="/"
+              class="w-full sm:w-auto inline-flex items-center justify-center gap-2 bg-black hover:bg-slate-900 text-white font-bold py-3.5 px-8 rounded-full shadow-md hover:shadow-lg transition-all duration-200 active:scale-95 text-base"
+            >
+              <span>Back to Homepage</span>
+            </a>
+            <a
+              href="/#contact"
+              class="w-full sm:w-auto inline-flex items-center justify-center gap-2 bg-transparent hover:bg-black/5 text-[#0B0F19] border border-black font-bold py-3.5 px-8 rounded-full transition-all duration-200 active:scale-95 text-base"
+            >
+              <span>Contact Us</span>
+            </a>
+          </div>
+        </div>
+
+        <div class="relative z-10 pt-8 border-t border-slate-200/70">
+          <p class="text-xs font-bold uppercase tracking-wider text-slate-500 mb-4">
+            Popular Destinations
+          </p>
+          <div class="flex flex-wrap items-center justify-center gap-x-6 gap-y-2 text-sm font-semibold text-[#0B0F19]">
+            <a href="/about" class="hover:underline underline-offset-4 transition-all">
+              About Us
+            </a>
+            <span class="text-slate-300" aria-hidden="true">•</span>
+            <a href="/services" class="hover:underline underline-offset-4 transition-all">
+              Our Services
+            </a>
+            <span class="text-slate-300" aria-hidden="true">•</span>
+            <a href="/#pricing" class="hover:underline underline-offset-4 transition-all">
+              Our Pricing
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <Footer
+    companyName={siteContext.companyName}
+    email={siteContext.contact.email}
+  />
+</BaseLayout>

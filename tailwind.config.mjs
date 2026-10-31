@@ -17,8 +17,6 @@ export default {
         sans: ['Inter', '-apple-system', 'BlinkMacSystemFont', '"Segoe UI"', 'Roboto', 'sans-serif'],
         display: ['"Plus Jakarta Sans"', '-apple-system', 'BlinkMacSystemFont', '"Segoe UI"', 'Roboto', 'sans-serif'],
         heading: ['"Plus Jakarta Sans"', '-apple-system', 'BlinkMacSystemFont', '"Segoe UI"', 'Roboto', 'sans-serif'],
-        syne: ["'Syne'", 'sans-serif'],
-        cormorant: ["'Cormorant'", "'Cormorant Garamond'", 'Georgia', 'serif'],
         fraunces: ["'Fraunces'", 'Georgia', 'serif'],
         'alegreya-sans': ["'Alegreya Sans'", 'sans-serif'],
         'homemade-apple': ["'Homemade Apple'", 'cursive'],

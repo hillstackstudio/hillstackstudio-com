@@ -1,0 +1,211 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+import siteContext from '../data/siteContext.json';
+
+const directorySections = [
+  {
+    title: "Main Pages",
+    description: "Core pages across the Hill Stack Studio website.",
+    links: [
+      {
+        label: "Home",
+        href: "/",
+        detail: "Overview of Hill Stack Studio, featured client work, core solutions, pricing, FAQs, and consultation requests."
+      },
+      {
+        label: "About Us",
+        href: "/about",
+        detail: "Our vision, mission, and the story behind our Pacific Northwest web engineering studio."
+      },
+      {
+        label: "Services & Solutions",
+        href: "/services",
+        detail: "Detailed breakdown of our 5-step process for local business visibility and custom website rebuilds."
+      }
+    ]
+  },
+  {
+    title: "Services & Process Breakdown",
+    description: "Direct links to each step of our local business web engineering and AEO workflow.",
+    links: [
+      {
+        label: "Step 01: Intake Call",
+        href: "/services#intake-call",
+        detail: "1-on-1 strategy session to align on your business goals, pages, and local target market."
+      },
+      {
+        label: "Step 02: AEO & SEO Website Audit",
+        href: "/services#audit",
+        detail: "Technical inspection of why search engines and AI assistants may be overlooking your current site."
+      },
+      {
+        label: "Step 03: Custom Website Rebuild",
+        href: "/services#web-design",
+        detail: "High-performance custom code engineered for sub-second load times and 90+ Lighthouse scores."
+      },
+      {
+        label: "Step 04: Website Hosting & Administration",
+        href: "/services#hosting",
+        detail: "Managed cloud hosting, daily security checks, backups, and ongoing content updates."
+      },
+      {
+        label: "Step 05: Local Partner Program",
+        href: "/services#local-partner-program",
+        detail: "Dedicated ongoing engineering, structured data maintenance, and 24/7 monitoring."
+      }
+    ]
+  },
+  {
+    title: "Homepage Sections",
+    description: "Quickly jump to specific sections on the homepage.",
+    links: [
+      {
+        label: "Our Work",
+        href: "/#recent-work",
+        detail: "Featured client showcase and results from recent custom builds."
+      },
+      {
+        label: "Our Solutions",
+        href: "/#services",
+        detail: "Summary of our core AEO audit, custom web development, and hosting services."
+      },
+      {
+        label: "Hill Stack Advantage",
+        href: "/#advantage",
+        detail: "How Hill Stack Studio custom websites compare against standard template builders."
+      },
+      {
+        label: "Pricing",
+        href: "/#pricing",
+        detail: "Transparent pricing for the Local Partner Program and custom website builds."
+      },
+      {
+        label: "Frequently Asked Questions",
+        href: "/#faq",
+        detail: "Answers to common questions about Answer Engine Optimization (AEO), AI search, and project timelines."
+      },
+      {
+        label: "Contact & Consultation Request",
+        href: "/#contact",
+        detail: "Request a consultation or reach our team directly."
+      }
+    ]
+  },
+  {
+    title: "Policies & Machine-Readable Resources",
+    description: "Legal policies, accessibility compliance, and structured indexation files.",
+    links: [
+      {
+        label: "Privacy Policy",
+        href: "/privacy",
+        detail: "How we collect, use, and protect information when you visit our website."
+      },
+      {
+        label: "Accessibility Statement",
+        href: "/accessibility",
+        detail: "Our commitment to digital accessibility and WCAG 2.2 Level AA compliance."
+      },
+      {
+        label: "XML Sitemap",
+        href: "/sitemap.xml",
+        detail: "Machine-readable XML sitemap for search engines and web crawlers."
+      },
+      {
+        label: "AI & LLM Profile (llms.txt)",
+        href: "/llms.txt",
+        detail: "Structured plain-text profile for conversational AI engines and Answer Engine Optimization."
+      }
+    ]
+  }
+];
+---
+
+<BaseLayout
+  title={`Site Map | ${siteContext.companyName}`}
+  description="Complete directory of pages, services, sections, and resources on the Hill Stack Studio website."
+>
+  <Header
+    companyName={siteContext.companyName}
+    email={siteContext.contact.email}
+  />
+
+  <main id="main-content" class="flex-grow flex flex-col">
+    {/* Page Header Hero */}
+    <section class="pt-14 pb-12 md:pt-20 md:pb-16 border-b border-slate-200/60 relative">
+      <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+        {/* Breadcrumbs */}
+        <nav class="flex items-center justify-start gap-2 text-xs md:text-sm text-slate-500 mb-6 font-medium" aria-label="Breadcrumb">
+          <a href="/" class="hover:text-black transition-colors">
+            Home
+          </a>
+          <svg class="w-3.5 h-3.5 text-slate-400 stroke-[2.5]" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="M9 18l6-6-6-6" />
+          </svg>
+          <span class="text-slate-800 font-bold">Site Map</span>
+        </nav>
+
+        <h1 class="text-[2.5rem] sm:text-5xl md:text-6xl font-extrabold text-[#0B0F19] tracking-tight leading-[1.08] sm:leading-[1.12]">
+          Site Map
+        </h1>
+        <p class="text-base sm:text-lg text-slate-600 mt-4 leading-relaxed font-normal">
+          A complete directory of all pages, service breakdowns, and resources available on <a href="/" class="text-black font-semibold underline underline-offset-4 hover:text-slate-700 transition-colors">hillstackstudio.com</a>.
+        </p>
+      </div>
+    </section>
+
+    {/* Directory Content Card */}
+    <section class="py-12 md:py-16">
+      <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="bg-white/80 backdrop-blur-xl rounded-3xl p-8 sm:p-12 md:p-14 border border-white/60 shadow-[0_8px_30px_rgb(0,0,0,0.05)] space-y-12 text-slate-700">
+          {directorySections.map((section, idx) => (
+            <div class={idx > 0 ? "pt-10 border-t border-slate-200/60" : ""}>
+              <h2 class="text-2xl sm:text-3xl font-extrabold text-[#0B0F19] tracking-tight mb-2">
+                {section.title}
+              </h2>
+              <p class="text-slate-600 text-sm sm:text-base mb-6">
+                {section.description}
+              </p>
+
+              <ul class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                {section.links.map((link) => (
+                  <li>
+                    <a
+                      href={link.href}
+                      class="group block h-full p-5 rounded-2xl bg-slate-50/80 hover:bg-white border border-slate-200/80 hover:border-slate-300 shadow-xs hover:shadow-md transition-all duration-200"
+                    >
+                      <div class="flex items-center justify-between gap-2 mb-1.5">
+                        <span class="font-bold text-[#0B0F19] group-hover:text-black text-base sm:text-lg">
+                          {link.label}
+                        </span>
+                        <svg
+                          class="w-4 h-4 text-slate-400 group-hover:text-black group-hover:translate-x-0.5 transition-all shrink-0"
+                          fill="none"
+                          viewBox="0 0 24 24"
+                          stroke="currentColor"
+                          stroke-width="2.5"
+                          aria-hidden="true"
+                        >
+                          <path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7" />
+                        </svg>
+                      </div>
+                      <p class="text-sm text-slate-600 leading-relaxed">
+                        {link.detail}
+                      </p>
+                    </a>
+                  </li>
+                ))}
+              </ul>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <Footer
+    companyName={siteContext.companyName}
+    email={siteContext.contact.email}
+  />
+</BaseLayout>

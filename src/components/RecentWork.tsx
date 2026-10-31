@@ -80,6 +80,7 @@ const RecentWork: React.FC<RecentWorkProps> = ({ works = defaultWorks }) => {
               href={`https://${currentWork.domain}`}
               target="_blank"
               rel="noopener noreferrer"
+              aria-label={`Visit ${currentWork.company} website (opens in a new tab)`}
               className="block group"
             >
               <video 

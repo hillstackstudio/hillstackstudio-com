@@ -19,7 +19,7 @@ import siteContext from '../data/siteContext.json';
     email={siteContext.contact.email}
     transparentAtTop={true}
   />
-  <main class="flex-grow flex flex-col">
+  <main id="main-content" class="flex-grow flex flex-col">
     <Hero 
       client:load
       companyName={siteContext.companyName}
@@ -45,7 +45,4 @@ import siteContext from '../data/siteContext.json';
     companyName={siteContext.companyName}
     email={siteContext.contact.email}
   />
-  <div class="sr-only" aria-hidden="true">
-    <span>Seattle Puyallup Tacoma Pierce County Pacific Northwest Hill Stack Studio Answer Engine Optimization Local AI Search Audits</span>
-  </div>
 </BaseLayout>

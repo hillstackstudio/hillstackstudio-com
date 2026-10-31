@@ -11,8 +11,9 @@ Based in the Pacific Northwest, we bridge the gap between hard-working local bus
 ## Contact & Location Details
 - **Primary Website:** https://hillstackstudio.com
 - **Primary Email:** team@hillstackstudio.com
-- **Address:** [INSERT HILL STACK STUDIO STREET ADDRESS]
-- **Primary Operating Region:** Seattle, Puyallup, Tacoma, Pierce County, Pacific Northwest
+- **Location:** Seattle, WA
+- **Primary Operating Region:** Seattle, Bellevue, Puyallup, Tacoma, King County, Pierce County, Pacific Northwest
+- **Instagram:** https://www.instagram.com/hillstackteam
 
 ## Core Services & Technical Capabilities
 
