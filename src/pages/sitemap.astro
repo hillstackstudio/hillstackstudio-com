@@ -27,37 +27,6 @@ const directorySections = [
     ]
   },
   {
-    title: "Services & Process Breakdown",
-    description: "Direct links to each step of our local business web engineering and AEO workflow.",
-    links: [
-      {
-        label: "Step 01: Intake Call",
-        href: "/services#intake-call",
-        detail: "1-on-1 strategy session to align on your business goals, pages, and local target market."
-      },
-      {
-        label: "Step 02: AEO & SEO Website Audit",
-        href: "/services#audit",
-        detail: "Technical inspection of why search engines and AI assistants may be overlooking your current site."
-      },
-      {
-        label: "Step 03: Custom Website Rebuild",
-        href: "/services#web-design",
-        detail: "High-performance custom code engineered for sub-second load times and 90+ Lighthouse scores."
-      },
-      {
-        label: "Step 04: Website Hosting & Administration",
-        href: "/services#hosting",
-        detail: "Managed cloud hosting, daily security checks, backups, and ongoing content updates."
-      },
-      {
-        label: "Step 05: Local Partner Program",
-        href: "/services#local-partner-program",
-        detail: "Dedicated ongoing engineering, structured data maintenance, and 24/7 monitoring."
-      }
-    ]
-  },
-  {
     title: "Homepage Sections",
     description: "Quickly jump to specific sections on the homepage.",
     links: [
@@ -90,6 +59,37 @@ const directorySections = [
         label: "Contact & Consultation Request",
         href: "/#contact",
         detail: "Request a consultation or reach our team directly."
+      }
+    ]
+  },
+  {
+    title: "Services & Process Breakdown",
+    description: "Direct links to each step of our local business web engineering and AEO workflow.",
+    links: [
+      {
+        label: "Step 01: Intake Call",
+        href: "/services#intake-call",
+        detail: "1-on-1 strategy session to align on your business goals, pages, and local target market."
+      },
+      {
+        label: "Step 02: AEO & SEO Website Audit",
+        href: "/services#audit",
+        detail: "Technical inspection of why search engines and AI assistants may be overlooking your current site."
+      },
+      {
+        label: "Step 03: Custom Website Rebuild",
+        href: "/services#web-design",
+        detail: "High-performance custom code engineered for sub-second load times and 90+ Lighthouse scores."
+      },
+      {
+        label: "Step 04: Website Hosting & Administration",
+        href: "/services#hosting",
+        detail: "Managed cloud hosting, daily security checks, backups, and ongoing content updates."
+      },
+      {
+        label: "Step 05: Local Partner Program",
+        href: "/services#local-partner-program",
+        detail: "Dedicated ongoing engineering, structured data maintenance, and 24/7 monitoring."
       }
     ]
   },
@@ -168,19 +168,19 @@ const directorySections = [
                 {section.description}
               </p>
 
-              <ul class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+              <ul class="divide-y divide-slate-100">
                 {section.links.map((link) => (
-                  <li>
+                  <li class="py-4 first:pt-0 last:pb-0">
                     <a
                       href={link.href}
-                      class="group block h-full p-5 rounded-2xl bg-slate-50/80 hover:bg-white border border-slate-200/80 hover:border-slate-300 shadow-xs hover:shadow-md transition-all duration-200"
+                      class="group flex flex-col sm:flex-row sm:items-baseline justify-between gap-1 sm:gap-6 text-left transition-colors"
                     >
-                      <div class="flex items-center justify-between gap-2 mb-1.5">
-                        <span class="font-bold text-[#0B0F19] group-hover:text-black text-base sm:text-lg">
+                      <div class="flex items-center gap-2">
+                        <span class="font-bold text-[#0B0F19] group-hover:text-black group-hover:underline underline-offset-4 text-base sm:text-lg">
                           {link.label}
                         </span>
                         <svg
-                          class="w-4 h-4 text-slate-400 group-hover:text-black group-hover:translate-x-0.5 transition-all shrink-0"
+                          class="w-4 h-4 text-slate-400 group-hover:text-black group-hover:translate-x-1 transition-all shrink-0"
                           fill="none"
                           viewBox="0 0 24 24"
                           stroke="currentColor"
@@ -190,7 +190,7 @@ const directorySections = [
                           <path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7" />
                         </svg>
                       </div>
-                      <p class="text-sm text-slate-600 leading-relaxed">
+                      <p class="text-sm text-slate-600 leading-relaxed sm:text-right max-w-md">
                         {link.detail}
                       </p>
                     </a>
