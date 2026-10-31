@@ -12,7 +12,7 @@ interface HeroProps {
 const Hero: React.FC<HeroProps> = ({
   companyName: _companyName = "Hill Stack Studio",
   tagline: _tagline = "Locally rooted. AI Optimized.",
-  aboutText = "We rebuild your website to better reflect your business. We run our audit so local searches can lead customers straight to you.",
+  aboutText = "We pair our local search audit with custom website redesign so searches in your service areas can lead customers straight to you.",
   primaryCallToAction = "Audit Your Website",
   regionalKeywords: _regionalKeywords = ["Seattle", "Bellevue", "Tacoma", "King County", "Pierce County", "Pacific Northwest"]
 }) => {
